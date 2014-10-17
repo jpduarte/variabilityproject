@@ -1,0 +1,5 @@
+sde_dvs.cmd: this file is to generate a structure (material, dimensions, doping, etc) and generate a mesh. In this case, a FinFET on bulk is generated.
+
+sdevice_des.cmd: this file take the output from sde_dvs.cmd (???) and model.par to solve the physical equations under the given bias conditions. The output of this file can be I-V, energy, densities etc.
+
+model.par: has the model parameters used for the simulation carried out by sdevice_sed.cmd
