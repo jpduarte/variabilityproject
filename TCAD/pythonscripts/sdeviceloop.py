@@ -1,19 +1,19 @@
 #run loops for sdevice simulation
-import os
+import os 
 import functionsaux as fxsupport
 import shutil #this library is to copy file from original to AUX for simulation
-import numpy as np
+import numpy as np #numpy is a math library for python
                 
-foldername = './v6/' 
-nameproject = 'finfet_6'               
+foldername = './simulationdata/run1/' 
+nameproject = 'finfet_1'               
 
 #dimensions                
-Lg_array    = 0.020*np.array([1, 0.9,1.1])#
-Wt_array    = 0.0076*np.array([1, 0.9,1.1])
-WbR_array   = 0.0076/2*np.array([1, 0.9,1.1])
-WbL_array   = 0.0076/2*np.array([1, 0.9,1.1])
-Hfin_array  = 0.042*np.array([1, 0.9,1.1])
-tox_array   = 0.0008*np.array([1, 0.9,1.1])
+Lg_array    = 0.020*np.array([1, 0.9,1.1])#gate length
+Wt_array    = 0.0076*np.array([1, 0.9,1.1])#width of the top of FIN
+WbR_array   = 0.0076/2*np.array([1, 0.9,1.1])#extra width of the base of the FIN in the right side
+WbL_array   = 0.0076/2*np.array([1, 0.9,1.1])#extra width of the base of the FIN in the left side
+Hfin_array  = 0.042*np.array([1, 0.9,1.1])#height of FIN
+tox_array   = 0.0008*np.array([1, 0.9,1.1])#insulator thickness
 Ro_array    = 0.003*np.array([1])
 Doping_FIN_array = 6e18*np.array([1, 0.9,1.1])
 Doping_PUNCH_array = [1e21]
@@ -29,7 +29,7 @@ Lg, Wt, WbR,WbL, Hfin, tox, Ro, Doping_FIN, Doping_PUNCH, Doping_SD = fxsupport.
 lgindex=0
 for L in Lg:
 
-    filename = foldername + 'sde_dvs.cmd'
+    filename = './TCADtemplates/ + 'sde_dvs.cmd'
     filenameaux = foldername + 'sde_dvsAUX.cmd'
     shutil.copyfile(filename,filenameaux)
 
