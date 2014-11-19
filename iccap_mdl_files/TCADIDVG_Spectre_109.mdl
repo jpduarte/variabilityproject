@@ -1,4 +1,4 @@
-LINK MODEL "TCAD_Extraction_Spectre_108" "690.400"
+LINK MODEL "TCAD_Extraction_Spectre_109" "690.400"
 {
 View model_window 1 "Model"
 TABLE "Variable Table" "690.400"
@@ -142,7 +142,7 @@ data
 circuitdeck
 {
  *BSIM6 modeling
- ahdl_include "/users/sourabh/sourabh/Variability/model_code/code_108/bsimcmg.va"
+ ahdl_include "/users/sourabh/sourabh/Variability/model_code/code_109beta/bsimcmg.va"
  model test bsimcmg
  +FPITCH=7.6e-9
  +CDSC=3.5E-3
@@ -157,7 +157,7 @@ circuitdeck
  +EOT=1.1E-9
  +ETA0=0.4
  +ETAMOB=95E-3
- +GEOMOD=1
+ +GEOMOD=4
  +GIDLMOD=0
  +IGMOD=0
  +K1RSCE=0
@@ -228,7 +228,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 0 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
+View par_var_table 1 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
 param FPITCH " 7.600n"
 param CDSC " 100.0m"
 param CDSCD " 13.00m"
@@ -242,7 +242,7 @@ param DVT3 " 0.000 "
 param EOT " 800.0p"
 param ETA0 " 15.00m"
 param ETAMOB " 95.00m"
-param GEOMOD " 1.000 "
+param GEOMOD " 4.000 "
 param GIDLMOD " 0.000 "
 param IGMOD " 0.000 "
 param K1RSCE " 0.000 "
@@ -18905,7 +18905,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 50.00n"
@@ -28365,8 +28365,8 @@ connpair "B" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "1.6781411359725 8658 6203"
-View plot 1 "0.56006014579646 2354 2166"
+View in_out 0 "1.6781411359725 8658 6203"
+View plot 0 "0.56006014579646 2354 2166"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 P13 C15 C15 C10"
@@ -28386,7 +28386,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,339,178"
+View draw_ds 0 "B,339,178"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28417,7 +28417,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2771,239"
+View draw_ds 0 "B,2771,239"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28440,7 +28440,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,5252,301"
+View draw_ds 0 "B,5252,301"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28464,7 +28464,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,5232,2727"
+View draw_ds 0 "B,5232,2727"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28488,7 +28488,7 @@ list XFORM "extract"
 }
 LINK SWEEP "LENGTH" "690.400"
 {
-View draw_ds 1 "B,2764,2664"
+View draw_ds 0 "B,2764,2664"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28518,7 +28518,7 @@ element "Value 5" " 970.0n"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3545"
+View draw_ds 0 "B,387,3545"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -29139,7 +29139,7 @@ member OUT "id"
 LINK PLOT "idvg" "690.400"
 {
 View plot_window 0 "1217,338,10807,8393"
-View draw_ds 1 "B,600,-14986"
+View draw_ds 0 "B,600,-14986"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29176,7 +29176,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "1231,743,10033,8305"
-View draw_ds 1 "B,-323,-11172"
+View draw_ds 0 "B,-323,-11172"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29219,7 +29219,7 @@ TABLE "ICVIEWDATA"
 UTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC&../../Lg1000nm/idvg0p05/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,-332,-7116"
+View draw_ds 0 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29262,7 +29262,7 @@ TABLE "ICVIEWDATA"
 ./Lg500nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../../Lg1000nm/idvg0p86/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,-332,-7116"
+View draw_ds 0 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29299,7 +29299,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p86" "690.400"
 {
 View plot_window 0 "0,61,28873,25925"
-View draw_ds 1 "B,-166,-3948"
+View draw_ds 0 "B,-166,-3948"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29375,7 +29375,7 @@ member SWEEP "Lg1000nm/idvg0p86/vg"
 LINK PLOT "ALLGMVG0p86" "690.400"
 {
 View plot_window 0 "70,107,35812,23409"
-View draw_ds 1 "B,-332,-7116"
+View draw_ds 0 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29412,7 +29412,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p05" "690.400"
 {
 View plot_window 0 "74,151,30043,25340"
-View draw_ds 1 "B,-166,-3948"
+View draw_ds 0 "B,-166,-3948"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29488,7 +29488,7 @@ member SWEEP "Lg1000nm/idvg0p05/vg"
 LINK PLOT "ALL" "690.400"
 {
 View plot_window 0 "168,97,29890,17055,{IDVG0p05:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 100.0u,5,4: 0.000 , 1.000 ,4,5&IDVG0p86:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 150.0u,3,5: 0.000 , 1.000 ,4,5}"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }

@@ -1,9 +1,9 @@
-LINK MODEL "TCAD_Extraction_Spectre" "690.400"
+LINK MODEL "TCAD_Extraction_Spectre_108" "690.400"
 {
 View model_window 1 "Model"
 TABLE "Variable Table" "690.400"
 {
-View par_var_table 1 "V530 P13 C15 C15 C10"
+View par_var_table 0 "V530 P13 C15 C15 C10"
 element 0 "Name" "SIMULATOR"
 element 0 "Value" "spmodeads"
 element 1 "Name" ""
@@ -215,6 +215,8 @@ circuitdeck
  +A1=0
  +A2=0
  +LA1=0
+ +LCDSC=0
+ +LETA0=0
  M0 (D G S B) test  TFIN=7.6e-9 HFIN=42e-9 L=50e-9 NFIN=1
  
 }
@@ -226,19 +228,19 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
 param FPITCH " 7.600n"
-param CDSC " 35.00m"
-param CDSCD " 25.00m"
-param CIT " 1.000m"
+param CDSC " 100.0m"
+param CDSCD " 13.00m"
+param CIT " 1.500m"
 param CS " 0.000 "
 param DEVTYPE " 1.000 "
-param DSUB " 550.0m"
+param DSUB " 900.0m"
 param DVT0 " 30.00m"
 param DVT1 " 350.0m"
 param DVT3 " 0.000 "
 param EOT " 800.0p"
-param ETA0 " 50.00m"
+param ETA0 " 15.00m"
 param ETAMOB " 95.00m"
 param GEOMOD " 1.000 "
 param GIDLMOD " 0.000 "
@@ -258,7 +260,7 @@ param NGATE " 0.000 "
 param NSD " 2.000E+26 "
 param PHIG " 4.240 "
 param COREMOD " 0.000 "
-param RDSW " 19.00 "
+param RDSW " 17.00 "
 param ARDSW " 0.000 "
 param BRDSW " 20.00n"
 param THETASAT " 838.0m"
@@ -268,8 +270,8 @@ param BPTWG " 1.000 "
 param ATHETASAT " 0.000 "
 param BTHETASAT " 1.000 "
 param U0 " 47.00m"
-param UP " 45.00n"
-param VSAT " 35.00K"
+param UP " 28.00n"
+param VSAT " 32.00K"
 param AVSAT " 30.00K"
 param BVSAT " 25.00n"
 param EU " 1.000 "
@@ -287,17 +289,19 @@ param ALP " 0.000 "
 param AGIDL " 0.000 "
 param BGIDL " 300.0MEG"
 param EGIDL " 200.0m"
-param DVT1SS " 500.0m"
+param DVT1SS " 380.0m"
 param LU0 " 0.000 "
 param LKSATIV " 0.000 "
-param LVSAT " 0.000 "
+param LVSAT " 40.00 "
 param DELTAVSAT " 1.000 "
 param PSAT " 2.000 "
-param DVTP0 " 10.00m"
-param PCLM " 1.000m"
+param DVTP0 " 19.00m"
+param PCLM " 0.000 "
 param A1 " 4.000 "
 param A2 " 0.000 "
 param LA1 " 1.000 "
+param LCDSC "-1.700m"
+param LETA0 " 0.000 "
 }
 }
 }
@@ -694,7 +698,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 1.000u"
@@ -717,8 +721,8 @@ connpair "B" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.413028319064 9966 7140"
-View plot 1 "1.1764631748752 2174 3890"
+View in_out 0 "2.413028319064 9966 7140"
+View plot 0 "1.1764631748752 2174 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -738,7 +742,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -761,7 +765,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -785,7 +789,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -809,7 +813,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -837,12 +841,12 @@ list XFORM "extract"
 list XFORM "optimize"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -961,106 +965,106 @@ point 97 1 1 4.424E-06 0
 point 98 1 1 4.497E-06 0
 point 99 1 1 4.57E-06 0
 type SIMU
-point 0 1 1 1.18108E-11 0
-point 1 1 1 1.61141E-11 0
-point 2 1 1 2.21728E-11 0
-point 3 1 1 3.05092E-11 0
-point 4 1 1 4.1979E-11 0
-point 5 1 1 5.77593E-11 0
-point 6 1 1 7.94687E-11 0
-point 7 1 1 1.09332E-10 0
-point 8 1 1 1.50408E-10 0
-point 9 1 1 2.06897E-10 0
-point 10 1 1 2.84566E-10 0
-point 11 1 1 3.91321E-10 0
-point 12 1 1 5.37998E-10 0
-point 13 1 1 7.39407E-10 0
-point 14 1 1 1.01576E-09 0
-point 15 1 1 1.39454E-09 0
-point 16 1 1 1.91297E-09 0
-point 17 1 1 2.62117E-09 0
-point 18 1 1 3.58606E-09 0
-point 19 1 1 4.89616E-09 0
-point 20 1 1 6.66688E-09 0
-point 21 1 1 9.04604E-09 0
-point 22 1 1 1.22187E-08 0
-point 23 1 1 1.641E-08 0
-point 24 1 1 2.18841E-08 0
-point 25 1 1 2.89382E-08 0
-point 26 1 1 3.78897E-08 0
-point 27 1 1 4.90583E-08 0
-point 28 1 1 6.27437E-08 0
-point 29 1 1 7.92036E-08 0
-point 30 1 1 9.86346E-08 0
-point 31 1 1 1.21162E-07 0
-point 32 1 1 1.46834E-07 0
-point 33 1 1 1.7563E-07 0
-point 34 1 1 2.0747E-07 0
-point 35 1 1 2.4223E-07 0
-point 36 1 1 2.79754E-07 0
-point 37 1 1 3.19872E-07 0
-point 38 1 1 3.62407E-07 0
-point 39 1 1 4.07182E-07 0
-point 40 1 1 4.54027E-07 0
-point 41 1 1 5.02783E-07 0
-point 42 1 1 5.53299E-07 0
-point 43 1 1 6.05438E-07 0
-point 44 1 1 6.59072E-07 0
-point 45 1 1 7.14087E-07 0
-point 46 1 1 7.70376E-07 0
-point 47 1 1 8.27843E-07 0
-point 48 1 1 8.86399E-07 0
-point 49 1 1 9.45966E-07 0
-point 50 1 1 1.00647E-06 0
-point 51 1 1 1.06784E-06 0
-point 52 1 1 1.13003E-06 0
-point 53 1 1 1.19297E-06 0
-point 54 1 1 1.25661E-06 0
-point 55 1 1 1.3209E-06 0
-point 56 1 1 1.38581E-06 0
-point 57 1 1 1.4513E-06 0
-point 58 1 1 1.51732E-06 0
-point 59 1 1 1.58385E-06 0
-point 60 1 1 1.65085E-06 0
-point 61 1 1 1.7183E-06 0
-point 62 1 1 1.78616E-06 0
-point 63 1 1 1.85442E-06 0
-point 64 1 1 1.92305E-06 0
-point 65 1 1 1.99203E-06 0
-point 66 1 1 2.06133E-06 0
-point 67 1 1 2.13096E-06 0
-point 68 1 1 2.20087E-06 0
-point 69 1 1 2.27106E-06 0
-point 70 1 1 2.34152E-06 0
-point 71 1 1 2.41223E-06 0
-point 72 1 1 2.48317E-06 0
-point 73 1 1 2.55434E-06 0
-point 74 1 1 2.62572E-06 0
-point 75 1 1 2.69731E-06 0
-point 76 1 1 2.76908E-06 0
-point 77 1 1 2.84104E-06 0
-point 78 1 1 2.91316E-06 0
-point 79 1 1 2.98546E-06 0
-point 80 1 1 3.05791E-06 0
-point 81 1 1 3.1305E-06 0
-point 82 1 1 3.20324E-06 0
-point 83 1 1 3.27611E-06 0
-point 84 1 1 3.34911E-06 0
-point 85 1 1 3.42223E-06 0
-point 86 1 1 3.49547E-06 0
-point 87 1 1 3.56881E-06 0
-point 88 1 1 3.64226E-06 0
-point 89 1 1 3.71581E-06 0
-point 90 1 1 3.78945E-06 0
-point 91 1 1 3.86319E-06 0
-point 92 1 1 3.93701E-06 0
-point 93 1 1 4.01091E-06 0
-point 94 1 1 4.08488E-06 0
-point 95 1 1 4.15893E-06 0
-point 96 1 1 4.23305E-06 0
-point 97 1 1 4.30724E-06 0
-point 98 1 1 4.38149E-06 0
-point 99 1 1 4.4558E-06 0
+point 0 1 1 1.18539E-11 0
+point 1 1 1 1.60336E-11 0
+point 2 1 1 2.18713E-11 0
+point 3 1 1 2.98343E-11 0
+point 4 1 1 4.06957E-11 0
+point 5 1 1 5.55099E-11 0
+point 6 1 1 7.57146E-11 0
+point 7 1 1 1.03269E-10 0
+point 8 1 1 1.40842E-10 0
+point 9 1 1 1.92071E-10 0
+point 10 1 1 2.61905E-10 0
+point 11 1 1 3.57076E-10 0
+point 12 1 1 4.8673E-10 0
+point 13 1 1 6.6328E-10 0
+point 14 1 1 9.03529E-10 0
+point 15 1 1 1.23018E-09 0
+point 16 1 1 1.67376E-09 0
+point 17 1 1 2.27521E-09 0
+point 18 1 1 3.08895E-09 0
+point 19 1 1 4.18682E-09 0
+point 20 1 1 5.66257E-09 0
+point 21 1 1 7.63673E-09 0
+point 22 1 1 1.02614E-08 0
+point 23 1 1 1.37239E-08 0
+point 24 1 1 1.82485E-08 0
+point 25 1 1 2.40938E-08 0
+point 26 1 1 3.15452E-08 0
+point 27 1 1 4.09028E-08 0
+point 28 1 1 5.2463E-08 0
+point 29 1 1 6.64988E-08 0
+point 30 1 1 8.32407E-08 0
+point 31 1 1 1.02861E-07 0
+point 32 1 1 1.25465E-07 0
+point 33 1 1 1.51091E-07 0
+point 34 1 1 1.79714E-07 0
+point 35 1 1 2.11259E-07 0
+point 36 1 1 2.45611E-07 0
+point 37 1 1 2.82629E-07 0
+point 38 1 1 3.22157E-07 0
+point 39 1 1 3.64034E-07 0
+point 40 1 1 4.081E-07 0
+point 41 1 1 4.54197E-07 0
+point 42 1 1 5.02179E-07 0
+point 43 1 1 5.51905E-07 0
+point 44 1 1 6.03246E-07 0
+point 45 1 1 6.56083E-07 0
+point 46 1 1 7.10305E-07 0
+point 47 1 1 7.65812E-07 0
+point 48 1 1 8.2251E-07 0
+point 49 1 1 8.80315E-07 0
+point 50 1 1 9.39149E-07 0
+point 51 1 1 9.98941E-07 0
+point 52 1 1 1.05962E-06 0
+point 53 1 1 1.12114E-06 0
+point 54 1 1 1.18343E-06 0
+point 55 1 1 1.24645E-06 0
+point 56 1 1 1.31015E-06 0
+point 57 1 1 1.37448E-06 0
+point 58 1 1 1.43941E-06 0
+point 59 1 1 1.50491E-06 0
+point 60 1 1 1.57093E-06 0
+point 61 1 1 1.63744E-06 0
+point 62 1 1 1.70442E-06 0
+point 63 1 1 1.77184E-06 0
+point 64 1 1 1.83967E-06 0
+point 65 1 1 1.90789E-06 0
+point 66 1 1 1.97649E-06 0
+point 67 1 1 2.04543E-06 0
+point 68 1 1 2.1147E-06 0
+point 69 1 1 2.18428E-06 0
+point 70 1 1 2.25417E-06 0
+point 71 1 1 2.32433E-06 0
+point 72 1 1 2.39475E-06 0
+point 73 1 1 2.46543E-06 0
+point 74 1 1 2.53635E-06 0
+point 75 1 1 2.6075E-06 0
+point 76 1 1 2.67886E-06 0
+point 77 1 1 2.75043E-06 0
+point 78 1 1 2.8222E-06 0
+point 79 1 1 2.89415E-06 0
+point 80 1 1 2.96628E-06 0
+point 81 1 1 3.03858E-06 0
+point 82 1 1 3.11104E-06 0
+point 83 1 1 3.18365E-06 0
+point 84 1 1 3.25641E-06 0
+point 85 1 1 3.32931E-06 0
+point 86 1 1 3.40234E-06 0
+point 87 1 1 3.47549E-06 0
+point 88 1 1 3.54877E-06 0
+point 89 1 1 3.62217E-06 0
+point 90 1 1 3.69567E-06 0
+point 91 1 1 3.76928E-06 0
+point 92 1 1 3.84299E-06 0
+point 93 1 1 3.9168E-06 0
+point 94 1 1 3.9907E-06 0
+point 95 1 1 4.06468E-06 0
+point 96 1 1 4.13875E-06 0
+point 97 1 1 4.2129E-06 0
+point 98 1 1 4.28712E-06 0
+point 99 1 1 4.36141E-06 0
 }
 }
 list XFORM "extract"
@@ -1068,8 +1072,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -1338,7 +1342,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "1158,331,11800,9904,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1544,-7870"
+View draw_ds 0 "B,1544,-7870"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -1376,7 +1380,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "927,98,19840,21207"
-View draw_ds 1 "B,700,-4056"
+View draw_ds 0 "B,700,-4056"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -1412,7 +1416,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 View plot_window 0 "0,61,11997,8998"
 TABLE "Plot Options" "690.400"
 {
@@ -4117,8 +4121,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p86" "690.400"
 {
-View in_out 1 "2.413028319064 9966 7140"
-View plot 1 "1.1871754801633 2639 3926"
+View in_out 0 "2.413028319064 9966 7140"
+View plot 0 "1.1871754801633 2639 3926"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -4138,7 +4142,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -4161,7 +4165,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -4185,7 +4189,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -4213,12 +4217,12 @@ list XFORM "extract"
 list XFORM "optimize"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -4242,7 +4246,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -4361,115 +4365,115 @@ point 97 1 1 2.045E-05 0
 point 98 1 1 2.101E-05 0
 point 99 1 1 2.158E-05 0
 type SIMU
-point 0 1 1 1.59771E-11 0
-point 1 1 1 1.96179E-11 0
-point 2 1 1 2.69942E-11 0
-point 3 1 1 3.71435E-11 0
-point 4 1 1 5.11079E-11 0
-point 5 1 1 7.03207E-11 0
-point 6 1 1 9.67533E-11 0
-point 7 1 1 1.33116E-10 0
-point 8 1 1 1.83133E-10 0
-point 9 1 1 2.51925E-10 0
-point 10 1 1 3.46519E-10 0
-point 11 1 1 4.76559E-10 0
-point 12 1 1 6.55265E-10 0
-point 13 1 1 9.00728E-10 0
-point 14 1 1 1.23766E-09 0
-point 15 1 1 1.69973E-09 0
-point 16 1 1 2.33263E-09 0
-point 17 1 1 3.19807E-09 0
-point 18 1 1 4.37886E-09 0
-point 19 1 1 5.98513E-09 0
-point 20 1 1 8.16169E-09 0
-point 21 1 1 1.10962E-08 0
-point 22 1 1 1.50274E-08 0
-point 23 1 1 2.0252E-08 0
-point 24 1 1 2.71296E-08 0
-point 25 1 1 3.60821E-08 0
-point 26 1 1 4.7589E-08 0
-point 27 1 1 6.2176E-08 0
-point 28 1 1 8.04005E-08 0
-point 29 1 1 1.02834E-07 0
-point 30 1 1 1.30047E-07 0
-point 31 1 1 1.62592E-07 0
-point 32 1 1 2.00996E-07 0
-point 33 1 1 2.4575E-07 0
-point 34 1 1 2.97308E-07 0
-point 35 1 1 3.56082E-07 0
-point 36 1 1 4.22444E-07 0
-point 37 1 1 4.96725E-07 0
-point 38 1 1 5.79218E-07 0
-point 39 1 1 6.70177E-07 0
-point 40 1 1 7.69825E-07 0
-point 41 1 1 8.78348E-07 0
-point 42 1 1 9.95903E-07 0
-point 43 1 1 1.12262E-06 0
-point 44 1 1 1.25859E-06 0
-point 45 1 1 1.40389E-06 0
-point 46 1 1 1.55858E-06 0
-point 47 1 1 1.72268E-06 0
-point 48 1 1 1.89619E-06 0
-point 49 1 1 2.07911E-06 0
-point 50 1 1 2.27141E-06 0
-point 51 1 1 2.47305E-06 0
-point 52 1 1 2.68397E-06 0
-point 53 1 1 2.90409E-06 0
-point 54 1 1 3.13334E-06 0
-point 55 1 1 3.37164E-06 0
-point 56 1 1 3.61887E-06 0
-point 57 1 1 3.87495E-06 0
-point 58 1 1 4.13976E-06 0
-point 59 1 1 4.41318E-06 0
-point 60 1 1 4.6951E-06 0
-point 61 1 1 4.98538E-06 0
-point 62 1 1 5.28392E-06 0
-point 63 1 1 5.59058E-06 0
-point 64 1 1 5.90523E-06 0
-point 65 1 1 6.22774E-06 0
-point 66 1 1 6.55798E-06 0
-point 67 1 1 6.89582E-06 0
-point 68 1 1 7.24112E-06 0
-point 69 1 1 7.59376E-06 0
-point 70 1 1 7.9536E-06 0
-point 71 1 1 8.3205E-06 0
-point 72 1 1 8.69435E-06 0
-point 73 1 1 9.07501E-06 0
-point 74 1 1 9.46235E-06 0
-point 75 1 1 9.85623E-06 0
-point 76 1 1 1.02566E-05 0
-point 77 1 1 1.06632E-05 0
-point 78 1 1 1.1076E-05 0
-point 79 1 1 1.14948E-05 0
-point 80 1 1 1.19196E-05 0
-point 81 1 1 1.23502E-05 0
-point 82 1 1 1.27865E-05 0
-point 83 1 1 1.32284E-05 0
-point 84 1 1 1.36757E-05 0
-point 85 1 1 1.41284E-05 0
-point 86 1 1 1.45864E-05 0
-point 87 1 1 1.50495E-05 0
-point 88 1 1 1.55176E-05 0
-point 89 1 1 1.59907E-05 0
-point 90 1 1 1.64686E-05 0
-point 91 1 1 1.69512E-05 0
-point 92 1 1 1.74384E-05 0
-point 93 1 1 1.79302E-05 0
-point 94 1 1 1.84264E-05 0
-point 95 1 1 1.8927E-05 0
-point 96 1 1 1.94318E-05 0
-point 97 1 1 1.99408E-05 0
-point 98 1 1 2.04539E-05 0
-point 99 1 1 2.09709E-05 0
+point 0 1 1 1.61996E-11 0
+point 1 1 1 1.97519E-11 0
+point 2 1 1 2.69436E-11 0
+point 3 1 1 3.67536E-11 0
+point 4 1 1 5.01344E-11 0
+point 5 1 1 6.83855E-11 0
+point 6 1 1 9.32783E-11 0
+point 7 1 1 1.27227E-10 0
+point 8 1 1 1.73524E-10 0
+point 9 1 1 2.3665E-10 0
+point 10 1 1 3.22712E-10 0
+point 11 1 1 4.40015E-10 0
+point 12 1 1 5.99852E-10 0
+point 13 1 1 8.17559E-10 0
+point 14 1 1 1.11392E-09 0
+point 15 1 1 1.51706E-09 0
+point 16 1 1 2.06489E-09 0
+point 17 1 1 2.80833E-09 0
+point 18 1 1 3.81543E-09 0
+point 19 1 1 5.17642E-09 0
+point 20 1 1 7.00989E-09 0
+point 21 1 1 9.46983E-09 0
+point 22 1 1 1.27532E-08 0
+point 23 1 1 1.71072E-08 0
+point 24 1 1 2.2835E-08 0
+point 25 1 1 3.02992E-08 0
+point 26 1 1 3.99201E-08 0
+point 27 1 1 5.21697E-08 0
+point 28 1 1 6.75614E-08 0
+point 29 1 1 8.66351E-08 0
+point 30 1 1 1.09942E-07 0
+point 31 1 1 1.3803E-07 0
+point 32 1 1 1.71431E-07 0
+point 33 1 1 2.10648E-07 0
+point 34 1 1 2.56156E-07 0
+point 35 1 1 3.08389E-07 0
+point 36 1 1 3.67746E-07 0
+point 37 1 1 4.34585E-07 0
+point 38 1 1 5.09225E-07 0
+point 39 1 1 5.91949E-07 0
+point 40 1 1 6.83005E-07 0
+point 41 1 1 7.82606E-07 0
+point 42 1 1 8.90932E-07 0
+point 43 1 1 1.00813E-06 0
+point 44 1 1 1.13433E-06 0
+point 45 1 1 1.26963E-06 0
+point 46 1 1 1.41408E-06 0
+point 47 1 1 1.56774E-06 0
+point 48 1 1 1.73063E-06 0
+point 49 1 1 1.90276E-06 0
+point 50 1 1 2.08412E-06 0
+point 51 1 1 2.27467E-06 0
+point 52 1 1 2.47436E-06 0
+point 53 1 1 2.68315E-06 0
+point 54 1 1 2.90096E-06 0
+point 55 1 1 3.12771E-06 0
+point 56 1 1 3.36331E-06 0
+point 57 1 1 3.60767E-06 0
+point 58 1 1 3.86069E-06 0
+point 59 1 1 4.12225E-06 0
+point 60 1 1 4.39224E-06 0
+point 61 1 1 4.67054E-06 0
+point 62 1 1 4.95704E-06 0
+point 63 1 1 5.25161E-06 0
+point 64 1 1 5.55413E-06 0
+point 65 1 1 5.86446E-06 0
+point 66 1 1 6.18249E-06 0
+point 67 1 1 6.50808E-06 0
+point 68 1 1 6.8411E-06 0
+point 69 1 1 7.18142E-06 0
+point 70 1 1 7.52891E-06 0
+point 71 1 1 7.88345E-06 0
+point 72 1 1 8.2449E-06 0
+point 73 1 1 8.61314E-06 0
+point 74 1 1 8.98803E-06 0
+point 75 1 1 9.36946E-06 0
+point 76 1 1 9.75729E-06 0
+point 77 1 1 1.01514E-05 0
+point 78 1 1 1.05517E-05 0
+point 79 1 1 1.0958E-05 0
+point 80 1 1 1.13702E-05 0
+point 81 1 1 1.17882E-05 0
+point 82 1 1 1.2212E-05 0
+point 83 1 1 1.26412E-05 0
+point 84 1 1 1.3076E-05 0
+point 85 1 1 1.3516E-05 0
+point 86 1 1 1.39614E-05 0
+point 87 1 1 1.44118E-05 0
+point 88 1 1 1.48673E-05 0
+point 89 1 1 1.53276E-05 0
+point 90 1 1 1.57928E-05 0
+point 91 1 1 1.62627E-05 0
+point 92 1 1 1.67373E-05 0
+point 93 1 1 1.72163E-05 0
+point 94 1 1 1.76998E-05 0
+point 95 1 1 1.81876E-05 0
+point 96 1 1 1.86797E-05 0
+point 97 1 1 1.91759E-05 0
+point 98 1 1 1.96761E-05 0
+point 99 1 1 2.01804E-05 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -4738,7 +4742,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "1158,331,11800,9904,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,844,-3814"
+View draw_ds 0 "B,844,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -4776,7 +4780,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11920,8921"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -4812,7 +4816,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,-368"
+View draw_ds 0 "B,0,-368"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -4898,7 +4902,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 500.0n"
@@ -7590,106 +7594,106 @@ point 97 1 1 8.535E-06 0
 point 98 1 1 8.672E-06 0
 point 99 1 1 8.809E-06 0
 type SIMU
-point 0 1 1 2.32759E-11 0
-point 1 1 1 3.18901E-11 0
-point 2 1 1 4.38805E-11 0
-point 3 1 1 6.03783E-11 0
-point 4 1 1 8.30772E-11 0
-point 5 1 1 1.14307E-10 0
-point 6 1 1 1.5727E-10 0
-point 7 1 1 2.16371E-10 0
-point 8 1 1 2.97661E-10 0
-point 9 1 1 4.09453E-10 0
-point 10 1 1 5.63159E-10 0
-point 11 1 1 7.74428E-10 0
-point 12 1 1 1.0647E-09 0
-point 13 1 1 1.46328E-09 0
-point 14 1 1 2.01018E-09 0
-point 15 1 1 2.75977E-09 0
-point 16 1 1 3.7857E-09 0
-point 17 1 1 5.18712E-09 0
-point 18 1 1 7.09648E-09 0
-point 19 1 1 9.68884E-09 0
-point 20 1 1 1.31925E-08 0
-point 21 1 1 1.78997E-08 0
-point 22 1 1 2.41764E-08 0
-point 23 1 1 3.24675E-08 0
-point 24 1 1 4.32946E-08 0
-point 25 1 1 5.72443E-08 0
-point 26 1 1 7.49426E-08 0
-point 27 1 1 9.7019E-08 0
-point 28 1 1 1.24062E-07 0
-point 29 1 1 1.56578E-07 0
-point 30 1 1 1.94949E-07 0
-point 31 1 1 2.39417E-07 0
-point 32 1 1 2.90074E-07 0
-point 33 1 1 3.46874E-07 0
-point 34 1 1 4.09653E-07 0
-point 35 1 1 4.78162E-07 0
-point 36 1 1 5.52093E-07 0
-point 37 1 1 6.31104E-07 0
-point 38 1 1 7.14844E-07 0
-point 39 1 1 8.02963E-07 0
-point 40 1 1 8.95123E-07 0
-point 41 1 1 9.91006E-07 0
-point 42 1 1 1.09032E-06 0
-point 43 1 1 1.19278E-06 0
-point 44 1 1 1.29814E-06 0
-point 45 1 1 1.40617E-06 0
-point 46 1 1 1.51666E-06 0
-point 47 1 1 1.62942E-06 0
-point 48 1 1 1.74426E-06 0
-point 49 1 1 1.86104E-06 0
-point 50 1 1 1.97961E-06 0
-point 51 1 1 2.09983E-06 0
-point 52 1 1 2.22159E-06 0
-point 53 1 1 2.34476E-06 0
-point 54 1 1 2.46925E-06 0
-point 55 1 1 2.59497E-06 0
-point 56 1 1 2.72183E-06 0
-point 57 1 1 2.84975E-06 0
-point 58 1 1 2.97866E-06 0
-point 59 1 1 3.10849E-06 0
-point 60 1 1 3.23918E-06 0
-point 61 1 1 3.37067E-06 0
-point 62 1 1 3.50291E-06 0
-point 63 1 1 3.63585E-06 0
-point 64 1 1 3.76945E-06 0
-point 65 1 1 3.90365E-06 0
-point 66 1 1 4.03843E-06 0
-point 67 1 1 4.17374E-06 0
-point 68 1 1 4.30955E-06 0
-point 69 1 1 4.44583E-06 0
-point 70 1 1 4.58255E-06 0
-point 71 1 1 4.71968E-06 0
-point 72 1 1 4.8572E-06 0
-point 73 1 1 4.99507E-06 0
-point 74 1 1 5.13328E-06 0
-point 75 1 1 5.2718E-06 0
-point 76 1 1 5.41062E-06 0
-point 77 1 1 5.54971E-06 0
-point 78 1 1 5.68906E-06 0
-point 79 1 1 5.82864E-06 0
-point 80 1 1 5.96845E-06 0
-point 81 1 1 6.10847E-06 0
-point 82 1 1 6.24867E-06 0
-point 83 1 1 6.38906E-06 0
-point 84 1 1 6.52961E-06 0
-point 85 1 1 6.67032E-06 0
-point 86 1 1 6.81116E-06 0
-point 87 1 1 6.95214E-06 0
-point 88 1 1 7.09323E-06 0
-point 89 1 1 7.23444E-06 0
-point 90 1 1 7.37574E-06 0
-point 91 1 1 7.51714E-06 0
-point 92 1 1 7.65862E-06 0
-point 93 1 1 7.80017E-06 0
-point 94 1 1 7.94178E-06 0
-point 95 1 1 8.08346E-06 0
-point 96 1 1 8.22519E-06 0
-point 97 1 1 8.36696E-06 0
-point 98 1 1 8.50876E-06 0
-point 99 1 1 8.6506E-06 0
+point 0 1 1 2.33423E-11 0
+point 1 1 1 3.17051E-11 0
+point 2 1 1 4.32489E-11 0
+point 3 1 1 5.89949E-11 0
+point 4 1 1 8.04725E-11 0
+point 5 1 1 1.09766E-10 0
+point 6 1 1 1.49719E-10 0
+point 7 1 1 2.04206E-10 0
+point 8 1 1 2.78504E-10 0
+point 9 1 1 3.79805E-10 0
+point 10 1 1 5.17894E-10 0
+point 11 1 1 7.06084E-10 0
+point 12 1 1 9.62462E-10 0
+point 13 1 1 1.31157E-09 0
+point 14 1 1 1.78663E-09 0
+point 15 1 1 2.43252E-09 0
+point 16 1 1 3.30963E-09 0
+point 17 1 1 4.49883E-09 0
+point 18 1 1 6.10776E-09 0
+point 19 1 1 8.2784E-09 0
+point 20 1 1 1.1196E-08 0
+point 21 1 1 1.50987E-08 0
+point 22 1 1 2.02869E-08 0
+point 23 1 1 2.71305E-08 0
+point 24 1 1 3.60718E-08 0
+point 25 1 1 4.76206E-08 0
+point 26 1 1 6.23394E-08 0
+point 27 1 1 8.08179E-08 0
+point 28 1 1 1.03638E-07 0
+point 29 1 1 1.31334E-07 0
+point 30 1 1 1.64354E-07 0
+point 31 1 1 2.03033E-07 0
+point 32 1 1 2.47573E-07 0
+point 33 1 1 2.98041E-07 0
+point 34 1 1 3.54385E-07 0
+point 35 1 1 4.16452E-07 0
+point 36 1 1 4.84013E-07 0
+point 37 1 1 5.56788E-07 0
+point 38 1 1 6.3447E-07 0
+point 39 1 1 7.1674E-07 0
+point 40 1 1 8.03281E-07 0
+point 41 1 1 8.93786E-07 0
+point 42 1 1 9.87962E-07 0
+point 43 1 1 1.08554E-06 0
+point 44 1 1 1.18625E-06 0
+point 45 1 1 1.28987E-06 0
+point 46 1 1 1.39618E-06 0
+point 47 1 1 1.50498E-06 0
+point 48 1 1 1.61607E-06 0
+point 49 1 1 1.72931E-06 0
+point 50 1 1 1.84453E-06 0
+point 51 1 1 1.96158E-06 0
+point 52 1 1 2.08034E-06 0
+point 53 1 1 2.2007E-06 0
+point 54 1 1 2.32253E-06 0
+point 55 1 1 2.44574E-06 0
+point 56 1 1 2.57024E-06 0
+point 57 1 1 2.69593E-06 0
+point 58 1 1 2.82275E-06 0
+point 59 1 1 2.95061E-06 0
+point 60 1 1 3.07945E-06 0
+point 61 1 1 3.20921E-06 0
+point 62 1 1 3.33983E-06 0
+point 63 1 1 3.47125E-06 0
+point 64 1 1 3.60342E-06 0
+point 65 1 1 3.7363E-06 0
+point 66 1 1 3.86984E-06 0
+point 67 1 1 4.00401E-06 0
+point 68 1 1 4.13876E-06 0
+point 69 1 1 4.27406E-06 0
+point 70 1 1 4.40988E-06 0
+point 71 1 1 4.54618E-06 0
+point 72 1 1 4.68293E-06 0
+point 73 1 1 4.82012E-06 0
+point 74 1 1 4.95771E-06 0
+point 75 1 1 5.09567E-06 0
+point 76 1 1 5.234E-06 0
+point 77 1 1 5.37265E-06 0
+point 78 1 1 5.51163E-06 0
+point 79 1 1 5.65089E-06 0
+point 80 1 1 5.79044E-06 0
+point 81 1 1 5.93024E-06 0
+point 82 1 1 6.07029E-06 0
+point 83 1 1 6.21057E-06 0
+point 84 1 1 6.35106E-06 0
+point 85 1 1 6.49175E-06 0
+point 86 1 1 6.63263E-06 0
+point 87 1 1 6.77369E-06 0
+point 88 1 1 6.91491E-06 0
+point 89 1 1 7.05628E-06 0
+point 90 1 1 7.1978E-06 0
+point 91 1 1 7.33944E-06 0
+point 92 1 1 7.48121E-06 0
+point 93 1 1 7.62309E-06 0
+point 94 1 1 7.76508E-06 0
+point 95 1 1 7.90716E-06 0
+point 96 1 1 8.04933E-06 0
+point 97 1 1 8.19158E-06 0
+point 98 1 1 8.33391E-06 0
+point 99 1 1 8.4763E-06 0
 }
 }
 list XFORM "extract"
@@ -7697,8 +7701,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -9092,115 +9096,115 @@ point 97 1 1 3.341E-05 0
 point 98 1 1 3.426E-05 0
 point 99 1 1 3.512E-05 0
 type SIMU
-point 0 1 1 2.98505E-11 0
-point 1 1 1 3.87078E-11 0
-point 2 1 1 5.32618E-11 0
-point 3 1 1 7.32873E-11 0
-point 4 1 1 1.0084E-10 0
-point 5 1 1 1.38749E-10 0
-point 6 1 1 1.90902E-10 0
-point 7 1 1 2.62648E-10 0
-point 8 1 1 3.61337E-10 0
-point 9 1 1 4.97068E-10 0
-point 10 1 1 6.83709E-10 0
-point 11 1 1 9.40287E-10 0
-point 12 1 1 1.29288E-09 0
-point 13 1 1 1.7772E-09 0
-point 14 1 1 2.44198E-09 0
-point 15 1 1 3.35365E-09 0
-point 16 1 1 4.60236E-09 0
-point 17 1 1 6.30985E-09 0
-point 18 1 1 8.63946E-09 0
-point 19 1 1 1.18084E-08 0
-point 20 1 1 1.61023E-08 0
-point 21 1 1 2.18912E-08 0
-point 22 1 1 2.96455E-08 0
-point 23 1 1 3.99503E-08 0
-point 24 1 1 5.35133E-08 0
-point 25 1 1 7.11653E-08 0
-point 26 1 1 9.38484E-08 0
-point 27 1 1 1.22595E-07 0
-point 28 1 1 1.58496E-07 0
-point 29 1 1 2.02669E-07 0
-point 30 1 1 2.56221E-07 0
-point 31 1 1 3.20222E-07 0
-point 32 1 1 3.95682E-07 0
-point 33 1 1 4.83534E-07 0
-point 34 1 1 5.84628E-07 0
-point 35 1 1 6.99721E-07 0
-point 36 1 1 8.29478E-07 0
-point 37 1 1 9.74476E-07 0
-point 38 1 1 1.1352E-06 0
-point 39 1 1 1.31205E-06 0
-point 40 1 1 1.50535E-06 0
-point 41 1 1 1.71534E-06 0
-point 42 1 1 1.94219E-06 0
-point 43 1 1 2.18601E-06 0
-point 44 1 1 2.44683E-06 0
-point 45 1 1 2.72464E-06 0
-point 46 1 1 3.01938E-06 0
-point 47 1 1 3.33094E-06 0
-point 48 1 1 3.65917E-06 0
-point 49 1 1 4.0039E-06 0
-point 50 1 1 4.36493E-06 0
-point 51 1 1 4.74202E-06 0
-point 52 1 1 5.13493E-06 0
-point 53 1 1 5.5434E-06 0
-point 54 1 1 5.96716E-06 0
-point 55 1 1 6.40593E-06 0
-point 56 1 1 6.85941E-06 0
-point 57 1 1 7.32733E-06 0
-point 58 1 1 7.80938E-06 0
-point 59 1 1 8.30527E-06 0
-point 60 1 1 8.8147E-06 0
-point 61 1 1 9.33737E-06 0
-point 62 1 1 9.873E-06 0
-point 63 1 1 1.04213E-05 0
-point 64 1 1 1.09819E-05 0
-point 65 1 1 1.15546E-05 0
-point 66 1 1 1.21392E-05 0
-point 67 1 1 1.27352E-05 0
-point 68 1 1 1.33425E-05 0
-point 69 1 1 1.39607E-05 0
-point 70 1 1 1.45896E-05 0
-point 71 1 1 1.5229E-05 0
-point 72 1 1 1.58785E-05 0
-point 73 1 1 1.65379E-05 0
-point 74 1 1 1.72071E-05 0
-point 75 1 1 1.78856E-05 0
-point 76 1 1 1.85734E-05 0
-point 77 1 1 1.92701E-05 0
-point 78 1 1 1.99755E-05 0
-point 79 1 1 2.06895E-05 0
-point 80 1 1 2.14118E-05 0
-point 81 1 1 2.21421E-05 0
-point 82 1 1 2.28803E-05 0
-point 83 1 1 2.36262E-05 0
-point 84 1 1 2.43795E-05 0
-point 85 1 1 2.51402E-05 0
-point 86 1 1 2.59079E-05 0
-point 87 1 1 2.66826E-05 0
-point 88 1 1 2.74639E-05 0
-point 89 1 1 2.82519E-05 0
-point 90 1 1 2.90463E-05 0
-point 91 1 1 2.98468E-05 0
-point 92 1 1 3.06535E-05 0
-point 93 1 1 3.1466E-05 0
-point 94 1 1 3.22844E-05 0
-point 95 1 1 3.31083E-05 0
-point 96 1 1 3.39377E-05 0
-point 97 1 1 3.47725E-05 0
-point 98 1 1 3.56124E-05 0
-point 99 1 1 3.64574E-05 0
+point 0 1 1 3.0328E-11 0
+point 1 1 1 3.90246E-11 0
+point 2 1 1 5.32336E-11 0
+point 3 1 1 7.26154E-11 0
+point 4 1 1 9.90525E-11 0
+point 5 1 1 1.35112E-10 0
+point 6 1 1 1.84293E-10 0
+point 7 1 1 2.51368E-10 0
+point 8 1 1 3.42837E-10 0
+point 9 1 1 4.67558E-10 0
+point 10 1 1 6.37592E-10 0
+point 11 1 1 8.6935E-10 0
+point 12 1 1 1.18514E-09 0
+point 13 1 1 1.61527E-09 0
+point 14 1 1 2.20079E-09 0
+point 15 1 1 2.99726E-09 0
+point 16 1 1 4.07958E-09 0
+point 17 1 1 5.54835E-09 0
+point 18 1 1 7.53795E-09 0
+point 19 1 1 1.02266E-08 0
+point 20 1 1 1.38485E-08 0
+point 21 1 1 1.87077E-08 0
+point 22 1 1 2.5193E-08 0
+point 23 1 1 3.37922E-08 0
+point 24 1 1 4.51034E-08 0
+point 25 1 1 5.98408E-08 0
+point 26 1 1 7.88323E-08 0
+point 27 1 1 1.03006E-07 0
+point 28 1 1 1.33369E-07 0
+point 29 1 1 1.70979E-07 0
+point 30 1 1 2.16911E-07 0
+point 31 1 1 2.72225E-07 0
+point 32 1 1 3.37947E-07 0
+point 33 1 1 4.15039E-07 0
+point 34 1 1 5.04393E-07 0
+point 35 1 1 6.06814E-07 0
+point 36 1 1 7.23024E-07 0
+point 37 1 1 8.53651E-07 0
+point 38 1 1 9.99239E-07 0
+point 39 1 1 1.16024E-06 0
+point 40 1 1 1.33703E-06 0
+point 41 1 1 1.52989E-06 0
+point 42 1 1 1.73904E-06 0
+point 43 1 1 1.96462E-06 0
+point 44 1 1 2.20672E-06 0
+point 45 1 1 2.46535E-06 0
+point 46 1 1 2.74047E-06 0
+point 47 1 1 3.03202E-06 0
+point 48 1 1 3.33986E-06 0
+point 49 1 1 3.66384E-06 0
+point 50 1 1 4.00377E-06 0
+point 51 1 1 4.35945E-06 0
+point 52 1 1 4.73063E-06 0
+point 53 1 1 5.11709E-06 0
+point 54 1 1 5.51854E-06 0
+point 55 1 1 5.93473E-06 0
+point 56 1 1 6.36537E-06 0
+point 57 1 1 6.81019E-06 0
+point 58 1 1 7.26889E-06 0
+point 59 1 1 7.74119E-06 0
+point 60 1 1 8.2268E-06 0
+point 61 1 1 8.72542E-06 0
+point 62 1 1 9.23676E-06 0
+point 63 1 1 9.76055E-06 0
+point 64 1 1 1.02965E-05 0
+point 65 1 1 1.08443E-05 0
+point 66 1 1 1.14037E-05 0
+point 67 1 1 1.19744E-05 0
+point 68 1 1 1.25561E-05 0
+point 69 1 1 1.31486E-05 0
+point 70 1 1 1.37517E-05 0
+point 71 1 1 1.43649E-05 0
+point 72 1 1 1.49882E-05 0
+point 73 1 1 1.56212E-05 0
+point 74 1 1 1.62637E-05 0
+point 75 1 1 1.69155E-05 0
+point 76 1 1 1.75763E-05 0
+point 77 1 1 1.82458E-05 0
+point 78 1 1 1.8924E-05 0
+point 79 1 1 1.96105E-05 0
+point 80 1 1 2.03052E-05 0
+point 81 1 1 2.10077E-05 0
+point 82 1 1 2.1718E-05 0
+point 83 1 1 2.24358E-05 0
+point 84 1 1 2.3161E-05 0
+point 85 1 1 2.38933E-05 0
+point 86 1 1 2.46326E-05 0
+point 87 1 1 2.53786E-05 0
+point 88 1 1 2.61312E-05 0
+point 89 1 1 2.68903E-05 0
+point 90 1 1 2.76557E-05 0
+point 91 1 1 2.84271E-05 0
+point 92 1 1 2.92045E-05 0
+point 93 1 1 2.99877E-05 0
+point 94 1 1 3.07766E-05 0
+point 95 1 1 3.15709E-05 0
+point 96 1 1 3.23706E-05 0
+point 97 1 1 3.31756E-05 0
+point 98 1 1 3.39856E-05 0
+point 99 1 1 3.48006E-05 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -9629,7 +9633,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 250.0n"
@@ -12356,106 +12360,106 @@ point 97 1 1 1.551E-05 0
 point 98 1 1 1.575E-05 0
 point 99 1 1 1.599E-05 0
 type SIMU
-point 0 1 1 4.55203E-11 0
-point 1 1 1 6.24985E-11 0
-point 2 1 1 8.59972E-11 0
-point 3 1 1 1.1833E-10 0
-point 4 1 1 1.62815E-10 0
-point 5 1 1 2.24019E-10 0
-point 6 1 1 3.08218E-10 0
-point 7 1 1 4.24043E-10 0
-point 8 1 1 5.83354E-10 0
-point 9 1 1 8.02443E-10 0
-point 10 1 1 1.10367E-09 0
-point 11 1 1 1.51771E-09 0
-point 12 1 1 2.08657E-09 0
-point 13 1 1 2.86769E-09 0
-point 14 1 1 3.93943E-09 0
-point 15 1 1 5.40837E-09 0
-point 16 1 1 7.41879E-09 0
-point 17 1 1 1.01649E-08 0
-point 18 1 1 1.39061E-08 0
-point 19 1 1 1.89853E-08 0
-point 20 1 1 2.58493E-08 0
-point 21 1 1 3.507E-08 0
-point 22 1 1 4.73631E-08 0
-point 23 1 1 6.35977E-08 0
-point 24 1 1 8.47923E-08 0
-point 25 1 1 1.1209E-07 0
-point 26 1 1 1.46709E-07 0
-point 27 1 1 1.89869E-07 0
-point 28 1 1 2.42708E-07 0
-point 29 1 1 3.06197E-07 0
-point 30 1 1 3.81065E-07 0
-point 31 1 1 4.67761E-07 0
-point 32 1 1 5.66443E-07 0
-point 33 1 1 6.77E-07 0
-point 34 1 1 7.99098E-07 0
-point 35 1 1 9.32232E-07 0
-point 36 1 1 1.07579E-06 0
-point 37 1 1 1.2291E-06 0
-point 38 1 1 1.39146E-06 0
-point 39 1 1 1.56218E-06 0
-point 40 1 1 1.7406E-06 0
-point 41 1 1 1.92609E-06 0
-point 42 1 1 2.11807E-06 0
-point 43 1 1 2.316E-06 0
-point 44 1 1 2.51937E-06 0
-point 45 1 1 2.72774E-06 0
-point 46 1 1 2.94069E-06 0
-point 47 1 1 3.15784E-06 0
-point 48 1 1 3.37884E-06 0
-point 49 1 1 3.60337E-06 0
-point 50 1 1 3.83116E-06 0
-point 51 1 1 4.06193E-06 0
-point 52 1 1 4.29543E-06 0
-point 53 1 1 4.53147E-06 0
-point 54 1 1 4.76982E-06 0
-point 55 1 1 5.0103E-06 0
-point 56 1 1 5.25275E-06 0
-point 57 1 1 5.497E-06 0
-point 58 1 1 5.74291E-06 0
-point 59 1 1 5.99035E-06 0
-point 60 1 1 6.2392E-06 0
-point 61 1 1 6.48933E-06 0
-point 62 1 1 6.74065E-06 0
-point 63 1 1 6.99305E-06 0
-point 64 1 1 7.24645E-06 0
-point 65 1 1 7.50076E-06 0
-point 66 1 1 7.7559E-06 0
-point 67 1 1 8.0118E-06 0
-point 68 1 1 8.26839E-06 0
-point 69 1 1 8.5256E-06 0
-point 70 1 1 8.78339E-06 0
-point 71 1 1 9.04168E-06 0
-point 72 1 1 9.30044E-06 0
-point 73 1 1 9.55961E-06 0
-point 74 1 1 9.81914E-06 0
-point 75 1 1 1.0079E-05 0
-point 76 1 1 1.03391E-05 0
-point 77 1 1 1.05995E-05 0
-point 78 1 1 1.08601E-05 0
-point 79 1 1 1.11209E-05 0
-point 80 1 1 1.13818E-05 0
-point 81 1 1 1.16428E-05 0
-point 82 1 1 1.19039E-05 0
-point 83 1 1 1.2165E-05 0
-point 84 1 1 1.24262E-05 0
-point 85 1 1 1.26874E-05 0
-point 86 1 1 1.29486E-05 0
-point 87 1 1 1.32098E-05 0
-point 88 1 1 1.34708E-05 0
-point 89 1 1 1.37319E-05 0
-point 90 1 1 1.39928E-05 0
-point 91 1 1 1.42536E-05 0
-point 92 1 1 1.45143E-05 0
-point 93 1 1 1.47749E-05 0
-point 94 1 1 1.50352E-05 0
-point 95 1 1 1.52955E-05 0
-point 96 1 1 1.55555E-05 0
-point 97 1 1 1.58153E-05 0
-point 98 1 1 1.6075E-05 0
-point 99 1 1 1.63344E-05 0
+point 0 1 1 4.55344E-11 0
+point 1 1 1 6.19775E-11 0
+point 2 1 1 8.45433E-11 0
+point 3 1 1 1.15324E-10 0
+point 4 1 1 1.57308E-10 0
+point 5 1 1 2.14572E-10 0
+point 6 1 1 2.92672E-10 0
+point 7 1 1 3.99182E-10 0
+point 8 1 1 5.4442E-10 0
+point 9 1 1 7.4244E-10 0
+point 10 1 1 1.01237E-09 0
+point 11 1 1 1.38024E-09 0
+point 12 1 1 1.88139E-09 0
+point 13 1 1 2.56379E-09 0
+point 14 1 1 3.49238E-09 0
+point 15 1 1 4.75485E-09 0
+point 16 1 1 6.46921E-09 0
+point 17 1 1 8.79347E-09 0
+point 18 1 1 1.19379E-08 0
+point 19 1 1 1.61797E-08 0
+point 20 1 1 2.18805E-08 0
+point 21 1 1 2.9505E-08 0
+point 22 1 1 3.96388E-08 0
+point 23 1 1 5.30026E-08 0
+point 24 1 1 7.04566E-08 0
+point 25 1 1 9.29908E-08 0
+point 26 1 1 1.21695E-07 0
+point 27 1 1 1.57706E-07 0
+point 28 1 1 2.02144E-07 0
+point 29 1 1 2.56027E-07 0
+point 30 1 1 3.20204E-07 0
+point 31 1 1 3.95296E-07 0
+point 32 1 1 4.81668E-07 0
+point 33 1 1 5.79424E-07 0
+point 34 1 1 6.88439E-07 0
+point 35 1 1 8.08397E-07 0
+point 36 1 1 9.38841E-07 0
+point 37 1 1 1.07922E-06 0
+point 38 1 1 1.22894E-06 0
+point 39 1 1 1.38737E-06 0
+point 40 1 1 1.5539E-06 0
+point 41 1 1 1.72793E-06 0
+point 42 1 1 1.90891E-06 0
+point 43 1 1 2.09629E-06 0
+point 44 1 1 2.28958E-06 0
+point 45 1 1 2.48833E-06 0
+point 46 1 1 2.69211E-06 0
+point 47 1 1 2.90053E-06 0
+point 48 1 1 3.11324E-06 0
+point 49 1 1 3.3299E-06 0
+point 50 1 1 3.55021E-06 0
+point 51 1 1 3.7739E-06 0
+point 52 1 1 4.0007E-06 0
+point 53 1 1 4.2304E-06 0
+point 54 1 1 4.46276E-06 0
+point 55 1 1 4.69759E-06 0
+point 56 1 1 4.93471E-06 0
+point 57 1 1 5.17394E-06 0
+point 58 1 1 5.41514E-06 0
+point 59 1 1 5.65815E-06 0
+point 60 1 1 5.90284E-06 0
+point 61 1 1 6.14909E-06 0
+point 62 1 1 6.39679E-06 0
+point 63 1 1 6.64581E-06 0
+point 64 1 1 6.89607E-06 0
+point 65 1 1 7.14748E-06 0
+point 66 1 1 7.39993E-06 0
+point 67 1 1 7.65337E-06 0
+point 68 1 1 7.9077E-06 0
+point 69 1 1 8.16286E-06 0
+point 70 1 1 8.41879E-06 0
+point 71 1 1 8.67541E-06 0
+point 72 1 1 8.93268E-06 0
+point 73 1 1 9.19054E-06 0
+point 74 1 1 9.44894E-06 0
+point 75 1 1 9.70783E-06 0
+point 76 1 1 9.96716E-06 0
+point 77 1 1 1.02269E-05 0
+point 78 1 1 1.0487E-05 0
+point 79 1 1 1.07474E-05 0
+point 80 1 1 1.10081E-05 0
+point 81 1 1 1.12691E-05 0
+point 82 1 1 1.15303E-05 0
+point 83 1 1 1.17917E-05 0
+point 84 1 1 1.20533E-05 0
+point 85 1 1 1.2315E-05 0
+point 86 1 1 1.25768E-05 0
+point 87 1 1 1.28387E-05 0
+point 88 1 1 1.31007E-05 0
+point 89 1 1 1.33627E-05 0
+point 90 1 1 1.36247E-05 0
+point 91 1 1 1.38868E-05 0
+point 92 1 1 1.41488E-05 0
+point 93 1 1 1.44108E-05 0
+point 94 1 1 1.46728E-05 0
+point 95 1 1 1.49347E-05 0
+point 96 1 1 1.51965E-05 0
+point 97 1 1 1.54583E-05 0
+point 98 1 1 1.57199E-05 0
+point 99 1 1 1.59814E-05 0
 }
 }
 list XFORM "extract"
@@ -12463,8 +12467,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -13858,115 +13862,115 @@ point 97 1 1 4.738E-05 0
 point 98 1 1 4.851E-05 0
 point 99 1 1 4.966E-05 0
 type SIMU
-point 0 1 1 5.63887E-11 0
-point 1 1 1 7.52246E-11 0
-point 2 1 1 1.03509E-10 0
-point 3 1 1 1.42426E-10 0
-point 4 1 1 1.95972E-10 0
-point 5 1 1 2.69643E-10 0
-point 6 1 1 3.70998E-10 0
-point 7 1 1 5.10428E-10 0
-point 8 1 1 7.02218E-10 0
-point 9 1 1 9.65993E-10 0
-point 10 1 1 1.3287E-09 0
-point 11 1 1 1.82732E-09 0
-point 12 1 1 2.51254E-09 0
-point 13 1 1 3.4537E-09 0
-point 14 1 1 4.74555E-09 0
-point 15 1 1 6.51712E-09 0
-point 16 1 1 8.94355E-09 0
-point 17 1 1 1.22613E-08 0
-point 18 1 1 1.67875E-08 0
-point 19 1 1 2.2944E-08 0
-point 20 1 1 3.1285E-08 0
-point 21 1 1 4.2528E-08 0
-point 22 1 1 5.75849E-08 0
-point 23 1 1 7.7588E-08 0
-point 24 1 1 1.03905E-07 0
-point 25 1 1 1.38138E-07 0
-point 26 1 1 1.82097E-07 0
-point 27 1 1 2.37757E-07 0
-point 28 1 1 3.0719E-07 0
-point 29 1 1 3.92498E-07 0
-point 30 1 1 4.95738E-07 0
-point 31 1 1 6.1886E-07 0
-point 32 1 1 7.63655E-07 0
-point 33 1 1 9.31724E-07 0
-point 34 1 1 1.12445E-06 0
-point 35 1 1 1.34299E-06 0
-point 36 1 1 1.58826E-06 0
-point 37 1 1 1.86095E-06 0
-point 38 1 1 2.16154E-06 0
-point 39 1 1 2.49029E-06 0
-point 40 1 1 2.84729E-06 0
-point 41 1 1 3.23244E-06 0
-point 42 1 1 3.64551E-06 0
-point 43 1 1 4.08615E-06 0
-point 44 1 1 4.55393E-06 0
-point 45 1 1 5.0483E-06 0
-point 46 1 1 5.56871E-06 0
-point 47 1 1 6.11452E-06 0
-point 48 1 1 6.6851E-06 0
-point 49 1 1 7.27977E-06 0
-point 50 1 1 7.89786E-06 0
-point 51 1 1 8.53869E-06 0
-point 52 1 1 9.2016E-06 0
-point 53 1 1 9.8859E-06 0
-point 54 1 1 1.05909E-05 0
-point 55 1 1 1.13161E-05 0
-point 56 1 1 1.20607E-05 0
-point 57 1 1 1.28241E-05 0
-point 58 1 1 1.36058E-05 0
-point 59 1 1 1.4405E-05 0
-point 60 1 1 1.52214E-05 0
-point 61 1 1 1.60542E-05 0
-point 62 1 1 1.6903E-05 0
-point 63 1 1 1.77672E-05 0
-point 64 1 1 1.86463E-05 0
-point 65 1 1 1.95398E-05 0
-point 66 1 1 2.04472E-05 0
-point 67 1 1 2.13681E-05 0
-point 68 1 1 2.2302E-05 0
-point 69 1 1 2.32484E-05 0
-point 70 1 1 2.4207E-05 0
-point 71 1 1 2.51774E-05 0
-point 72 1 1 2.61591E-05 0
-point 73 1 1 2.71517E-05 0
-point 74 1 1 2.8155E-05 0
-point 75 1 1 2.91685E-05 0
-point 76 1 1 3.01919E-05 0
-point 77 1 1 3.12248E-05 0
-point 78 1 1 3.22671E-05 0
-point 79 1 1 3.33182E-05 0
-point 80 1 1 3.4378E-05 0
-point 81 1 1 3.54461E-05 0
-point 82 1 1 3.65223E-05 0
-point 83 1 1 3.76064E-05 0
-point 84 1 1 3.86979E-05 0
-point 85 1 1 3.97968E-05 0
-point 86 1 1 4.09027E-05 0
-point 87 1 1 4.20155E-05 0
-point 88 1 1 4.31348E-05 0
-point 89 1 1 4.42606E-05 0
-point 90 1 1 4.53925E-05 0
-point 91 1 1 4.65304E-05 0
-point 92 1 1 4.76741E-05 0
-point 93 1 1 4.88234E-05 0
-point 94 1 1 4.9978E-05 0
-point 95 1 1 5.1138E-05 0
-point 96 1 1 5.23029E-05 0
-point 97 1 1 5.34728E-05 0
-point 98 1 1 5.46474E-05 0
-point 99 1 1 5.58266E-05 0
+point 0 1 1 5.74499E-11 0
+point 1 1 1 7.6022E-11 0
+point 2 1 1 1.03702E-10 0
+point 3 1 1 1.41459E-10 0
+point 4 1 1 1.92959E-10 0
+point 5 1 1 2.63205E-10 0
+point 6 1 1 3.59012E-10 0
+point 7 1 1 4.89676E-10 0
+point 8 1 1 6.67861E-10 0
+point 9 1 1 9.10821E-10 0
+point 10 1 1 1.24205E-09 0
+point 11 1 1 1.69351E-09 0
+point 12 1 1 2.30867E-09 0
+point 13 1 1 3.14653E-09 0
+point 14 1 1 4.28708E-09 0
+point 15 1 1 5.83849E-09 0
+point 16 1 1 7.94662E-09 0
+point 17 1 1 1.08073E-08 0
+point 18 1 1 1.46822E-08 0
+point 19 1 1 1.9918E-08 0
+point 20 1 1 2.69704E-08 0
+point 21 1 1 3.64304E-08 0
+point 22 1 1 4.90533E-08 0
+point 23 1 1 6.57855E-08 0
+point 24 1 1 8.77859E-08 0
+point 25 1 1 1.16435E-07 0
+point 26 1 1 1.53329E-07 0
+point 27 1 1 2.00249E-07 0
+point 28 1 1 2.59115E-07 0
+point 29 1 1 3.31926E-07 0
+point 30 1 1 4.20689E-07 0
+point 31 1 1 5.27354E-07 0
+point 32 1 1 6.53758E-07 0
+point 33 1 1 8.01573E-07 0
+point 34 1 1 9.7228E-07 0
+point 35 1 1 1.16714E-06 0
+point 36 1 1 1.38718E-06 0
+point 37 1 1 1.63322E-06 0
+point 38 1 1 1.90583E-06 0
+point 39 1 1 2.20537E-06 0
+point 40 1 1 2.53201E-06 0
+point 41 1 1 2.88576E-06 0
+point 42 1 1 3.26643E-06 0
+point 43 1 1 3.67376E-06 0
+point 44 1 1 4.10734E-06 0
+point 45 1 1 4.5667E-06 0
+point 46 1 1 5.05129E-06 0
+point 47 1 1 5.56054E-06 0
+point 48 1 1 6.09382E-06 0
+point 49 1 1 6.6505E-06 0
+point 50 1 1 7.22991E-06 0
+point 51 1 1 7.83141E-06 0
+point 52 1 1 8.45434E-06 0
+point 53 1 1 9.09805E-06 0
+point 54 1 1 9.7619E-06 0
+point 55 1 1 1.04452E-05 0
+point 56 1 1 1.11475E-05 0
+point 57 1 1 1.1868E-05 0
+point 58 1 1 1.26061E-05 0
+point 59 1 1 1.33614E-05 0
+point 60 1 1 1.41332E-05 0
+point 61 1 1 1.49209E-05 0
+point 62 1 1 1.57242E-05 0
+point 63 1 1 1.65423E-05 0
+point 64 1 1 1.73749E-05 0
+point 65 1 1 1.82214E-05 0
+point 66 1 1 1.90814E-05 0
+point 67 1 1 1.99544E-05 0
+point 68 1 1 2.084E-05 0
+point 69 1 1 2.17378E-05 0
+point 70 1 1 2.26472E-05 0
+point 71 1 1 2.35681E-05 0
+point 72 1 1 2.44999E-05 0
+point 73 1 1 2.54422E-05 0
+point 74 1 1 2.63948E-05 0
+point 75 1 1 2.73573E-05 0
+point 76 1 1 2.83294E-05 0
+point 77 1 1 2.93107E-05 0
+point 78 1 1 3.03009E-05 0
+point 79 1 1 3.12998E-05 0
+point 80 1 1 3.2307E-05 0
+point 81 1 1 3.33222E-05 0
+point 82 1 1 3.43453E-05 0
+point 83 1 1 3.53759E-05 0
+point 84 1 1 3.64137E-05 0
+point 85 1 1 3.74587E-05 0
+point 86 1 1 3.85104E-05 0
+point 87 1 1 3.95688E-05 0
+point 88 1 1 4.06335E-05 0
+point 89 1 1 4.17044E-05 0
+point 90 1 1 4.27812E-05 0
+point 91 1 1 4.38639E-05 0
+point 92 1 1 4.49521E-05 0
+point 93 1 1 4.60457E-05 0
+point 94 1 1 4.71446E-05 0
+point 95 1 1 4.82485E-05 0
+point 96 1 1 4.93574E-05 0
+point 97 1 1 5.04709E-05 0
+point 98 1 1 5.15891E-05 0
+point 99 1 1 5.27117E-05 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -14395,7 +14399,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 100.0n"
@@ -16862,106 +16866,106 @@ point 97 1 1 3.243E-05 0
 point 98 1 1 3.292E-05 0
 point 99 1 1 3.34E-05 0
 type SIMU
-point 0 1 1 1.0706E-10 0
-point 1 1 1 1.47177E-10 0
-point 2 1 1 2.02514E-10 0
-point 3 1 1 2.78652E-10 0
-point 4 1 1 3.83408E-10 0
-point 5 1 1 5.27533E-10 0
-point 6 1 1 7.25807E-10 0
-point 7 1 1 9.98553E-10 0
-point 8 1 1 1.3737E-09 0
-point 9 1 1 1.8896E-09 0
-point 10 1 1 2.59891E-09 0
-point 11 1 1 3.57383E-09 0
-point 12 1 1 4.91327E-09 0
-point 13 1 1 6.75243E-09 0
-point 14 1 1 9.27576E-09 0
-point 15 1 1 1.2734E-08 0
-point 16 1 1 1.74666E-08 0
-point 17 1 1 2.39304E-08 0
-point 18 1 1 3.2735E-08 0
-point 19 1 1 4.46857E-08 0
-point 20 1 1 6.08312E-08 0
-point 21 1 1 8.25121E-08 0
-point 22 1 1 1.11402E-07 0
-point 23 1 1 1.4953E-07 0
-point 24 1 1 1.99264E-07 0
-point 25 1 1 2.63252E-07 0
-point 26 1 1 3.44291E-07 0
-point 27 1 1 4.45166E-07 0
-point 28 1 1 5.68434E-07 0
-point 29 1 1 7.16232E-07 0
-point 30 1 1 8.90117E-07 0
-point 31 1 1 1.09098E-06 0
-point 32 1 1 1.31902E-06 0
-point 33 1 1 1.57385E-06 0
-point 34 1 1 1.85456E-06 0
-point 35 1 1 2.15987E-06 0
-point 36 1 1 2.48829E-06 0
-point 37 1 1 2.8382E-06 0
-point 38 1 1 3.20792E-06 0
-point 39 1 1 3.59582E-06 0
-point 40 1 1 4.00034E-06 0
-point 41 1 1 4.42E-06 0
-point 42 1 1 4.85341E-06 0
-point 43 1 1 5.2993E-06 0
-point 44 1 1 5.7565E-06 0
-point 45 1 1 6.22394E-06 0
-point 46 1 1 6.70062E-06 0
-point 47 1 1 7.18566E-06 0
-point 48 1 1 7.67823E-06 0
-point 49 1 1 8.17759E-06 0
-point 50 1 1 8.68304E-06 0
-point 51 1 1 9.19397E-06 0
-point 52 1 1 9.7098E-06 0
-point 53 1 1 1.023E-05 0
-point 54 1 1 1.07541E-05 0
-point 55 1 1 1.12817E-05 0
-point 56 1 1 1.18123E-05 0
-point 57 1 1 1.23456E-05 0
-point 58 1 1 1.28813E-05 0
-point 59 1 1 1.3419E-05 0
-point 60 1 1 1.39584E-05 0
-point 61 1 1 1.44993E-05 0
-point 62 1 1 1.50414E-05 0
-point 63 1 1 1.55845E-05 0
-point 64 1 1 1.61284E-05 0
-point 65 1 1 1.66729E-05 0
-point 66 1 1 1.72178E-05 0
-point 67 1 1 1.7763E-05 0
-point 68 1 1 1.83083E-05 0
-point 69 1 1 1.88535E-05 0
-point 70 1 1 1.93985E-05 0
-point 71 1 1 1.99433E-05 0
-point 72 1 1 2.04876E-05 0
-point 73 1 1 2.10313E-05 0
-point 74 1 1 2.15745E-05 0
-point 75 1 1 2.21169E-05 0
-point 76 1 1 2.26586E-05 0
-point 77 1 1 2.31993E-05 0
-point 78 1 1 2.37391E-05 0
-point 79 1 1 2.42779E-05 0
-point 80 1 1 2.48155E-05 0
-point 81 1 1 2.5352E-05 0
-point 82 1 1 2.58874E-05 0
-point 83 1 1 2.64214E-05 0
-point 84 1 1 2.69541E-05 0
-point 85 1 1 2.74855E-05 0
-point 86 1 1 2.80155E-05 0
-point 87 1 1 2.85441E-05 0
-point 88 1 1 2.90712E-05 0
-point 89 1 1 2.95968E-05 0
-point 90 1 1 3.01208E-05 0
-point 91 1 1 3.06433E-05 0
-point 92 1 1 3.11642E-05 0
-point 93 1 1 3.16835E-05 0
-point 94 1 1 3.22011E-05 0
-point 95 1 1 3.27171E-05 0
-point 96 1 1 3.32314E-05 0
-point 97 1 1 3.3744E-05 0
-point 98 1 1 3.42549E-05 0
-point 99 1 1 3.47641E-05 0
+point 0 1 1 1.06534E-10 0
+point 1 1 1 1.45172E-10 0
+point 2 1 1 1.98006E-10 0
+point 3 1 1 2.70065E-10 0
+point 4 1 1 3.68342E-10 0
+point 5 1 1 5.02369E-10 0
+point 6 1 1 6.85143E-10 0
+point 7 1 1 9.34371E-10 0
+point 8 1 1 1.27418E-09 0
+point 9 1 1 1.73742E-09 0
+point 10 1 1 2.36882E-09 0
+point 11 1 1 3.22916E-09 0
+point 12 1 1 4.40105E-09 0
+point 13 1 1 5.9965E-09 0
+point 14 1 1 8.16715E-09 0
+point 15 1 1 1.11177E-08 0
+point 16 1 1 1.51234E-08 0
+point 17 1 1 2.05526E-08 0
+point 18 1 1 2.78951E-08 0
+point 19 1 1 3.77961E-08 0
+point 20 1 1 5.10957E-08 0
+point 21 1 1 6.88714E-08 0
+point 22 1 1 9.24779E-08 0
+point 23 1 1 1.23576E-07 0
+point 24 1 1 1.64139E-07 0
+point 25 1 1 2.16423E-07 0
+point 26 1 1 2.82887E-07 0
+point 27 1 1 3.6607E-07 0
+point 28 1 1 4.68422E-07 0
+point 29 1 1 5.92123E-07 0
+point 30 1 1 7.3892E-07 0
+point 31 1 1 9.10013E-07 0
+point 32 1 1 1.10601E-06 0
+point 33 1 1 1.32693E-06 0
+point 34 1 1 1.5723E-06 0
+point 35 1 1 1.84127E-06 0
+point 36 1 1 2.1327E-06 0
+point 37 1 1 2.44526E-06 0
+point 38 1 1 2.77757E-06 0
+point 39 1 1 3.12821E-06 0
+point 40 1 1 3.49579E-06 0
+point 41 1 1 3.87897E-06 0
+point 42 1 1 4.27648E-06 0
+point 43 1 1 4.68716E-06 0
+point 44 1 1 5.10989E-06 0
+point 45 1 1 5.54365E-06 0
+point 46 1 1 5.9875E-06 0
+point 47 1 1 6.44058E-06 0
+point 48 1 1 6.90208E-06 0
+point 49 1 1 7.37127E-06 0
+point 50 1 1 7.84748E-06 0
+point 51 1 1 8.33009E-06 0
+point 52 1 1 8.81851E-06 0
+point 53 1 1 9.31223E-06 0
+point 54 1 1 9.81075E-06 0
+point 55 1 1 1.03136E-05 0
+point 56 1 1 1.08205E-05 0
+point 57 1 1 1.13309E-05 0
+point 58 1 1 1.18445E-05 0
+point 59 1 1 1.2361E-05 0
+point 60 1 1 1.28801E-05 0
+point 61 1 1 1.34015E-05 0
+point 62 1 1 1.39249E-05 0
+point 63 1 1 1.44501E-05 0
+point 64 1 1 1.4977E-05 0
+point 65 1 1 1.55052E-05 0
+point 66 1 1 1.60345E-05 0
+point 67 1 1 1.65649E-05 0
+point 68 1 1 1.70961E-05 0
+point 69 1 1 1.7628E-05 0
+point 70 1 1 1.81604E-05 0
+point 71 1 1 1.86932E-05 0
+point 72 1 1 1.92262E-05 0
+point 73 1 1 1.97594E-05 0
+point 74 1 1 2.02927E-05 0
+point 75 1 1 2.08259E-05 0
+point 76 1 1 2.13589E-05 0
+point 77 1 1 2.18916E-05 0
+point 78 1 1 2.2424E-05 0
+point 79 1 1 2.2956E-05 0
+point 80 1 1 2.34875E-05 0
+point 81 1 1 2.40184E-05 0
+point 82 1 1 2.45487E-05 0
+point 83 1 1 2.50783E-05 0
+point 84 1 1 2.56071E-05 0
+point 85 1 1 2.61351E-05 0
+point 86 1 1 2.66623E-05 0
+point 87 1 1 2.71885E-05 0
+point 88 1 1 2.77138E-05 0
+point 89 1 1 2.82382E-05 0
+point 90 1 1 2.87614E-05 0
+point 91 1 1 2.92836E-05 0
+point 92 1 1 2.98047E-05 0
+point 93 1 1 3.03247E-05 0
+point 94 1 1 3.08434E-05 0
+point 95 1 1 3.1361E-05 0
+point 96 1 1 3.18774E-05 0
+point 97 1 1 3.23925E-05 0
+point 98 1 1 3.29063E-05 0
+point 99 1 1 3.34188E-05 0
 }
 }
 list XFORM "extract"
@@ -16969,8 +16973,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -18364,115 +18368,115 @@ point 97 1 1 7.207E-05 0
 point 98 1 1 7.358E-05 0
 point 99 1 1 7.509E-05 0
 type SIMU
-point 0 1 1 1.2633E-10 0
-point 1 1 1 1.71464E-10 0
-point 2 1 1 2.35933E-10 0
-point 3 1 1 3.24637E-10 0
-point 4 1 1 4.46685E-10 0
-point 5 1 1 6.14601E-10 0
-point 6 1 1 8.45612E-10 0
-point 7 1 1 1.1634E-09 0
-point 8 1 1 1.60053E-09 0
-point 9 1 1 2.2017E-09 0
-point 10 1 1 3.02834E-09 0
-point 11 1 1 4.16468E-09 0
-point 12 1 1 5.72618E-09 0
-point 13 1 1 7.8708E-09 0
-point 14 1 1 1.08143E-08 0
-point 15 1 1 1.48503E-08 0
-point 16 1 1 2.03772E-08 0
-point 17 1 1 2.79326E-08 0
-point 18 1 1 3.82368E-08 0
-point 19 1 1 5.22461E-08 0
-point 20 1 1 7.12152E-08 0
-point 21 1 1 9.67636E-08 0
-point 22 1 1 1.30942E-07 0
-point 23 1 1 1.76282E-07 0
-point 24 1 1 2.3582E-07 0
-point 25 1 1 3.13071E-07 0
-point 26 1 1 4.11944E-07 0
-point 27 1 1 5.3661E-07 0
-point 28 1 1 6.91307E-07 0
-point 29 1 1 8.80133E-07 0
-point 30 1 1 1.10684E-06 0
-point 31 1 1 1.37467E-06 0
-point 32 1 1 1.68622E-06 0
-point 33 1 1 2.04334E-06 0
-point 34 1 1 2.44718E-06 0
-point 35 1 1 2.89819E-06 0
-point 36 1 1 3.3962E-06 0
-point 37 1 1 3.94051E-06 0
-point 38 1 1 4.53005E-06 0
-point 39 1 1 5.16343E-06 0
-point 40 1 1 5.83908E-06 0
-point 41 1 1 6.5553E-06 0
-point 42 1 1 7.31035E-06 0
-point 43 1 1 8.10247E-06 0
-point 44 1 1 8.92991E-06 0
-point 45 1 1 9.79099E-06 0
-point 46 1 1 1.0684E-05 0
-point 47 1 1 1.16075E-05 0
-point 48 1 1 1.25599E-05 0
-point 49 1 1 1.35397E-05 0
-point 50 1 1 1.45455E-05 0
-point 51 1 1 1.55762E-05 0
-point 52 1 1 1.66303E-05 0
-point 53 1 1 1.77068E-05 0
-point 54 1 1 1.88045E-05 0
-point 55 1 1 1.99223E-05 0
-point 56 1 1 2.10594E-05 0
-point 57 1 1 2.22146E-05 0
-point 58 1 1 2.33871E-05 0
-point 59 1 1 2.4576E-05 0
-point 60 1 1 2.57806E-05 0
-point 61 1 1 2.7E-05 0
-point 62 1 1 2.82336E-05 0
-point 63 1 1 2.94806E-05 0
-point 64 1 1 3.07405E-05 0
-point 65 1 1 3.20125E-05 0
-point 66 1 1 3.32961E-05 0
-point 67 1 1 3.45907E-05 0
-point 68 1 1 3.58958E-05 0
-point 69 1 1 3.72109E-05 0
-point 70 1 1 3.85356E-05 0
-point 71 1 1 3.98693E-05 0
-point 72 1 1 4.12116E-05 0
-point 73 1 1 4.25622E-05 0
-point 74 1 1 4.39207E-05 0
-point 75 1 1 4.52866E-05 0
-point 76 1 1 4.66597E-05 0
-point 77 1 1 4.80395E-05 0
-point 78 1 1 4.94258E-05 0
-point 79 1 1 5.08183E-05 0
-point 80 1 1 5.22167E-05 0
-point 81 1 1 5.36206E-05 0
-point 82 1 1 5.503E-05 0
-point 83 1 1 5.64444E-05 0
-point 84 1 1 5.78636E-05 0
-point 85 1 1 5.92875E-05 0
-point 86 1 1 6.07158E-05 0
-point 87 1 1 6.21483E-05 0
-point 88 1 1 6.35848E-05 0
-point 89 1 1 6.50251E-05 0
-point 90 1 1 6.64691E-05 0
-point 91 1 1 6.79164E-05 0
-point 92 1 1 6.93671E-05 0
-point 93 1 1 7.08209E-05 0
-point 94 1 1 7.22777E-05 0
-point 95 1 1 7.37373E-05 0
-point 96 1 1 7.51996E-05 0
-point 97 1 1 7.66645E-05 0
-point 98 1 1 7.81318E-05 0
-point 99 1 1 7.96014E-05 0
+point 0 1 1 1.30041E-10 0
+point 1 1 1 1.75023E-10 0
+point 2 1 1 2.38719E-10 0
+point 3 1 1 3.25592E-10 0
+point 4 1 1 4.44074E-10 0
+point 5 1 1 6.05657E-10 0
+point 6 1 1 8.26011E-10 0
+point 7 1 1 1.12649E-09 0
+point 8 1 1 1.5362E-09 0
+point 9 1 1 2.09476E-09 0
+point 10 1 1 2.85613E-09 0
+point 11 1 1 3.89371E-09 0
+point 12 1 1 5.30724E-09 0
+point 13 1 1 7.23213E-09 0
+point 14 1 1 9.85182E-09 0
+point 15 1 1 1.34143E-08 0
+point 16 1 1 1.82536E-08 0
+point 17 1 1 2.48181E-08 0
+point 18 1 1 3.37058E-08 0
+point 19 1 1 4.57081E-08 0
+point 20 1 1 6.18628E-08 0
+point 21 1 1 8.35121E-08 0
+point 22 1 1 1.12365E-07 0
+point 23 1 1 1.5055E-07 0
+point 24 1 1 2.00656E-07 0
+point 25 1 1 2.65733E-07 0
+point 26 1 1 3.49256E-07 0
+point 27 1 1 4.55022E-07 0
+point 28 1 1 5.87008E-07 0
+point 29 1 1 7.49182E-07 0
+point 30 1 1 9.45305E-07 0
+point 31 1 1 1.17874E-06 0
+point 32 1 1 1.45229E-06 0
+point 33 1 1 1.76812E-06 0
+point 34 1 1 2.12767E-06 0
+point 35 1 1 2.5317E-06 0
+point 36 1 1 2.98035E-06 0
+point 37 1 1 3.47319E-06 0
+point 38 1 1 4.00936E-06 0
+point 39 1 1 4.58769E-06 0
+point 40 1 1 5.20675E-06 0
+point 41 1 1 5.865E-06 0
+point 42 1 1 6.56078E-06 0
+point 43 1 1 7.29244E-06 0
+point 44 1 1 8.05831E-06 0
+point 45 1 1 8.85675E-06 0
+point 46 1 1 9.6862E-06 0
+point 47 1 1 1.05451E-05 0
+point 48 1 1 1.1432E-05 0
+point 49 1 1 1.23455E-05 0
+point 50 1 1 1.32843E-05 0
+point 51 1 1 1.42471E-05 0
+point 52 1 1 1.52326E-05 0
+point 53 1 1 1.62398E-05 0
+point 54 1 1 1.72675E-05 0
+point 55 1 1 1.83147E-05 0
+point 56 1 1 1.93805E-05 0
+point 57 1 1 2.04639E-05 0
+point 58 1 1 2.15641E-05 0
+point 59 1 1 2.26802E-05 0
+point 60 1 1 2.38113E-05 0
+point 61 1 1 2.49569E-05 0
+point 62 1 1 2.61162E-05 0
+point 63 1 1 2.72885E-05 0
+point 64 1 1 2.84732E-05 0
+point 65 1 1 2.96697E-05 0
+point 66 1 1 3.08774E-05 0
+point 67 1 1 3.20958E-05 0
+point 68 1 1 3.33243E-05 0
+point 69 1 1 3.45626E-05 0
+point 70 1 1 3.58102E-05 0
+point 71 1 1 3.70665E-05 0
+point 72 1 1 3.83312E-05 0
+point 73 1 1 3.9604E-05 0
+point 74 1 1 4.08844E-05 0
+point 75 1 1 4.2172E-05 0
+point 76 1 1 4.34666E-05 0
+point 77 1 1 4.47679E-05 0
+point 78 1 1 4.60755E-05 0
+point 79 1 1 4.73891E-05 0
+point 80 1 1 4.87084E-05 0
+point 81 1 1 5.00333E-05 0
+point 82 1 1 5.13634E-05 0
+point 83 1 1 5.26985E-05 0
+point 84 1 1 5.40384E-05 0
+point 85 1 1 5.53829E-05 0
+point 86 1 1 5.67317E-05 0
+point 87 1 1 5.80847E-05 0
+point 88 1 1 5.94416E-05 0
+point 89 1 1 6.08024E-05 0
+point 90 1 1 6.21667E-05 0
+point 91 1 1 6.35346E-05 0
+point 92 1 1 6.49057E-05 0
+point 93 1 1 6.62799E-05 0
+point 94 1 1 6.76572E-05 0
+point 95 1 1 6.90373E-05 0
+point 96 1 1 7.04202E-05 0
+point 97 1 1 7.18056E-05 0
+point 98 1 1 7.31936E-05 0
+point 99 1 1 7.45839E-05 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -19392,7 +19396,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvd" "690.400"
 {
-View in_out 1 "3.3265699453764 13739 6092"
+View in_out 0 "3.3265699453764 13739 6092"
 View plot 0 "1.07935834993 4379 3647"
 TABLE "Variable Table" "690.400"
 {
@@ -19411,7 +19415,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,4870,-10"
+View draw_ds 0 "B,4870,-10"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -19439,7 +19443,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,7574,97"
+View draw_ds 0 "B,7574,97"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -19462,7 +19466,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,2707,-26"
+View draw_ds 0 "B,2707,-26"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -19492,7 +19496,7 @@ list PLOT "rds"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,2603,3070"
+View draw_ds 0 "B,2603,3070"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -20185,8 +20189,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6207"
-View plot 1 "1.1764631748752 2639 3890"
+View in_out 0 "2.0963274319142 8658 6207"
+View plot 0 "1.1764631748752 2639 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -20206,7 +20210,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2549,278"
+View draw_ds 0 "B,2549,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -20229,7 +20233,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6704,534"
+View draw_ds 0 "B,6704,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -20253,7 +20257,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,314,350"
+View draw_ds 0 "B,314,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -20284,7 +20288,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4677,436"
+View draw_ds 0 "B,4677,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -20315,7 +20319,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,385,3559"
+View draw_ds 0 "B,385,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -21209,7 +21213,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,844,-3814"
+View draw_ds 0 "B,844,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -21247,7 +21251,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11920,8921"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -21304,8 +21308,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1764631748752 2174 3890"
+View in_out 0 "2.0963274319142 8658 6203"
+View plot 0 "1.1764631748752 2174 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -21325,7 +21329,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -21348,7 +21352,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -21372,7 +21376,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -21404,7 +21408,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -21428,7 +21432,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -21547,106 +21551,106 @@ point 97 1 1 5.031E-05 0
 point 98 1 1 5.103E-05 0
 point 99 1 1 5.174E-05 0
 type SIMU
-point 0 1 1 2.03342E-10 0
-point 1 1 1 2.79306E-10 0
-point 2 1 1 3.83833E-10 0
-point 3 1 1 5.27471E-10 0
-point 4 1 1 7.24845E-10 0
-point 5 1 1 9.96047E-10 0
-point 6 1 1 1.36867E-09 0
-point 7 1 1 1.88058E-09 0
-point 8 1 1 2.58377E-09 0
-point 9 1 1 3.54955E-09 0
-point 10 1 1 4.87566E-09 0
-point 11 1 1 6.69592E-09 0
-point 12 1 1 9.19338E-09 0
-point 13 1 1 1.26179E-08 0
-point 14 1 1 1.73096E-08 0
-point 15 1 1 2.37303E-08 0
-point 16 1 1 3.25036E-08 0
-point 17 1 1 4.44667E-08 0
-point 18 1 1 6.07342E-08 0
-point 19 1 1 8.27734E-08 0
-point 20 1 1 1.12488E-07 0
-point 21 1 1 1.523E-07 0
-point 22 1 1 2.05217E-07 0
-point 23 1 1 2.74859E-07 0
-point 24 1 1 3.65415E-07 0
-point 25 1 1 4.8151E-07 0
-point 26 1 1 6.2797E-07 0
-point 27 1 1 8.09493E-07 0
-point 28 1 1 1.03028E-06 0
-point 29 1 1 1.29371E-06 0
-point 30 1 1 1.60205E-06 0
-point 31 1 1 1.95638E-06 0
-point 32 1 1 2.35661E-06 0
-point 33 1 1 2.80164E-06 0
-point 34 1 1 3.28954E-06 0
-point 35 1 1 3.81785E-06 0
-point 36 1 1 4.38378E-06 0
-point 37 1 1 4.98436E-06 0
-point 38 1 1 5.61663E-06 0
-point 39 1 1 6.2777E-06 0
-point 40 1 1 6.96481E-06 0
-point 41 1 1 7.67539E-06 0
-point 42 1 1 8.40703E-06 0
-point 43 1 1 9.15751E-06 0
-point 44 1 1 9.92479E-06 0
-point 45 1 1 1.0707E-05 0
-point 46 1 1 1.15025E-05 0
-point 47 1 1 1.23096E-05 0
-point 48 1 1 1.3127E-05 0
-point 49 1 1 1.39533E-05 0
-point 50 1 1 1.47874E-05 0
-point 51 1 1 1.56282E-05 0
-point 52 1 1 1.64747E-05 0
-point 53 1 1 1.7326E-05 0
-point 54 1 1 1.81813E-05 0
-point 55 1 1 1.90398E-05 0
-point 56 1 1 1.99009E-05 0
-point 57 1 1 2.07639E-05 0
-point 58 1 1 2.16282E-05 0
-point 59 1 1 2.24934E-05 0
-point 60 1 1 2.33588E-05 0
-point 61 1 1 2.42242E-05 0
-point 62 1 1 2.50891E-05 0
-point 63 1 1 2.5953E-05 0
-point 64 1 1 2.68158E-05 0
-point 65 1 1 2.7677E-05 0
-point 66 1 1 2.85364E-05 0
-point 67 1 1 2.93937E-05 0
-point 68 1 1 3.02487E-05 0
-point 69 1 1 3.11012E-05 0
-point 70 1 1 3.19509E-05 0
-point 71 1 1 3.27977E-05 0
-point 72 1 1 3.36413E-05 0
-point 73 1 1 3.44818E-05 0
-point 74 1 1 3.53189E-05 0
-point 75 1 1 3.61524E-05 0
-point 76 1 1 3.69823E-05 0
-point 77 1 1 3.78085E-05 0
-point 78 1 1 3.86309E-05 0
-point 79 1 1 3.94494E-05 0
-point 80 1 1 4.02638E-05 0
-point 81 1 1 4.10742E-05 0
-point 82 1 1 4.18805E-05 0
-point 83 1 1 4.26825E-05 0
-point 84 1 1 4.34804E-05 0
-point 85 1 1 4.4274E-05 0
-point 86 1 1 4.50632E-05 0
-point 87 1 1 4.58481E-05 0
-point 88 1 1 4.66286E-05 0
-point 89 1 1 4.74047E-05 0
-point 90 1 1 4.81764E-05 0
-point 91 1 1 4.89436E-05 0
-point 92 1 1 4.97064E-05 0
-point 93 1 1 5.04647E-05 0
-point 94 1 1 5.12185E-05 0
-point 95 1 1 5.19679E-05 0
-point 96 1 1 5.27127E-05 0
-point 97 1 1 5.34531E-05 0
-point 98 1 1 5.4189E-05 0
-point 99 1 1 5.49203E-05 0
+point 0 1 1 2.8127E-10 0
+point 1 1 1 3.79783E-10 0
+point 2 1 1 5.12975E-10 0
+point 3 1 1 6.92866E-10 0
+point 4 1 1 9.35819E-10 0
+point 5 1 1 1.26392E-09 0
+point 6 1 1 1.70699E-09 0
+point 7 1 1 2.30524E-09 0
+point 8 1 1 3.11291E-09 0
+point 9 1 1 4.2031E-09 0
+point 10 1 1 5.67429E-09 0
+point 11 1 1 7.65895E-09 0
+point 12 1 1 1.03351E-08 0
+point 13 1 1 1.39414E-08 0
+point 14 1 1 1.87973E-08 0
+point 15 1 1 2.53285E-08 0
+point 16 1 1 3.41004E-08 0
+point 17 1 1 4.5859E-08 0
+point 18 1 1 6.15809E-08 0
+point 19 1 1 8.25323E-08 0
+point 20 1 1 1.10332E-07 0
+point 21 1 1 1.47014E-07 0
+point 22 1 1 1.95079E-07 0
+point 23 1 1 2.57516E-07 0
+point 24 1 1 3.37776E-07 0
+point 25 1 1 4.39677E-07 0
+point 26 1 1 5.67232E-07 0
+point 27 1 1 7.24407E-07 0
+point 28 1 1 9.14832E-07 0
+point 29 1 1 1.14153E-06 0
+point 30 1 1 1.40669E-06 0
+point 31 1 1 1.71156E-06 0
+point 32 1 1 2.05643E-06 0
+point 33 1 1 2.44076E-06 0
+point 34 1 1 2.86329E-06 0
+point 35 1 1 3.32226E-06 0
+point 36 1 1 3.81559E-06 0
+point 37 1 1 4.34101E-06 0
+point 38 1 1 4.89617E-06 0
+point 39 1 1 5.47875E-06 0
+point 40 1 1 6.08651E-06 0
+point 41 1 1 6.7173E-06 0
+point 42 1 1 7.3691E-06 0
+point 43 1 1 8.04002E-06 0
+point 44 1 1 8.72832E-06 0
+point 45 1 1 9.43236E-06 0
+point 46 1 1 1.01507E-05 0
+point 47 1 1 1.08818E-05 0
+point 48 1 1 1.16246E-05 0
+point 49 1 1 1.23777E-05 0
+point 50 1 1 1.31403E-05 0
+point 51 1 1 1.39111E-05 0
+point 52 1 1 1.46894E-05 0
+point 53 1 1 1.54743E-05 0
+point 54 1 1 1.6265E-05 0
+point 55 1 1 1.70608E-05 0
+point 56 1 1 1.78611E-05 0
+point 57 1 1 1.86651E-05 0
+point 58 1 1 1.94725E-05 0
+point 59 1 1 2.02826E-05 0
+point 60 1 1 2.1095E-05 0
+point 61 1 1 2.19092E-05 0
+point 62 1 1 2.27248E-05 0
+point 63 1 1 2.35415E-05 0
+point 64 1 1 2.43588E-05 0
+point 65 1 1 2.51765E-05 0
+point 66 1 1 2.59943E-05 0
+point 67 1 1 2.68119E-05 0
+point 68 1 1 2.7629E-05 0
+point 69 1 1 2.84453E-05 0
+point 70 1 1 2.92608E-05 0
+point 71 1 1 3.00751E-05 0
+point 72 1 1 3.0888E-05 0
+point 73 1 1 3.16995E-05 0
+point 74 1 1 3.25092E-05 0
+point 75 1 1 3.33172E-05 0
+point 76 1 1 3.41231E-05 0
+point 77 1 1 3.4927E-05 0
+point 78 1 1 3.57287E-05 0
+point 79 1 1 3.6528E-05 0
+point 80 1 1 3.73248E-05 0
+point 81 1 1 3.81192E-05 0
+point 82 1 1 3.89108E-05 0
+point 83 1 1 3.96998E-05 0
+point 84 1 1 4.0486E-05 0
+point 85 1 1 4.12694E-05 0
+point 86 1 1 4.20498E-05 0
+point 87 1 1 4.28272E-05 0
+point 88 1 1 4.36016E-05 0
+point 89 1 1 4.43729E-05 0
+point 90 1 1 4.5141E-05 0
+point 91 1 1 4.5906E-05 0
+point 92 1 1 4.66678E-05 0
+point 93 1 1 4.74263E-05 0
+point 94 1 1 4.81815E-05 0
+point 95 1 1 4.89334E-05 0
+point 96 1 1 4.96819E-05 0
+point 97 1 1 5.04271E-05 0
+point 98 1 1 5.11689E-05 0
+point 99 1 1 5.19073E-05 0
 }
 }
 list XFORM "extract"
@@ -21654,8 +21658,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -21924,7 +21928,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1022,0"
+View draw_ds 0 "B,1022,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -21962,7 +21966,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11946,8922"
-View draw_ds 1 "B,178,3814"
+View draw_ds 0 "B,178,3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -21998,7 +22002,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 View plot_window 0 "0,61,11997,8998"
 TABLE "Plot Options" "690.400"
 {
@@ -22807,8 +22811,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p86" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1871754801633 2639 3926"
+View in_out 0 "2.0963274319142 8658 6203"
+View plot 0 "1.1871754801633 2639 3926"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -22828,7 +22832,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -22851,7 +22855,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -22875,7 +22879,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -22907,7 +22911,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -22931,7 +22935,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -23050,115 +23054,115 @@ point 97 1 1 9.07E-05 0
 point 98 1 1 9.244E-05 0
 point 99 1 1 9.417E-05 0
 type SIMU
-point 0 1 1 2.35683E-10 0
-point 1 1 1 3.21308E-10 0
-point 2 1 1 4.41258E-10 0
-point 3 1 1 6.05979E-10 0
-point 4 1 1 8.32174E-10 0
-point 5 1 1 1.14277E-09 0
-point 6 1 1 1.56924E-09 0
-point 7 1 1 2.15475E-09 0
-point 8 1 1 2.95853E-09 0
-point 9 1 1 4.06177E-09 0
-point 10 1 1 5.5757E-09 0
-point 11 1 1 7.65259E-09 0
-point 12 1 1 1.05006E-08 0
-point 13 1 1 1.44039E-08 0
-point 14 1 1 1.97493E-08 0
-point 15 1 1 2.70622E-08 0
-point 16 1 1 3.70526E-08 0
-point 17 1 1 5.06752E-08 0
-point 18 1 1 6.92033E-08 0
-point 19 1 1 9.43188E-08 0
-point 20 1 1 1.28214E-07 0
-point 21 1 1 1.73696E-07 0
-point 22 1 1 2.34286E-07 0
-point 23 1 1 3.14272E-07 0
-point 24 1 1 4.18714E-07 0
-point 25 1 1 5.53341E-07 0
-point 26 1 1 7.24339E-07 0
-point 27 1 1 9.38039E-07 0
-point 28 1 1 1.20052E-06 0
-point 29 1 1 1.51722E-06 0
-point 30 1 1 1.89254E-06 0
-point 31 1 1 2.32967E-06 0
-point 32 1 1 2.83042E-06 0
-point 33 1 1 3.3953E-06 0
-point 34 1 1 4.02369E-06 0
-point 35 1 1 4.71403E-06 0
-point 36 1 1 5.4641E-06 0
-point 37 1 1 6.27124E-06 0
-point 38 1 1 7.13254E-06 0
-point 39 1 1 8.04499E-06 0
-point 40 1 1 9.00557E-06 0
-point 41 1 1 1.00114E-05 0
-point 42 1 1 1.10595E-05 0
-point 43 1 1 1.21474E-05 0
-point 44 1 1 1.32724E-05 0
-point 45 1 1 1.44322E-05 0
-point 46 1 1 1.56244E-05 0
-point 47 1 1 1.68471E-05 0
-point 48 1 1 1.80983E-05 0
-point 49 1 1 1.93762E-05 0
-point 50 1 1 2.06789E-05 0
-point 51 1 1 2.2005E-05 0
-point 52 1 1 2.3353E-05 0
-point 53 1 1 2.47215E-05 0
-point 54 1 1 2.61091E-05 0
-point 55 1 1 2.75148E-05 0
-point 56 1 1 2.89373E-05 0
-point 57 1 1 3.03756E-05 0
-point 58 1 1 3.18287E-05 0
-point 59 1 1 3.32957E-05 0
-point 60 1 1 3.47758E-05 0
-point 61 1 1 3.62681E-05 0
-point 62 1 1 3.77719E-05 0
-point 63 1 1 3.92864E-05 0
-point 64 1 1 4.08111E-05 0
-point 65 1 1 4.23453E-05 0
-point 66 1 1 4.38884E-05 0
-point 67 1 1 4.54399E-05 0
-point 68 1 1 4.69991E-05 0
-point 69 1 1 4.85658E-05 0
-point 70 1 1 5.01394E-05 0
-point 71 1 1 5.17194E-05 0
-point 72 1 1 5.33055E-05 0
-point 73 1 1 5.48973E-05 0
-point 74 1 1 5.64944E-05 0
-point 75 1 1 5.80965E-05 0
-point 76 1 1 5.97033E-05 0
-point 77 1 1 6.13145E-05 0
-point 78 1 1 6.29297E-05 0
-point 79 1 1 6.45488E-05 0
-point 80 1 1 6.61714E-05 0
-point 81 1 1 6.77973E-05 0
-point 82 1 1 6.94263E-05 0
-point 83 1 1 7.10582E-05 0
-point 84 1 1 7.26927E-05 0
-point 85 1 1 7.43297E-05 0
-point 86 1 1 7.5969E-05 0
-point 87 1 1 7.76103E-05 0
-point 88 1 1 7.92536E-05 0
-point 89 1 1 8.08987E-05 0
-point 90 1 1 8.25455E-05 0
-point 91 1 1 8.41937E-05 0
-point 92 1 1 8.58432E-05 0
-point 93 1 1 8.7494E-05 0
-point 94 1 1 8.91458E-05 0
-point 95 1 1 9.07987E-05 0
-point 96 1 1 9.24524E-05 0
-point 97 1 1 9.41068E-05 0
-point 98 1 1 9.57619E-05 0
-point 99 1 1 9.74176E-05 0
+point 0 1 1 3.52235E-10 0
+point 1 1 1 4.72785E-10 0
+point 2 1 1 6.37698E-10 0
+point 3 1 1 8.6012E-10 0
+point 4 1 1 1.1601E-09 0
+point 5 1 1 1.56465E-09 0
+point 6 1 1 2.11018E-09 0
+point 7 1 1 2.84578E-09 0
+point 8 1 1 3.83752E-09 0
+point 9 1 1 5.17437E-09 0
+point 10 1 1 6.97601E-09 0
+point 11 1 1 9.40328E-09 0
+point 12 1 1 1.26721E-08 0
+point 13 1 1 1.70717E-08 0
+point 14 1 1 2.2989E-08 0
+point 15 1 1 3.09396E-08 0
+point 16 1 1 4.16079E-08 0
+point 17 1 1 5.58979E-08 0
+point 18 1 1 7.4995E-08 0
+point 19 1 1 1.00439E-07 0
+point 20 1 1 1.34207E-07 0
+point 21 1 1 1.78799E-07 0
+point 22 1 1 2.37312E-07 0
+point 23 1 1 3.13498E-07 0
+point 24 1 1 4.11762E-07 0
+point 25 1 1 5.37097E-07 0
+point 26 1 1 6.9493E-07 0
+point 27 1 1 8.9088E-07 0
+point 28 1 1 1.13044E-06 0
+point 29 1 1 1.41862E-06 0
+point 30 1 1 1.75967E-06 0
+point 31 1 1 2.1568E-06 0
+point 32 1 1 2.61205E-06 0
+point 33 1 1 3.12633E-06 0
+point 34 1 1 3.69948E-06 0
+point 35 1 1 4.33046E-06 0
+point 36 1 1 5.01759E-06 0
+point 37 1 1 5.75868E-06 0
+point 38 1 1 6.55126E-06 0
+point 39 1 1 7.39273E-06 0
+point 40 1 1 8.2804E-06 0
+point 41 1 1 9.21165E-06 0
+point 42 1 1 1.01839E-05 0
+point 43 1 1 1.11946E-05 0
+point 44 1 1 1.22415E-05 0
+point 45 1 1 1.33224E-05 0
+point 46 1 1 1.4435E-05 0
+point 47 1 1 1.55775E-05 0
+point 48 1 1 1.6748E-05 0
+point 49 1 1 1.79447E-05 0
+point 50 1 1 1.91661E-05 0
+point 51 1 1 2.04105E-05 0
+point 52 1 1 2.16766E-05 0
+point 53 1 1 2.2963E-05 0
+point 54 1 1 2.42685E-05 0
+point 55 1 1 2.55919E-05 0
+point 56 1 1 2.69322E-05 0
+point 57 1 1 2.82882E-05 0
+point 58 1 1 2.96591E-05 0
+point 59 1 1 3.1044E-05 0
+point 60 1 1 3.2442E-05 0
+point 61 1 1 3.38524E-05 0
+point 62 1 1 3.52743E-05 0
+point 63 1 1 3.67071E-05 0
+point 64 1 1 3.81503E-05 0
+point 65 1 1 3.96031E-05 0
+point 66 1 1 4.10649E-05 0
+point 67 1 1 4.25354E-05 0
+point 68 1 1 4.40139E-05 0
+point 69 1 1 4.54999E-05 0
+point 70 1 1 4.69931E-05 0
+point 71 1 1 4.8493E-05 0
+point 72 1 1 4.99992E-05 0
+point 73 1 1 5.15114E-05 0
+point 74 1 1 5.30292E-05 0
+point 75 1 1 5.45522E-05 0
+point 76 1 1 5.60801E-05 0
+point 77 1 1 5.76127E-05 0
+point 78 1 1 5.91497E-05 0
+point 79 1 1 6.06908E-05 0
+point 80 1 1 6.22357E-05 0
+point 81 1 1 6.37842E-05 0
+point 82 1 1 6.53361E-05 0
+point 83 1 1 6.68912E-05 0
+point 84 1 1 6.84493E-05 0
+point 85 1 1 7.00101E-05 0
+point 86 1 1 7.15736E-05 0
+point 87 1 1 7.31394E-05 0
+point 88 1 1 7.47075E-05 0
+point 89 1 1 7.62778E-05 0
+point 90 1 1 7.78499E-05 0
+point 91 1 1 7.94239E-05 0
+point 92 1 1 8.09996E-05 0
+point 93 1 1 8.25768E-05 0
+point 94 1 1 8.41554E-05 0
+point 95 1 1 8.57353E-05 0
+point 96 1 1 8.73165E-05 0
+point 97 1 1 8.88987E-05 0
+point 98 1 1 9.04819E-05 0
+point 99 1 1 9.2066E-05 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -23427,7 +23431,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,844,-3814"
+View draw_ds 0 "B,844,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -23465,7 +23469,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11920,8921"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -23501,7 +23505,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,-178,-3814"
+View draw_ds 0 "B,-178,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -23587,7 +23591,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 20.00n"
@@ -24935,8 +24939,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6207"
-View plot 1 "1.1764631748752 2639 3890"
+View in_out 0 "2.0963274319142 8658 6207"
+View plot 0 "1.1764631748752 2639 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -24956,7 +24960,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2549,278"
+View draw_ds 0 "B,2549,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -24979,7 +24983,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6704,534"
+View draw_ds 0 "B,6704,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25003,7 +25007,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,314,350"
+View draw_ds 0 "B,314,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25034,7 +25038,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4677,436"
+View draw_ds 0 "B,4677,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25065,7 +25069,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,385,3559"
+View draw_ds 0 "B,385,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -25959,7 +25963,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,844,-3814"
+View draw_ds 0 "B,844,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -25997,7 +26001,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11920,8921"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -26054,8 +26058,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1764631748752 2174 3890"
+View in_out 0 "2.0963274319142 8658 6203"
+View plot 0 "1.1764631748752 2174 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -26075,7 +26079,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -26098,7 +26102,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -26122,7 +26126,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -26154,7 +26158,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -26178,7 +26182,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -26297,106 +26301,106 @@ point 97 1 1 7.749E-05 0
 point 98 1 1 7.851E-05 0
 point 99 1 1 7.952E-05 0
 type SIMU
-point 0 1 1 2.71187E-09 0
-point 1 1 1 3.54057E-09 0
-point 2 1 1 4.62246E-09 0
-point 3 1 1 6.03458E-09 0
-point 4 1 1 7.87744E-09 0
-point 5 1 1 1.0282E-08 0
-point 6 1 1 1.34187E-08 0
-point 7 1 1 1.75093E-08 0
-point 8 1 1 2.28415E-08 0
-point 9 1 1 2.97886E-08 0
-point 10 1 1 3.88335E-08 0
-point 11 1 1 5.05991E-08 0
-point 12 1 1 6.58863E-08 0
-point 13 1 1 8.57198E-08 0
-point 14 1 1 1.11403E-07 0
-point 15 1 1 1.44581E-07 0
-point 16 1 1 1.8731E-07 0
-point 17 1 1 2.42128E-07 0
-point 18 1 1 3.1212E-07 0
-point 19 1 1 4.00966E-07 0
-point 20 1 1 5.12947E-07 0
-point 21 1 1 6.52904E-07 0
-point 22 1 1 8.26123E-07 0
-point 23 1 1 1.03814E-06 0
-point 24 1 1 1.29445E-06 0
-point 25 1 1 1.6002E-06 0
-point 26 1 1 1.95987E-06 0
-point 27 1 1 2.37695E-06 0
-point 28 1 1 2.85374E-06 0
-point 29 1 1 3.39132E-06 0
-point 30 1 1 3.98954E-06 0
-point 31 1 1 4.64717E-06 0
-point 32 1 1 5.36211E-06 0
-point 33 1 1 6.13159E-06 0
-point 34 1 1 6.95237E-06 0
-point 35 1 1 7.82098E-06 0
-point 36 1 1 8.73378E-06 0
-point 37 1 1 9.68714E-06 0
-point 38 1 1 1.06775E-05 0
-point 39 1 1 1.17015E-05 0
-point 40 1 1 1.27557E-05 0
-point 41 1 1 1.38372E-05 0
-point 42 1 1 1.49429E-05 0
-point 43 1 1 1.60702E-05 0
-point 44 1 1 1.72166E-05 0
-point 45 1 1 1.83797E-05 0
-point 46 1 1 1.95574E-05 0
-point 47 1 1 2.07476E-05 0
-point 48 1 1 2.19484E-05 0
-point 49 1 1 2.31582E-05 0
-point 50 1 1 2.43755E-05 0
-point 51 1 1 2.55986E-05 0
-point 52 1 1 2.68264E-05 0
-point 53 1 1 2.80576E-05 0
-point 54 1 1 2.9291E-05 0
-point 55 1 1 3.05256E-05 0
-point 56 1 1 3.17606E-05 0
-point 57 1 1 3.29949E-05 0
-point 58 1 1 3.42278E-05 0
-point 59 1 1 3.54586E-05 0
-point 60 1 1 3.66865E-05 0
-point 61 1 1 3.79111E-05 0
-point 62 1 1 3.91317E-05 0
-point 63 1 1 4.03478E-05 0
-point 64 1 1 4.15589E-05 0
-point 65 1 1 4.27647E-05 0
-point 66 1 1 4.39647E-05 0
-point 67 1 1 4.51586E-05 0
-point 68 1 1 4.6346E-05 0
-point 69 1 1 4.75267E-05 0
-point 70 1 1 4.87004E-05 0
-point 71 1 1 4.98669E-05 0
-point 72 1 1 5.10259E-05 0
-point 73 1 1 5.21773E-05 0
-point 74 1 1 5.33209E-05 0
-point 75 1 1 5.44566E-05 0
-point 76 1 1 5.55841E-05 0
-point 77 1 1 5.67035E-05 0
-point 78 1 1 5.78146E-05 0
-point 79 1 1 5.89173E-05 0
-point 80 1 1 6.00116E-05 0
-point 81 1 1 6.10973E-05 0
-point 82 1 1 6.21745E-05 0
-point 83 1 1 6.3243E-05 0
-point 84 1 1 6.43029E-05 0
-point 85 1 1 6.53542E-05 0
-point 86 1 1 6.63967E-05 0
-point 87 1 1 6.74306E-05 0
-point 88 1 1 6.84558E-05 0
-point 89 1 1 6.94723E-05 0
-point 90 1 1 7.04801E-05 0
-point 91 1 1 7.14793E-05 0
-point 92 1 1 7.24699E-05 0
-point 93 1 1 7.34518E-05 0
-point 94 1 1 7.44252E-05 0
-point 95 1 1 7.53901E-05 0
-point 96 1 1 7.63464E-05 0
-point 97 1 1 7.72943E-05 0
-point 98 1 1 7.82338E-05 0
-point 99 1 1 7.91649E-05 0
+point 0 1 1 2.33965E-09 0
+point 1 1 1 3.04786E-09 0
+point 2 1 1 3.97045E-09 0
+point 3 1 1 5.17205E-09 0
+point 4 1 1 6.73685E-09 0
+point 5 1 1 8.77435E-09 0
+point 6 1 1 1.14268E-08 0
+point 7 1 1 1.48789E-08 0
+point 8 1 1 1.93703E-08 0
+point 9 1 1 2.52114E-08 0
+point 10 1 1 3.28034E-08 0
+point 11 1 1 4.26642E-08 0
+point 12 1 1 5.54599E-08 0
+point 13 1 1 7.20441E-08 0
+point 14 1 1 9.35054E-08 0
+point 15 1 1 1.21223E-07 0
+point 16 1 1 1.56933E-07 0
+point 17 1 1 2.02791E-07 0
+point 18 1 1 2.61451E-07 0
+point 19 1 1 3.36118E-07 0
+point 20 1 1 4.30586E-07 0
+point 21 1 1 5.49242E-07 0
+point 22 1 1 6.96999E-07 0
+point 23 1 1 8.79157E-07 0
+point 24 1 1 1.10119E-06 0
+point 25 1 1 1.36844E-06 0
+point 26 1 1 1.68579E-06 0
+point 27 1 1 2.05733E-06 0
+point 28 1 1 2.4861E-06 0
+point 29 1 1 2.9739E-06 0
+point 30 1 1 3.5213E-06 0
+point 31 1 1 4.12769E-06 0
+point 32 1 1 4.79149E-06 0
+point 33 1 1 5.51031E-06 0
+point 34 1 1 6.28125E-06 0
+point 35 1 1 7.10102E-06 0
+point 36 1 1 7.96619E-06 0
+point 37 1 1 8.87324E-06 0
+point 38 1 1 9.81873E-06 0
+point 39 1 1 1.07993E-05 0
+point 40 1 1 1.18117E-05 0
+point 41 1 1 1.2853E-05 0
+point 42 1 1 1.39202E-05 0
+point 43 1 1 1.50107E-05 0
+point 44 1 1 1.61221E-05 0
+point 45 1 1 1.72519E-05 0
+point 46 1 1 1.83982E-05 0
+point 47 1 1 1.95588E-05 0
+point 48 1 1 2.0732E-05 0
+point 49 1 1 2.19162E-05 0
+point 50 1 1 2.31096E-05 0
+point 51 1 1 2.4311E-05 0
+point 52 1 1 2.5519E-05 0
+point 53 1 1 2.67323E-05 0
+point 54 1 1 2.79499E-05 0
+point 55 1 1 2.91708E-05 0
+point 56 1 1 3.03939E-05 0
+point 57 1 1 3.16185E-05 0
+point 58 1 1 3.28437E-05 0
+point 59 1 1 3.40687E-05 0
+point 60 1 1 3.5293E-05 0
+point 61 1 1 3.65158E-05 0
+point 62 1 1 3.77367E-05 0
+point 63 1 1 3.8955E-05 0
+point 64 1 1 4.01704E-05 0
+point 65 1 1 4.13823E-05 0
+point 66 1 1 4.25903E-05 0
+point 67 1 1 4.37942E-05 0
+point 68 1 1 4.49934E-05 0
+point 69 1 1 4.61878E-05 0
+point 70 1 1 4.73771E-05 0
+point 71 1 1 4.85609E-05 0
+point 72 1 1 4.9739E-05 0
+point 73 1 1 5.09113E-05 0
+point 74 1 1 5.20775E-05 0
+point 75 1 1 5.32374E-05 0
+point 76 1 1 5.4391E-05 0
+point 77 1 1 5.55379E-05 0
+point 78 1 1 5.66782E-05 0
+point 79 1 1 5.78117E-05 0
+point 80 1 1 5.89382E-05 0
+point 81 1 1 6.00578E-05 0
+point 82 1 1 6.11702E-05 0
+point 83 1 1 6.22755E-05 0
+point 84 1 1 6.33735E-05 0
+point 85 1 1 6.44642E-05 0
+point 86 1 1 6.55477E-05 0
+point 87 1 1 6.66237E-05 0
+point 88 1 1 6.76923E-05 0
+point 89 1 1 6.87535E-05 0
+point 90 1 1 6.98073E-05 0
+point 91 1 1 7.08536E-05 0
+point 92 1 1 7.18924E-05 0
+point 93 1 1 7.29237E-05 0
+point 94 1 1 7.39476E-05 0
+point 95 1 1 7.4964E-05 0
+point 96 1 1 7.59729E-05 0
+point 97 1 1 7.69743E-05 0
+point 98 1 1 7.79684E-05 0
+point 99 1 1 7.89549E-05 0
 }
 }
 list XFORM "extract"
@@ -26404,8 +26408,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -26674,7 +26678,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1022,0"
+View draw_ds 0 "B,1022,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -26712,7 +26716,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "117,83,24369,19460"
-View draw_ds 1 "B,178,3814"
+View draw_ds 0 "B,178,3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -26748,7 +26752,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 View plot_window 0 "0,61,11997,8998"
 TABLE "Plot Options" "690.400"
 {
@@ -27800,115 +27804,115 @@ point 97 1 1 0.0001175 0
 point 98 1 1 0.0001195 0
 point 99 1 1 0.0001214 0
 type SIMU
-point 0 1 1 8.79641E-09 0
-point 1 1 1 1.12363E-08 0
-point 2 1 1 1.43543E-08 0
-point 3 1 1 1.83353E-08 0
-point 4 1 1 2.34168E-08 0
-point 5 1 1 2.99007E-08 0
-point 6 1 1 3.81701E-08 0
-point 7 1 1 4.8711E-08 0
-point 8 1 1 6.21374E-08 0
-point 9 1 1 7.92236E-08 0
-point 10 1 1 1.00942E-07 0
-point 11 1 1 1.28508E-07 0
-point 12 1 1 1.63432E-07 0
-point 13 1 1 2.07578E-07 0
-point 14 1 1 2.63223E-07 0
-point 15 1 1 3.33117E-07 0
-point 16 1 1 4.20537E-07 0
-point 17 1 1 5.29319E-07 0
-point 18 1 1 6.63857E-07 0
-point 19 1 1 8.29062E-07 0
-point 20 1 1 1.03025E-06 0
-point 21 1 1 1.273E-06 0
-point 22 1 1 1.56286E-06 0
-point 23 1 1 1.90514E-06 0
-point 24 1 1 2.30459E-06 0
-point 25 1 1 2.76514E-06 0
-point 26 1 1 3.28973E-06 0
-point 27 1 1 3.8802E-06 0
-point 28 1 1 4.53732E-06 0
-point 29 1 1 5.26088E-06 0
-point 30 1 1 6.0499E-06 0
-point 31 1 1 6.90275E-06 0
-point 32 1 1 7.81739E-06 0
-point 33 1 1 8.79149E-06 0
-point 34 1 1 9.82256E-06 0
-point 35 1 1 1.0908E-05 0
-point 36 1 1 1.20454E-05 0
-point 37 1 1 1.32319E-05 0
-point 38 1 1 1.44652E-05 0
-point 39 1 1 1.57427E-05 0
-point 40 1 1 1.70621E-05 0
-point 41 1 1 1.84209E-05 0
-point 42 1 1 1.98169E-05 0
-point 43 1 1 2.1248E-05 0
-point 44 1 1 2.2712E-05 0
-point 45 1 1 2.42069E-05 0
-point 46 1 1 2.57309E-05 0
-point 47 1 1 2.7282E-05 0
-point 48 1 1 2.88587E-05 0
-point 49 1 1 3.04591E-05 0
-point 50 1 1 3.20819E-05 0
-point 51 1 1 3.37256E-05 0
-point 52 1 1 3.53887E-05 0
-point 53 1 1 3.70699E-05 0
-point 54 1 1 3.87682E-05 0
-point 55 1 1 4.04822E-05 0
-point 56 1 1 4.2211E-05 0
-point 57 1 1 4.39534E-05 0
-point 58 1 1 4.57087E-05 0
-point 59 1 1 4.74758E-05 0
-point 60 1 1 4.92539E-05 0
-point 61 1 1 5.10423E-05 0
-point 62 1 1 5.28402E-05 0
-point 63 1 1 5.4647E-05 0
-point 64 1 1 5.64619E-05 0
-point 65 1 1 5.82843E-05 0
-point 66 1 1 6.01138E-05 0
-point 67 1 1 6.19497E-05 0
-point 68 1 1 6.37916E-05 0
-point 69 1 1 6.56389E-05 0
-point 70 1 1 6.74913E-05 0
-point 71 1 1 6.93482E-05 0
-point 72 1 1 7.12094E-05 0
-point 73 1 1 7.30745E-05 0
-point 74 1 1 7.4943E-05 0
-point 75 1 1 7.68147E-05 0
-point 76 1 1 7.86892E-05 0
-point 77 1 1 8.05663E-05 0
-point 78 1 1 8.24458E-05 0
-point 79 1 1 8.43272E-05 0
-point 80 1 1 8.62105E-05 0
-point 81 1 1 8.80953E-05 0
-point 82 1 1 8.99814E-05 0
-point 83 1 1 9.18687E-05 0
-point 84 1 1 9.37569E-05 0
-point 85 1 1 9.56459E-05 0
-point 86 1 1 9.75355E-05 0
-point 87 1 1 9.94256E-05 0
-point 88 1 1 0.000101316 0
-point 89 1 1 0.000103206 0
-point 90 1 1 0.000105097 0
-point 91 1 1 0.000106987 0
-point 92 1 1 0.000108877 0
-point 93 1 1 0.000110767 0
-point 94 1 1 0.000112656 0
-point 95 1 1 0.000114545 0
-point 96 1 1 0.000116432 0
-point 97 1 1 0.00011832 0
-point 98 1 1 0.000120206 0
-point 99 1 1 0.000122091 0
+point 0 1 1 7.89877E-09 0
+point 1 1 1 1.00513E-08 0
+point 2 1 1 1.27922E-08 0
+point 3 1 1 1.62789E-08 0
+point 4 1 1 2.07133E-08 0
+point 5 1 1 2.63514E-08 0
+point 6 1 1 3.35172E-08 0
+point 7 1 1 4.26203E-08 0
+point 8 1 1 5.4178E-08 0
+point 9 1 1 6.88408E-08 0
+point 10 1 1 8.74257E-08 0
+point 11 1 1 1.10954E-07 0
+point 12 1 1 1.40696E-07 0
+point 13 1 1 1.78223E-07 0
+point 14 1 1 2.25465E-07 0
+point 15 1 1 2.84766E-07 0
+point 16 1 1 3.58945E-07 0
+point 17 1 1 4.51341E-07 0
+point 18 1 1 5.65841E-07 0
+point 19 1 1 7.06874E-07 0
+point 20 1 1 8.79358E-07 0
+point 21 1 1 1.08859E-06 0
+point 22 1 1 1.34006E-06 0
+point 23 1 1 1.63925E-06 0
+point 24 1 1 1.9913E-06 0
+point 25 1 1 2.40079E-06 0
+point 26 1 1 2.87146E-06 0
+point 27 1 1 3.40605E-06 0
+point 28 1 1 4.00621E-06 0
+point 29 1 1 4.67257E-06 0
+point 30 1 1 5.40483E-06 0
+point 31 1 1 6.2019E-06 0
+point 32 1 1 7.06215E-06 0
+point 33 1 1 7.98351E-06 0
+point 34 1 1 8.96365E-06 0
+point 35 1 1 1.00001E-05 0
+point 36 1 1 1.10903E-05 0
+point 37 1 1 1.22317E-05 0
+point 38 1 1 1.34216E-05 0
+point 39 1 1 1.46576E-05 0
+point 40 1 1 1.59371E-05 0
+point 41 1 1 1.72578E-05 0
+point 42 1 1 1.86172E-05 0
+point 43 1 1 2.00131E-05 0
+point 44 1 1 2.14433E-05 0
+point 45 1 1 2.29057E-05 0
+point 46 1 1 2.43983E-05 0
+point 47 1 1 2.59193E-05 0
+point 48 1 1 2.74667E-05 0
+point 49 1 1 2.9039E-05 0
+point 50 1 1 3.06345E-05 0
+point 51 1 1 3.22517E-05 0
+point 52 1 1 3.38891E-05 0
+point 53 1 1 3.55454E-05 0
+point 54 1 1 3.72194E-05 0
+point 55 1 1 3.89098E-05 0
+point 56 1 1 4.06156E-05 0
+point 57 1 1 4.23357E-05 0
+point 58 1 1 4.40691E-05 0
+point 59 1 1 4.58149E-05 0
+point 60 1 1 4.75722E-05 0
+point 61 1 1 4.93403E-05 0
+point 62 1 1 5.11184E-05 0
+point 63 1 1 5.29057E-05 0
+point 64 1 1 5.47016E-05 0
+point 65 1 1 5.65056E-05 0
+point 66 1 1 5.83169E-05 0
+point 67 1 1 6.01351E-05 0
+point 68 1 1 6.19596E-05 0
+point 69 1 1 6.379E-05 0
+point 70 1 1 6.56258E-05 0
+point 71 1 1 6.74666E-05 0
+point 72 1 1 6.9312E-05 0
+point 73 1 1 7.11616E-05 0
+point 74 1 1 7.3015E-05 0
+point 75 1 1 7.4872E-05 0
+point 76 1 1 7.67323E-05 0
+point 77 1 1 7.85954E-05 0
+point 78 1 1 8.04612E-05 0
+point 79 1 1 8.23294E-05 0
+point 80 1 1 8.41998E-05 0
+point 81 1 1 8.60721E-05 0
+point 82 1 1 8.79461E-05 0
+point 83 1 1 8.98216E-05 0
+point 84 1 1 9.16984E-05 0
+point 85 1 1 9.35763E-05 0
+point 86 1 1 9.54552E-05 0
+point 87 1 1 9.73349E-05 0
+point 88 1 1 9.92152E-05 0
+point 89 1 1 0.000101096 0
+point 90 1 1 0.000102977 0
+point 91 1 1 0.000104859 0
+point 92 1 1 0.00010674 0
+point 93 1 1 0.000108622 0
+point 94 1 1 0.000110503 0
+point 95 1 1 0.000112384 0
+point 96 1 1 0.000114265 0
+point 97 1 1 0.000116146 0
+point 98 1 1 0.000118026 0
+point 99 1 1 0.000119905 0
 }
 }
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
-list PLOT "Global/idvg0p05/IDVG0p86"
 list PLOT "gmvg"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p86"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -28361,8 +28365,8 @@ connpair "B" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1181756313959 3549 3058"
+View in_out 1 "1.6781411359725 8658 6203"
+View plot 1 "0.56006014579646 2354 2166"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 P13 C15 C15 C10"
@@ -29135,7 +29139,7 @@ member OUT "id"
 LINK PLOT "idvg" "690.400"
 {
 View plot_window 0 "1217,338,10807,8393"
-View draw_ds 1 "B,932,-7870"
+View draw_ds 1 "B,600,-14986"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29172,7 +29176,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "1231,743,10033,8305"
-View draw_ds 1 "B,9,-4056"
+View draw_ds 1 "B,-323,-11172"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29215,7 +29219,7 @@ TABLE "ICVIEWDATA"
 UTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC&../../Lg1000nm/idvg0p05/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,0,0"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29249,58 +29253,16 @@ HYPTABLE "Multi GUI Table"
 PlotOptimizerOpt Enable 0
 }
 }
-LINK PLOT "IDVG0p05" "690.400"
-{
-View plot_window 0 "0,61,17939,14247"
-View draw_ds 1 "B,166,3168"
-TABLE "Plot Options" "690.400"
-{
-}
-data
-{
-HYPTABLE "Edit plot Info"
-{
-element "Report Type" "XY GRAPH"
-}
-HYPTABLE "Edit Plot Def"
-{
-element "X Data" "../../Lg1000nm/idvg0p05/vg"
-element "Y Data 0" "../../Lg20nm/idvg0p05/id"
-element "Y Data 1" "../../Lg50nm/idvg0p05/id"
-element "Y Data 2" "../../Lg100nm/idvg0p05/id"
-element "Y Data 3" "../../Lg250nm/idvg0p05/id"
-element "Y Data 4" "../../Lg500nm/idvg0p05/id"
-element "Y Data 5" "../../Lg1000nm/idvg0p05/id"
-element "Y Data 6" ""
-element "Y Data 7" ""
-element "Curve Data" ""
-element "Header" ""
-element "Footer" ""
-element "X Axis Type" "LINEAR"
-element "Y Axis Type" "LINEAR"
-element "Y2 Axis Type" "LINEAR"
-element "Y2 Data" ""
-}
-PlotOptimizerOpt Enable 0
-}
-member OUT "Lg1000nm/idvg0p05/id"
-member OUT "Lg100nm/idvg0p05/id"
-member OUT "Lg20nm/idvg0p05/id"
-member OUT "Lg250nm/idvg0p05/id"
-member OUT "Lg500nm/idvg0p05/id"
-member OUT "Lg50nm/idvg0p05/id"
-member SWEEP "Lg1000nm/idvg0p05/vg"
-}
 LINK PLOT "ALLIDVG0p86" "690.400"
 {
 View plot_window 0 "__iccapDataBlock"
 TABLE "ICVIEWDATA"
 {
-0,61,23002,26001,{../../Lg20nm/idvg0p86/idvg:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg50nm/idvg0p86/idvg:MAN|XY|-200.0m, 1.200 ,7,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg100nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg250nm/idvg0p86/idvg:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../.
+0,61,43691,26001,{../../Lg20nm/idvg0p86/idvg:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg50nm/idvg0p86/idvg:MAN|XY|-200.0m, 1.200 ,7,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg100nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 140.0u,7,4: 0.000 , 1.000 ,4,5&../../Lg250nm/idvg0p86/idvg:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../.
 ./Lg500nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../../Lg1000nm/idvg0p86/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,0,0"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29336,10 +29298,38 @@ PlotOptimizerOpt Enable 0
 }
 LINK PLOT "IDVG0p86" "690.400"
 {
-View plot_window 0 "0,61,17939,14247"
-View draw_ds 1 "B,166,3168"
+View plot_window 0 "0,61,28873,25925"
+View draw_ds 1 "B,-166,-3948"
 TABLE "Plot Options" "690.400"
 {
+TABLE "Plot Settings" "690.400"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Symbols Only" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "No" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "6.000" "N"
+element 0 "Plot Selection Callback" "" "A"
+}
 }
 data
 {
@@ -29366,7 +29356,13 @@ element "Y Axis Type" "LINEAR"
 element "Y2 Axis Type" "LINEAR"
 element "Y2 Data" ""
 }
-PlotOptimizerOpt Enable 0
+PlotOptimizerOpt Enable 1
+PlotOptimizerTraceSet "Y Data 0" "B"
+PlotOptimizerTraceSet "Y Data 1" "B"
+PlotOptimizerTraceSet "Y Data 2" "B"
+PlotOptimizerTraceSet "Y Data 3" "B"
+PlotOptimizerTraceSet "Y Data 4" "B"
+PlotOptimizerTraceSet "Y Data 5" "B"
 }
 member OUT "Lg1000nm/idvg0p86/id"
 member OUT "Lg100nm/idvg0p86/id"
@@ -29379,7 +29375,7 @@ member SWEEP "Lg1000nm/idvg0p86/vg"
 LINK PLOT "ALLGMVG0p86" "690.400"
 {
 View plot_window 0 "70,107,35812,23409"
-View draw_ds 1 "B,0,0"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29413,6 +29409,115 @@ HYPTABLE "Multi GUI Table"
 PlotOptimizerOpt Enable 0
 }
 }
+LINK PLOT "IDVG0p05" "690.400"
+{
+View plot_window 0 "74,151,30043,25340"
+View draw_ds 1 "B,-166,-3948"
+TABLE "Plot Options" "690.400"
+{
+TABLE "Plot Settings" "690.400"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Symbols Only" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "No" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "6.000" "N"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "../../Lg1000nm/idvg0p05/vg"
+element "Y Data 0" "../../Lg20nm/idvg0p05/id"
+element "Y Data 1" "../../Lg50nm/idvg0p05/id"
+element "Y Data 2" "../../Lg100nm/idvg0p05/id"
+element "Y Data 3" "../../Lg250nm/idvg0p05/id"
+element "Y Data 4" "../../Lg500nm/idvg0p05/id"
+element "Y Data 5" "../../Lg1000nm/idvg0p05/id"
+element "Y Data 6" ""
+element "Y Data 7" ""
+element "Curve Data" ""
+element "Header" ""
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+}
+PlotOptimizerOpt Enable 1
+PlotOptimizerTraceSet "Y Data 0" "B"
+PlotOptimizerTraceSet "Y Data 1" "B"
+PlotOptimizerTraceSet "Y Data 2" "B"
+PlotOptimizerTraceSet "Y Data 3" "B"
+PlotOptimizerTraceSet "Y Data 4" "B"
+PlotOptimizerTraceSet "Y Data 5" "B"
+}
+member OUT "Lg1000nm/idvg0p05/id"
+member OUT "Lg100nm/idvg0p05/id"
+member OUT "Lg20nm/idvg0p05/id"
+member OUT "Lg250nm/idvg0p05/id"
+member OUT "Lg500nm/idvg0p05/id"
+member OUT "Lg50nm/idvg0p05/id"
+member SWEEP "Lg1000nm/idvg0p05/vg"
+}
+LINK PLOT "ALL" "690.400"
+{
+View plot_window 0 "168,97,29890,17055,{IDVG0p05:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 100.0u,5,4: 0.000 , 1.000 ,4,5&IDVG0p86:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 150.0u,3,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 1 "B,0,0"
+TABLE "Plot Options" "690.400"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "2"
+element "# of GUIs" "0"
+element "Orientation" "H"
+element "Plots Per Row" "0"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "IDVG0p05"
+element "Plot 1" "IDVG0p86"
+}
+HYPTABLE "Multi GUI Table"
+{
+}
+PlotOptimizerOpt Enable 0
+}
+}
 data "690.400"
 {
 TABLE "HP4142.7.23" "690.400"
@@ -29436,7 +29541,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg1p2" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 3839"
+View in_out 0 "2.0963274319142 8658 3839"
 View plot 0 "1.07935834993 2545 3648"
 TABLE "Variable Table" "690.400"
 {
@@ -29457,7 +29562,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,834,-947"
+View draw_ds 0 "B,834,-947"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -29488,7 +29593,7 @@ list PLOT "gm"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,3224,-400"
+View draw_ds 0 "B,3224,-400"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -29512,7 +29617,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,5387,-278"
+View draw_ds 0 "B,5387,-278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -29535,7 +29640,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,5754,2239"
+View draw_ds 0 "B,5754,2239"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -29559,7 +29664,7 @@ list XFORM "extract"
 }
 LINK SWEEP "LENGTH" "690.400"
 {
-View draw_ds 1 "B,3299,1982"
+View draw_ds 0 "B,3299,1982"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -29589,7 +29694,7 @@ element "Value 5" " 40.00n"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,711,2336"
+View draw_ds 0 "B,711,2336"
 data
 {
 HYPTABLE "Edit Output Info"
