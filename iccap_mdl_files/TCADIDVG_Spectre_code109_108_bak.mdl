@@ -1,4 +1,4 @@
-LINK MODEL "TCAD_Extraction_Spectre_109" "690.400"
+LINK MODEL "TCAD_Extraction_Spectre_108_109" "690.400"
 {
 View model_window 1 "Model"
 TABLE "Variable Table" "690.400"
@@ -148,15 +148,18 @@ circuitdeck
  +CDSC=3.5E-3
  +CDSCD=0
  +CIT=0
+ +CS=0
  +DEVTYPE=1
  +DSUB=0.56
  +DVT0=1.2
  +DVT1=0.3
+ +DVT3 = 0
  +EOT=1.1E-9
  +ETA0=0.4
  +ETAMOB=95E-3
- +GEOMOD=4
+ +GEOMOD=1
  +GIDLMOD=0
+ +IGMOD=0
  +K1RSCE=0
  +KSATIV=1.0
  +LINT=0
@@ -174,9 +177,12 @@ circuitdeck
  +RDSW=20
  +ARDSW = 0
  +BRDSW = 20E-9
+ +THETASAT=0.838
  +PTWG = 0
  +APTWG = 0
  +BPTWG = 1
+ +ATHETASAT =0
+ +BTHETASAT = 1
  +U0=164.9E-4
  +UP=0
  +VSAT=85E3
@@ -193,6 +199,7 @@ circuitdeck
  +MOBMOD=0
  +RDSMOD=0
  +DVT2=200m
+ +ALP =0
  +AGIDL = 0
  +BGIDL = 0.3e9
  +EGIDL = 0.2
@@ -209,11 +216,6 @@ circuitdeck
  +LA1=0
  +LCDSC=0
  +LETA0=0
- +W_UFCM = 91.94e-9
- +Ach_UFCM = 319.2e-18
- +Cins_UFCM = 3966.6e-12
- +TFIN_TOP=7.6n
- +TFIN_BASE=15.2n
  M0 (D G S B) test  TFIN=7.6e-9 HFIN=42e-9 L=50e-9 NFIN=1
  
 }
@@ -229,16 +231,19 @@ View par_var_table 1 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
 param FPITCH " 7.600n"
 param CDSC " 100.0m"
 param CDSCD " 13.00m"
-param CIT " 1.800m"
+param CIT " 1.500m"
+param CS " 0.000 "
 param DEVTYPE " 1.000 "
-param DSUB " 400.0m"
-param DVT0 " 100.0m"
-param DVT1 " 250.0m"
+param DSUB " 900.0m"
+param DVT0 " 30.00m"
+param DVT1 " 350.0m"
+param DVT3 " 0.000 "
 param EOT " 800.0p"
-param ETA0 " 100.0m"
+param ETA0 " 15.00m"
 param ETAMOB " 95.00m"
-param GEOMOD " 4.000 "
+param GEOMOD " 1.000 "
 param GIDLMOD " 0.000 "
+param IGMOD " 0.000 "
 param K1RSCE " 0.000 "
 param KSATIV " 1.000 "
 param LINT " 0.000 "
@@ -253,15 +258,18 @@ param NF " 1.000 "
 param NGATE " 0.000 "
 param NSD " 2.000E+26 "
 param PHIG " 4.240 "
-param RDSW " 16.00 "
+param RDSW " 17.00 "
 param ARDSW " 0.000 "
 param BRDSW " 20.00n"
+param THETASAT " 838.0m"
 param PTWG " 0.000 "
 param APTWG " 0.000 "
 param BPTWG " 1.000 "
+param ATHETASAT " 0.000 "
+param BTHETASAT " 1.000 "
 param U0 " 47.00m"
-param UP " 27.00n"
-param VSAT " 33.00K"
+param UP " 28.00n"
+param VSAT " 32.00K"
 param AVSAT " 30.00K"
 param BVSAT " 25.00n"
 param EU " 1.000 "
@@ -275,10 +283,11 @@ param UCS " 1.000 "
 param MOBMOD " 0.000 "
 param RDSMOD " 0.000 "
 param DVT2 " 200.0m"
+param ALP " 0.000 "
 param AGIDL " 0.000 "
 param BGIDL " 300.0MEG"
 param EGIDL " 200.0m"
-param DVT1SS " 350.0m"
+param DVT1SS " 380.0m"
 param LU0 " 0.000 "
 param LKSATIV " 0.000 "
 param LVSAT " 40.00 "
@@ -291,11 +300,6 @@ param A2 " 0.000 "
 param LA1 " 1.000 "
 param LCDSC "-1.700m"
 param LETA0 " 0.000 "
-param W_UFCM " 91.94n"
-param Ach_UFCM " 319.2a"
-param Cins_UFCM " 3.967n"
-param TFIN_TOP " 7.600n"
-param TFIN_BASE " 15.20n"
 }
 }
 }
@@ -23585,7 +23589,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 42.00n"
 param L " 20.00n"
@@ -24933,7 +24937,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6207"
+View in_out 0 "2.0963274319142 8658 6207"
 View plot 0 "1.1764631748752 2639 3890"
 TABLE "Variable Table" "690.400"
 {
@@ -24954,7 +24958,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2549,278"
+View draw_ds 0 "B,2549,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -24977,7 +24981,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6704,534"
+View draw_ds 0 "B,6704,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25001,7 +25005,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,314,350"
+View draw_ds 0 "B,314,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25032,7 +25036,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4677,436"
+View draw_ds 0 "B,4677,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -25063,7 +25067,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,385,3559"
+View draw_ds 0 "B,385,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -26053,7 +26057,7 @@ element 0 "Init Command" ""
 LINK DAT "idvg0p05" "690.400"
 {
 View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1764631748752 2174 3890"
+View plot 0 "1.1764631748752 2174 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -26295,106 +26299,106 @@ point 97 1 1 7.749E-05 0
 point 98 1 1 7.851E-05 0
 point 99 1 1 7.952E-05 0
 type SIMU
-point 0 1 1 2.66468E-09 0
-point 1 1 1 3.46082E-09 0
-point 2 1 1 4.4948E-09 0
-point 3 1 1 5.83736E-09 0
-point 4 1 1 7.58036E-09 0
-point 5 1 1 9.84286E-09 0
-point 6 1 1 1.2779E-08 0
-point 7 1 1 1.65884E-08 0
-point 8 1 1 2.15287E-08 0
-point 9 1 1 2.79326E-08 0
-point 10 1 1 3.62287E-08 0
-point 11 1 1 4.69673E-08 0
-point 12 1 1 6.08533E-08 0
-point 13 1 1 7.87851E-08 0
-point 14 1 1 1.01902E-07 0
-point 15 1 1 1.31641E-07 0
-point 16 1 1 1.69792E-07 0
-point 17 1 1 2.18569E-07 0
-point 18 1 1 2.80666E-07 0
-point 19 1 1 3.5931E-07 0
-point 20 1 1 4.58279E-07 0
-point 21 1 1 5.81891E-07 0
-point 22 1 1 7.34921E-07 0
-point 23 1 1 9.22464E-07 0
-point 24 1 1 1.14972E-06 0
-point 25 1 1 1.42173E-06 0
-point 26 1 1 1.74309E-06 0
-point 27 1 1 2.11766E-06 0
-point 28 1 1 2.54839E-06 0
-point 29 1 1 3.03717E-06 0
-point 30 1 1 3.58478E-06 0
-point 31 1 1 4.191E-06 0
-point 32 1 1 4.85468E-06 0
-point 33 1 1 5.57391E-06 0
-point 34 1 1 6.34618E-06 0
-point 35 1 1 7.16858E-06 0
-point 36 1 1 8.03787E-06 0
-point 37 1 1 8.9507E-06 0
-point 38 1 1 9.90365E-06 0
-point 39 1 1 1.08933E-05 0
-point 40 1 1 1.19164E-05 0
-point 41 1 1 1.29699E-05 0
-point 42 1 1 1.40506E-05 0
-point 43 1 1 1.51559E-05 0
-point 44 1 1 1.62831E-05 0
-point 45 1 1 1.74297E-05 0
-point 46 1 1 1.85937E-05 0
-point 47 1 1 1.97729E-05 0
-point 48 1 1 2.09655E-05 0
-point 49 1 1 2.21696E-05 0
-point 50 1 1 2.33838E-05 0
-point 51 1 1 2.46066E-05 0
-point 52 1 1 2.58366E-05 0
-point 53 1 1 2.70726E-05 0
-point 54 1 1 2.83134E-05 0
-point 55 1 1 2.95582E-05 0
-point 56 1 1 3.08058E-05 0
-point 57 1 1 3.20554E-05 0
-point 58 1 1 3.33063E-05 0
-point 59 1 1 3.45576E-05 0
-point 60 1 1 3.58088E-05 0
-point 61 1 1 3.70591E-05 0
-point 62 1 1 3.83081E-05 0
-point 63 1 1 3.95551E-05 0
-point 64 1 1 4.07997E-05 0
-point 65 1 1 4.20415E-05 0
-point 66 1 1 4.328E-05 0
-point 67 1 1 4.45149E-05 0
-point 68 1 1 4.57457E-05 0
-point 69 1 1 4.69723E-05 0
-point 70 1 1 4.81943E-05 0
-point 71 1 1 4.94113E-05 0
-point 72 1 1 5.06233E-05 0
-point 73 1 1 5.18299E-05 0
-point 74 1 1 5.30309E-05 0
-point 75 1 1 5.42262E-05 0
-point 76 1 1 5.54155E-05 0
-point 77 1 1 5.65987E-05 0
-point 78 1 1 5.77758E-05 0
-point 79 1 1 5.89464E-05 0
-point 80 1 1 6.01106E-05 0
-point 81 1 1 6.12682E-05 0
-point 82 1 1 6.24191E-05 0
-point 83 1 1 6.35632E-05 0
-point 84 1 1 6.47004E-05 0
-point 85 1 1 6.58308E-05 0
-point 86 1 1 6.69541E-05 0
-point 87 1 1 6.80704E-05 0
-point 88 1 1 6.91797E-05 0
-point 89 1 1 7.02818E-05 0
-point 90 1 1 7.13768E-05 0
-point 91 1 1 7.24646E-05 0
-point 92 1 1 7.35451E-05 0
-point 93 1 1 7.46185E-05 0
-point 94 1 1 7.56846E-05 0
-point 95 1 1 7.67435E-05 0
-point 96 1 1 7.77952E-05 0
-point 97 1 1 7.88396E-05 0
-point 98 1 1 7.98767E-05 0
-point 99 1 1 8.09066E-05 0
+point 0 1 1 1.43481E-09 0
+point 1 1 1 1.88405E-09 0
+point 2 1 1 2.47405E-09 0
+point 3 1 1 3.2487E-09 0
+point 4 1 1 4.26569E-09 0
+point 5 1 1 5.60069E-09 0
+point 6 1 1 7.35288E-09 0
+point 7 1 1 9.6522E-09 0
+point 8 1 1 1.26687E-08 0
+point 9 1 1 1.66249E-08 0
+point 10 1 1 2.18111E-08 0
+point 11 1 1 2.8606E-08 0
+point 12 1 1 3.75021E-08 0
+point 13 1 1 4.91381E-08 0
+point 14 1 1 6.43387E-08 0
+point 15 1 1 8.41642E-08 0
+point 16 1 1 1.09969E-07 0
+point 17 1 1 1.43466E-07 0
+point 18 1 1 1.86803E-07 0
+point 19 1 1 2.42634E-07 0
+point 20 1 1 3.14181E-07 0
+point 21 1 1 4.05276E-07 0
+point 22 1 1 5.20355E-07 0
+point 23 1 1 6.64391E-07 0
+point 24 1 1 8.42752E-07 0
+point 25 1 1 1.06096E-06 0
+point 26 1 1 1.32442E-06 0
+point 27 1 1 1.63803E-06 0
+point 28 1 1 2.00596E-06 0
+point 29 1 1 2.4313E-06 0
+point 30 1 1 2.91601E-06 0
+point 31 1 1 3.46081E-06 0
+point 32 1 1 4.06532E-06 0
+point 33 1 1 4.72815E-06 0
+point 34 1 1 5.44714E-06 0
+point 35 1 1 6.21949E-06 0
+point 36 1 1 7.04199E-06 0
+point 37 1 1 7.91114E-06 0
+point 38 1 1 8.82333E-06 0
+point 39 1 1 9.77496E-06 0
+point 40 1 1 1.07625E-05 0
+point 41 1 1 1.17824E-05 0
+point 42 1 1 1.28316E-05 0
+point 43 1 1 1.39068E-05 0
+point 44 1 1 1.50054E-05 0
+point 45 1 1 1.61247E-05 0
+point 46 1 1 1.72622E-05 0
+point 47 1 1 1.84157E-05 0
+point 48 1 1 1.95832E-05 0
+point 49 1 1 2.07628E-05 0
+point 50 1 1 2.19527E-05 0
+point 51 1 1 2.31515E-05 0
+point 52 1 1 2.43576E-05 0
+point 53 1 1 2.55699E-05 0
+point 54 1 1 2.6787E-05 0
+point 55 1 1 2.80079E-05 0
+point 56 1 1 2.92316E-05 0
+point 57 1 1 3.04571E-05 0
+point 58 1 1 3.16837E-05 0
+point 59 1 1 3.29106E-05 0
+point 60 1 1 3.4137E-05 0
+point 61 1 1 3.53624E-05 0
+point 62 1 1 3.6586E-05 0
+point 63 1 1 3.78075E-05 0
+point 64 1 1 3.90262E-05 0
+point 65 1 1 4.02417E-05 0
+point 66 1 1 4.14537E-05 0
+point 67 1 1 4.26616E-05 0
+point 68 1 1 4.38653E-05 0
+point 69 1 1 4.50642E-05 0
+point 70 1 1 4.62583E-05 0
+point 71 1 1 4.74471E-05 0
+point 72 1 1 4.86304E-05 0
+point 73 1 1 4.98081E-05 0
+point 74 1 1 5.09799E-05 0
+point 75 1 1 5.21456E-05 0
+point 76 1 1 5.3305E-05 0
+point 77 1 1 5.44581E-05 0
+point 78 1 1 5.56046E-05 0
+point 79 1 1 5.67444E-05 0
+point 80 1 1 5.78775E-05 0
+point 81 1 1 5.90037E-05 0
+point 82 1 1 6.01229E-05 0
+point 83 1 1 6.12351E-05 0
+point 84 1 1 6.23401E-05 0
+point 85 1 1 6.3438E-05 0
+point 86 1 1 6.45287E-05 0
+point 87 1 1 6.5612E-05 0
+point 88 1 1 6.66881E-05 0
+point 89 1 1 6.77568E-05 0
+point 90 1 1 6.88181E-05 0
+point 91 1 1 6.98721E-05 0
+point 92 1 1 7.09186E-05 0
+point 93 1 1 7.19578E-05 0
+point 94 1 1 7.29895E-05 0
+point 95 1 1 7.40138E-05 0
+point 96 1 1 7.50307E-05 0
+point 97 1 1 7.60401E-05 0
+point 98 1 1 7.70422E-05 0
+point 99 1 1 7.80369E-05 0
 }
 }
 list XFORM "extract"
@@ -26402,8 +26406,8 @@ list XFORM "optimize"
 list XFORM "opt_NFS"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
-list PLOT "Global/idvg0p05/IDVG0p05"
 list PLOT "idvg"
+list PLOT "Global/idvg0p05/IDVG0p05"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -26672,7 +26676,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1022,0"
+View draw_ds 0 "B,1022,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -26710,7 +26714,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "117,83,24369,19460"
-View draw_ds 1 "B,178,3814"
+View draw_ds 0 "B,178,3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -26746,8 +26750,8 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,0"
-View plot_window 0 "0,61,26015,22366,{AUTO|XY| 0.000 , 1.000 ,5,4: 1.000a, 100.0u,14,9: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,0,0"
+View plot_window 0 "0,61,11997,8998"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -28359,8 +28363,8 @@ connpair "B" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 0 "2.0963274319142 8658 6203"
-View plot 0 "0.74166960729949 2354 2166"
+View in_out 1 "2.0963274319142 8658 6203"
+View plot 1 "0.74166960729949 2354 2166"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 P13 C15 C15 C10"
@@ -28380,7 +28384,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 0 "B,339,178"
+View draw_ds 1 "B,339,178"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28411,7 +28415,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 0 "B,2771,239"
+View draw_ds 1 "B,2771,239"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28434,7 +28438,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 0 "B,5252,301"
+View draw_ds 1 "B,5252,301"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28458,7 +28462,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 0 "B,5232,2727"
+View draw_ds 1 "B,5232,2727"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28482,7 +28486,7 @@ list XFORM "extract"
 }
 LINK SWEEP "LENGTH" "690.400"
 {
-View draw_ds 0 "B,2764,2664"
+View draw_ds 1 "B,2764,2664"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28512,7 +28516,7 @@ element "Value 5" " 970.0n"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 0 "B,387,3545"
+View draw_ds 1 "B,387,3545"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -29132,8 +29136,8 @@ member OUT "id"
 }
 LINK PLOT "idvg" "690.400"
 {
-View plot_window 0 "1217,338,10807,8393"
-View draw_ds 0 "B,600,-14986"
+View plot_window 0 "1217,338,10802,8388"
+View draw_ds 1 "B,600,-14986"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29170,7 +29174,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "1231,743,10033,8305"
-View draw_ds 0 "B,-323,-11172"
+View draw_ds 1 "B,-323,-11172"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29213,7 +29217,7 @@ TABLE "ICVIEWDATA"
 UTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC&../../Lg1000nm/idvg0p05/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 0 "B,-332,-7116"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29256,7 +29260,7 @@ TABLE "ICVIEWDATA"
 ./Lg500nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../../Lg1000nm/idvg0p86/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 0 "B,-332,-7116"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29293,7 +29297,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p86" "690.400"
 {
 View plot_window 0 "0,61,28873,25925"
-View draw_ds 0 "B,-166,-3948"
+View draw_ds 1 "B,-166,-3948"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29369,7 +29373,7 @@ member SWEEP "Lg1000nm/idvg0p86/vg"
 LINK PLOT "ALLGMVG0p86" "690.400"
 {
 View plot_window 0 "70,107,35812,23409"
-View draw_ds 0 "B,-332,-7116"
+View draw_ds 1 "B,-332,-7116"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29406,7 +29410,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p05" "690.400"
 {
 View plot_window 0 "74,151,30043,25340"
-View draw_ds 0 "B,-166,-3948"
+View draw_ds 1 "B,-166,-3948"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29481,8 +29485,8 @@ member SWEEP "Lg1000nm/idvg0p05/vg"
 }
 LINK PLOT "ALL" "690.400"
 {
-View plot_window 0 "168,97,34008,21858,{IDVG0p05:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 100.0u,5,4: 0.000 , 1.000 ,4,5&IDVG0p86:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 150.0u,3,5: 0.000 , 1.000 ,4,5}"
-View draw_ds 0 "B,0,0"
+View plot_window 1 "80,349,29890,17055,{IDVG0p05:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 100.0u,5,4: 0.000 , 1.000 ,4,5&IDVG0p86:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 150.0u,3,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 1 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -30354,7 +30358,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvd" "690.400"
 {
-View in_out 0 "2.914262684541 13739 6092"
+View in_out 1 "3.3265699453764 13739 6092"
 View plot 0 "1.07935834993 2372 3648"
 TABLE "Variable Table" "690.400"
 {
@@ -30373,7 +30377,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 0 "B,4870,-10"
+View draw_ds 1 "B,4870,-10"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30401,7 +30405,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 0 "B,7574,97"
+View draw_ds 1 "B,7574,97"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30424,7 +30428,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 0 "B,2707,-26"
+View draw_ds 1 "B,2707,-26"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30453,7 +30457,7 @@ list PLOT "idvsvg"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 0 "B,2603,3070"
+View draw_ds 1 "B,2603,3070"
 data
 {
 HYPTABLE "Edit Output Info"

@@ -1163,8 +1163,11 @@ analog begin
 						Qdep_ov_Cins 		= -1*`q*NBODY*Ach/(Cins);
 					end else begin
 						Weff_UFCM  		=  2*sqrt(HFIN*HFIN+(TFIN_TOP-TFIN_BASE)*(TFIN_TOP-TFIN_BASE)/4)+TFIN_TOP;
+                                                $strobe("Weff_UFCM=%e",Weff_UFCM);
 						Cins 			=  Weff_UFCM*3.9 * `EPS0 / EOT;
+                                                   $strobe("Cins=%e",Cins);
 						Ach 			=  HFIN*(TFIN_TOP+TFIN_BASE)/2;
+                                                     $strobe("Ach=%e",Ach);
 						rc 			=  (2*Cins/(Weff_UFCM*Weff_UFCM*epssub/Ach));	
 						Qdep_ov_Cins 		= -1*`q*NBODY*Ach/(Cins);
 					end			
