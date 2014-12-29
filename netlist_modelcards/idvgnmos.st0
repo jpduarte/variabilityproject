@@ -1,0 +1,204 @@
+***** HSPICE -- G-2012.06 32-BIT (May 27 2012) RHEL32 ******
+ Input File: idvgnmos.sp
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   sourabh              HOSTNAME: bwrcr720-1.eecs.berkeley.edu
+ lic: HOSTID:                      PID:      4968
+ lic: Using FLEXlm license file:
+ lic: 1701@sunv40z-1.eecs.berkeley.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 19-dec-2015/2014.09
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley.
+ lic:
+ init: begin read circuit files,  cpu clock=  2.00E-02
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/be
+                         have
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/bj
+                         t
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/bu
+                         rr_brn
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/co
+                         mlinear
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/di
+                         o
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/fe
+                         t
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/li
+                         n_tech
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/pc
+                         i
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/si
+                         gnet
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/ti
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/tl
+                         ine
+       option search   = /tools/synopsys/hspice/G-2012.06/hspice/parts/xi
+                         linx
+       option runlvl
+       option abstol   =    1.000E-06
+       option reltol   =    1.000E-06
+       option post
+       option ingold
+ init: end read circuit files,  cpu clock=  3.19E+00 memory=    150 kb
+ init: begin check errors,  cpu clock=  3.19E+00
+ init: end check errors,  cpu clock=  3.24E+00 memory=    153 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  3.24E+00
+       establish matrix -- done,  cpu clock=  3.24E+00 memory=    154 kb
+       re-order matrix -- done,  cpu clock=  3.24E+00 memory=    154 kb
+ init: end setup matrix,  cpu clock=  3.25E+00 memory=    168 kb
+ sweep: monte_carlo     monte_carlo1     begin, #sweeps =  50
+ output: idvgnmos.ms0
+ sweep: dc dc1    begin, #sweeps= 151 cpu clock=  3.25E+00
+ sweep: dc dc1    end,  cpu clock=  3.28E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc2    begin, #sweeps= 151 cpu clock=  3.29E+00
+ sweep: dc dc2    end,  cpu clock=  3.32E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc3    begin, #sweeps= 151 cpu clock=  3.32E+00
+ sweep: dc dc3    end,  cpu clock=  3.35E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc4    begin, #sweeps= 151 cpu clock=  3.36E+00
+ sweep: dc dc4    end,  cpu clock=  3.39E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc5    begin, #sweeps= 151 cpu clock=  3.39E+00
+ sweep: dc dc5    end,  cpu clock=  3.42E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc6    begin, #sweeps= 151 cpu clock=  3.43E+00
+ sweep: dc dc6    end,  cpu clock=  3.46E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc7    begin, #sweeps= 151 cpu clock=  3.47E+00
+ sweep: dc dc7    end,  cpu clock=  3.50E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc8    begin, #sweeps= 151 cpu clock=  3.50E+00
+ sweep: dc dc8    end,  cpu clock=  3.53E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc9    begin, #sweeps= 151 cpu clock=  3.54E+00
+ sweep: dc dc9    end,  cpu clock=  3.57E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc10   begin, #sweeps= 151 cpu clock=  3.57E+00
+ sweep: dc dc10   end,  cpu clock=  3.61E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc11   begin, #sweeps= 151 cpu clock=  3.61E+00
+ sweep: dc dc11   end,  cpu clock=  3.64E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc12   begin, #sweeps= 151 cpu clock=  3.65E+00
+ sweep: dc dc12   end,  cpu clock=  3.68E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc13   begin, #sweeps= 151 cpu clock=  3.68E+00
+ sweep: dc dc13   end,  cpu clock=  3.72E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc14   begin, #sweeps= 151 cpu clock=  3.72E+00
+ sweep: dc dc14   end,  cpu clock=  3.75E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc15   begin, #sweeps= 151 cpu clock=  3.76E+00
+ sweep: dc dc15   end,  cpu clock=  3.79E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc16   begin, #sweeps= 151 cpu clock=  3.80E+00
+ sweep: dc dc16   end,  cpu clock=  3.83E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc17   begin, #sweeps= 151 cpu clock=  3.83E+00
+ sweep: dc dc17   end,  cpu clock=  3.86E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc18   begin, #sweeps= 151 cpu clock=  3.87E+00
+ sweep: dc dc18   end,  cpu clock=  3.90E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc19   begin, #sweeps= 151 cpu clock=  3.90E+00
+ sweep: dc dc19   end,  cpu clock=  3.94E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc20   begin, #sweeps= 151 cpu clock=  3.94E+00
+ sweep: dc dc20   end,  cpu clock=  3.97E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc21   begin, #sweeps= 151 cpu clock=  3.98E+00
+ sweep: dc dc21   end,  cpu clock=  4.01E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc22   begin, #sweeps= 151 cpu clock=  4.01E+00
+ sweep: dc dc22   end,  cpu clock=  4.05E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc23   begin, #sweeps= 151 cpu clock=  4.05E+00
+ sweep: dc dc23   end,  cpu clock=  4.08E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc24   begin, #sweeps= 151 cpu clock=  4.09E+00
+ sweep: dc dc24   end,  cpu clock=  4.12E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc25   begin, #sweeps= 151 cpu clock=  4.13E+00
+ sweep: dc dc25   end,  cpu clock=  4.16E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc26   begin, #sweeps= 151 cpu clock=  4.16E+00
+ sweep: dc dc26   end,  cpu clock=  4.20E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc27   begin, #sweeps= 151 cpu clock=  4.20E+00
+ sweep: dc dc27   end,  cpu clock=  4.23E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc28   begin, #sweeps= 151 cpu clock=  4.24E+00
+ sweep: dc dc28   end,  cpu clock=  4.27E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc29   begin, #sweeps= 151 cpu clock=  4.27E+00
+ sweep: dc dc29   end,  cpu clock=  4.30E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc30   begin, #sweeps= 151 cpu clock=  4.31E+00
+ sweep: dc dc30   end,  cpu clock=  4.34E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc31   begin, #sweeps= 151 cpu clock=  4.34E+00
+ sweep: dc dc31   end,  cpu clock=  4.38E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc32   begin, #sweeps= 151 cpu clock=  4.38E+00
+ sweep: dc dc32   end,  cpu clock=  4.41E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc33   begin, #sweeps= 151 cpu clock=  4.42E+00
+ sweep: dc dc33   end,  cpu clock=  4.45E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc34   begin, #sweeps= 151 cpu clock=  4.45E+00
+ sweep: dc dc34   end,  cpu clock=  4.49E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc35   begin, #sweeps= 151 cpu clock=  4.49E+00
+ sweep: dc dc35   end,  cpu clock=  4.52E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc36   begin, #sweeps= 151 cpu clock=  4.53E+00
+ sweep: dc dc36   end,  cpu clock=  4.56E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc37   begin, #sweeps= 151 cpu clock=  4.56E+00
+ sweep: dc dc37   end,  cpu clock=  4.59E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc38   begin, #sweeps= 151 cpu clock=  4.60E+00
+ sweep: dc dc38   end,  cpu clock=  4.63E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc39   begin, #sweeps= 151 cpu clock=  4.64E+00
+ sweep: dc dc39   end,  cpu clock=  4.67E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc40   begin, #sweeps= 151 cpu clock=  4.67E+00
+ sweep: dc dc40   end,  cpu clock=  4.71E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc41   begin, #sweeps= 151 cpu clock=  4.71E+00
+ sweep: dc dc41   end,  cpu clock=  4.74E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc42   begin, #sweeps= 151 cpu clock=  4.75E+00
+ sweep: dc dc42   end,  cpu clock=  4.78E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc43   begin, #sweeps= 151 cpu clock=  4.78E+00
+ sweep: dc dc43   end,  cpu clock=  4.81E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc44   begin, #sweeps= 151 cpu clock=  4.82E+00
+ sweep: dc dc44   end,  cpu clock=  4.85E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc45   begin, #sweeps= 151 cpu clock=  4.86E+00
+ sweep: dc dc45   end,  cpu clock=  4.89E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc46   begin, #sweeps= 151 cpu clock=  4.89E+00
+ sweep: dc dc46   end,  cpu clock=  4.93E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc47   begin, #sweeps= 151 cpu clock=  4.93E+00
+ sweep: dc dc47   end,  cpu clock=  4.96E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc48   begin, #sweeps= 151 cpu clock=  4.97E+00
+ sweep: dc dc48   end,  cpu clock=  5.00E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc49   begin, #sweeps= 151 cpu clock=  5.00E+00
+ sweep: dc dc49   end,  cpu clock=  5.03E+00 memory=    182 kb
+ output: idvgnmos.ms0
+ sweep: dc dc50   begin, #sweeps= 151 cpu clock=  5.04E+00
+ sweep: dc dc50   end,  cpu clock=  5.07E+00 memory=    182 kb
+ sweep: monte_carlo     monte_carlo     1 end
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
