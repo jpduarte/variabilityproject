@@ -4,27 +4,27 @@
 .option abstol=1e-6 reltol=1e-6 post ingold
 .temp 27
 
-.param tox_mc=agauss(0,1,1)
-.param tox_n=0.8n
+.param w_ufcm_mc=agauss(0,1,1)
+.param w_ufcm_n=91.94n
 
-.param lint_n=0
-.param lint_mc=agauss(0,1,1)
+.param ach_ufcm_n=319.2a
+.param ach_ufcm_mc=agauss(0,1,1)
 
-.param wint_n=0
-.param wint_mc=agauss(0,1,1)
+.param cins_ufcm_n=3.967n
+.param cins_ufcm_mc=agauss(0,1,1)
 
-.param tfin_n=7.6n
-.param tfin_mc=agauss(0,1,1)
+.param tfin_top_n=7.6n
+.param tfin_top_mc=agauss(0,1,1)
 
-.param hfin_n=42n
-.param hfin_mc=agauss(0,1,1)
+.param tfin_base_n=15.2n
+.param tfin_base_mc=agauss(0,1,1)
 
 .param nbody_n=6.0e24
 .param nbody_mc=agauss(0,1,1)
 
 
 .hdl "../model_code/code_109beta/bsimcmg.va"
-.include "modelcard-109-geo1.nmos"
+.include "modelcard-109-geo4.nmos"
 
 * --- Voltage Sources ---
 vds supply  0 dc=0.05

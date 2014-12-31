@@ -1,6 +1,6 @@
-***BSIMCMG109 Model Card with TCAD data for variability simulations
+***BSIMCMG109 Model Card with TCAD data for variability simulations with GEOMOD=1
 .model nmos1 bsimcmg
-+FPITCH =7.600n
+*+FPITCH =8.5n
 +CDSC =100.0m
 +CDSCD =13.00m
 +CIT =1.800m

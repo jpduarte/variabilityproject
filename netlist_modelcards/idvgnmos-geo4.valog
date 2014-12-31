@@ -14,10 +14,10 @@ HSP_ARCH:   linux
 HSP_GCC :   /tools/synopsys/hspice/G-2012.06/hspice/GNU/amd64/gcc-4.5.2-static/bin/gcc -m32 
 HSP_GCC_VER:   4.5.2
 Working-Dir: /users/sourabh/sourabh/Variability/netlist_modelcards
-Args:        -p hsp -t spi -f idvgnmos.pvadir/pvaHDL.lis -o idvgnmos.pvadir 
+Args:        -p hsp -t spi -f idvgnmos-geo4.pvadir/pvaHDL.lis -o idvgnmos-geo4.pvadir 
 
 
-Begin of pVA compiling on Tue Dec 30 19:25:47 2014
+Begin of pVA compiling on Tue Dec 30 19:50:28 2014
 
 Parsing './../model_code/code_109beta/bsimcmg.va'
 Parsing include file '././/../model_code/code_109beta/bsimcmg_main.va'
@@ -30,19 +30,19 @@ Parsing include file '././/../model_code/code_109beta/bsimcmg_binning_parameters
 Parsing include file '././/../model_code/code_109beta/bsimcmg_rdsmod.include'
 Parsing include file '././/../model_code/code_109beta/bsimcmg_quasi_static_cv.include'
 
-End of pVA compiling on Tue Dec 30 19:25:47 2014
+End of pVA compiling on Tue Dec 30 19:50:28 2014
 
 
-End of build pVA DB on Tue Dec 30 19:25:47 2014
+End of build pVA DB on Tue Dec 30 19:50:28 2014
 
 
-idvgnmos.pvadir/pvaRTL_linux.so is reused
+idvgnmos-geo4.pvadir/pvaRTL_linux.so is reused
 
-End of pVA elaboration on Tue Dec 30 19:25:47 2014
+End of pVA elaboration on Tue Dec 30 19:50:28 2014
 
 *pvaI* Creating Verilog-A module 'bsimcmg' for X2
 *pvaI* Creating Verilog-A module 'bsimcmg' for X1
 
 
-pVA concluded on Tue Dec 30 19:25:50 2014
+pVA concluded on Tue Dec 30 19:51:11 2014
 
