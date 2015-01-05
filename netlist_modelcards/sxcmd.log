@@ -1,0 +1,9 @@
+### SPICE Explorer log file, revision C2009.03-SP1 (build 0906) ###
+### created at 12:50:25 on Mon Nov 24 2014 (Linux AMD64) ###
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+# (0) HOME defined
+sx_open_sim_file_read "/users/sourabh/sourabh/Variability/netlist_modelcards/idvgnmos.lis"
+sx_log "disp_sig 1 A P=null file=0 S='x1.' W='x1.d'x1.d'x1.d'x1.d'x1.d'' "

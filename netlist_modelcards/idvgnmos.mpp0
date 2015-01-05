@@ -1,0 +1,50 @@
+================================================================
+*** This file format is subject to change **
+read in failed for sample file: idvgnmos.mc0, do not do importance analysis
+
+Summary statistics
+==================
+Number of Samples:  50
+Number of Failures: 0
+
+Sample moments etc:
+-------------------
+CI: 95% Bootstrap confidence intervals based on 500 re-samples
+                 CI          mean       median     stdDev     mad        skewness   kurtosis   
+                2.5%        1.578e-01  1.575e-01  3.324e-03  2.817e-03 -5.275e-01  2.009e+00
+vth_lin                     1.589e-01  1.584e-01  4.162e-03  4.522e-03 -9.197e-02  2.615e+00
+                97.5%       1.600e-01  1.600e-01  4.833e-03  5.560e-03  3.917e-01  3.401e+00
+
+                2.5%        1.235e-01  1.237e-01  3.181e-04  1.483e-04 -2.242e+00  2.393e+00
+vth_sat                     1.237e-01  1.238e-01  4.548e-04  2.224e-04 -1.586e+00  5.453e+00
+                97.5%       1.238e-01  1.239e-01  5.814e-04  4.448e-04 -7.539e-01  8.969e+00
+
+
+Quantiles:
+----------
+                 CI          Q01        Q05        Q25        Q75        Q95        Q99        
+                2.5%        1.493e-01  1.496e-01  1.546e-01  1.598e-01  1.637e-01  1.652e-01 
+vth_lin                     1.496e-01  1.522e-01  1.560e-01  1.616e-01  1.653e-01  1.670e-01 
+                97.5%       1.526e-01  1.546e-01  1.576e-01  1.634e-01  1.670e-01  1.670e-01 
+
+                2.5%        1.220e-01  1.222e-01  1.232e-01  1.239e-01  1.241e-01  1.241e-01 
+vth_sat                     1.222e-01  1.229e-01  1.234e-01  1.240e-01  1.241e-01  1.241e-01 
+                97.5%       1.229e-01  1.232e-01  1.237e-01  1.240e-01  1.241e-01  1.241e-01 
+
+
+Extremes and corners:
+---------------------
+                 min        max        minIndex     maxIndex   
+vth_lin          1.493e-01  1.670e-01      34             21
+vth_sat          1.220e-01  1.241e-01      11              4
+
+Response Correlation matrix (%)
+===============================
+                vth_lin vth_sat 
+vth_lin          100.0     3.4  
+vth_sat            3.4   100.0  
+
+Selective simulation
+====================
+To simulate corners only:
+Use: ... Monte = list(4, 7, 11, 12, 21, 22, 34, 41, 42, 44)

@@ -1,0 +1,48 @@
+
+ --------------------------------------------------------
+|                                                        |
+|          Synopsys Unified Verilog-A (pVA v2.0)         |
+|                                                        |
+|       Machine Name: bwrcr720-1.eecs.berkeley.edu       |
+| Copyright (c) 2011 Synopsys Inc., All Rights Reserved. |
+|                                                        |
+ --------------------------------------------------------
+
+libepva built by pvamgr synmake_pva_build  on Tue May  1 20:03:16 PDT 2012
+HSP_HOME:   /tools/synopsys/hspice/G-2012.06/hspice
+HSP_ARCH:   linux
+HSP_GCC :   /tools/synopsys/hspice/G-2012.06/hspice/GNU/amd64/gcc-4.5.2-static/bin/gcc -m32 
+HSP_GCC_VER:   4.5.2
+Working-Dir: /users/sourabh/sourabh/Variability/netlist_modelcards
+Args:        -p hsp -t spi -f idvgnmos.pvadir/pvaHDL.lis -o idvgnmos.pvadir 
+
+
+Begin of pVA compiling on Tue Dec 30 19:25:47 2014
+
+Parsing './../model_code/code_109beta/bsimcmg.va'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_main.va'
+Parsing include file '/tools/synopsys/hspice/G-2012.06/hspice/include/constants.vams'
+Parsing include file '/tools/synopsys/hspice/G-2012.06/hspice/include/disciplines.vams'
+Parsing include file '././/../model_code/code_109beta/common_defs.include'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_cfringe.include'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_body.include'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_binning_parameters.include'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_rdsmod.include'
+Parsing include file '././/../model_code/code_109beta/bsimcmg_quasi_static_cv.include'
+
+End of pVA compiling on Tue Dec 30 19:25:47 2014
+
+
+End of build pVA DB on Tue Dec 30 19:25:47 2014
+
+
+idvgnmos.pvadir/pvaRTL_linux.so is reused
+
+End of pVA elaboration on Tue Dec 30 19:25:47 2014
+
+*pvaI* Creating Verilog-A module 'bsimcmg' for X2
+*pvaI* Creating Verilog-A module 'bsimcmg' for X1
+
+
+pVA concluded on Tue Dec 30 19:25:50 2014
+
