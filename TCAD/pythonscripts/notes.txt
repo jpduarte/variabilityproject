@@ -1,0 +1,5 @@
+findIonsat.py: read all the files and plot Id-Vg for Vd=0.86 V, in linear and log scale
+findIonlin.py: read all the files and plot Id-Vg for Vd=0.05 V, in linear and log scale
+findIonIoff.py:plot Ion vs Ioff plot
+extractresults.py:extracresults script from I-V results
+plotelectricalextraction.py: plot data of simulations such as Vth, SS, Ion vs Ioff etc.
