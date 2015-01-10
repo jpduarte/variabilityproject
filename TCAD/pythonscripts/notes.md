@@ -5,3 +5,5 @@ extractresults.py:extract results script from I-V results
 plotelectricalextraction.py: plot data of simulations such as Vth, SS, Ion vs Ioff etc.
 extractresultscorner.py: extract results script from I-V results of corner simulations, additional code had to be added since some name of files were wrongly written (missing Nfin parameter for 1e18 body doping)
 plotelectricalextractioncorner.py: plot data of simulations such as Vth, SS, Ion vs Ioff etc.
+extracDIBL.py: extract DIBL and write down all electrical measurements of each device in a file (sat and lin)
+plotelectricalextractioncornersatlin.py: uses results from extracDIBL.py to plot different electrical quantities
