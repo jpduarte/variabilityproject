@@ -1,0 +1,119 @@
+***** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******
+ Input File: idvgnmos.sp
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU
+ lic: HOSTID:                      PID:      25562
+ lic: Using FLEXlm license file:
+ lic: 1701@sunv40z-1.eecs.berkeley.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 19-dec-2015/2014.09
+ lic: 2(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley.
+ lic:
+ init: begin read circuit files,  cpu clock=  4.00E-02
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/behave
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/bjt
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/burr_brn
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/comlinear
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/dio
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/fet
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/lin_tech
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/pci
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/signet
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ti
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/tline
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/xilinx
+       option runlvl
+       option abstol   =    1.000E-06
+       option reltol   =    1.000E-06
+       option post
+       option ingold
+ init: end read circuit files,  cpu clock=  1.00E-01 memory=    150 kb
+ init: begin check errors,  cpu clock=  1.00E-01
+ init: end check errors,  cpu clock=  1.80E-01 memory=    152 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.80E-01
+       establish matrix -- done,  cpu clock=  1.80E-01 memory=    153 kb
+       re-order matrix -- done,  cpu clock=  1.80E-01 memory=    153 kb
+ init: end setup matrix,  cpu clock=  1.80E-01 memory=    164 kb
+ sweep: monte_carlo     monte_carlo1     begin, #sweeps =   3
+ output: idvgnmos.sw0
+ sweep: dc dc1    begin, #sweeps= 101 cpu clock=  1.90E-01
+ sweep: dc dc1    end,  cpu clock=  2.10E-01 memory=    166 kb
+ output: idvgnmos.sw0
+ sweep: dc dc2    begin, #sweeps= 101 cpu clock=  2.10E-01
+ sweep: dc dc2    end,  cpu clock=  2.30E-01 memory=    166 kb
+ output: idvgnmos.sw0
+ sweep: dc dc3    begin, #sweeps= 101 cpu clock=  2.30E-01
+ sweep: dc dc3    end,  cpu clock=  2.50E-01 memory=    166 kb
+ sweep: monte_carlo     monte_carlo     1 end
+>info:         ***** hspice job concluded
+ init: begin read circuit files,  cpu clock=  5.55E-01
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ad
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/behave
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/bjt
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/burr_brn
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/comlinear
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/dio
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/fet
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/lin_tech
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/pci
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/signet
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/ti
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/tline
+       option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
+                         ts/xilinx
+       option runlvl
+       option abstol   =    1.000E-06
+       option reltol   =    1.000E-06
+       option post
+       option ingold
+ init: end read circuit files,  cpu clock=  5.57E-01 memory=    151 kb
+ init: begin check errors,  cpu clock=  5.57E-01
+ init: end check errors,  cpu clock=  6.51E-01 memory=    153 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  6.51E-01
+       establish matrix -- done,  cpu clock=  6.51E-01 memory=    154 kb
+       re-order matrix -- done,  cpu clock=  6.51E-01 memory=    154 kb
+ init: end setup matrix,  cpu clock=  6.53E-01 memory=    165 kb
+ sweep: monte_carlo     monte_carlo1     begin, #sweeps =   3
+ output: idvgnmos.sw1
+ sweep: dc dc1    begin, #sweeps= 101 cpu clock=  6.61E-01
+ sweep: dc dc1    end,  cpu clock=  6.79E-01 memory=    167 kb
+ output: idvgnmos.sw1
+ sweep: dc dc2    begin, #sweeps= 101 cpu clock=  6.84E-01
+ sweep: dc dc2    end,  cpu clock=  7.01E-01 memory=    167 kb
+ output: idvgnmos.sw1
+ sweep: dc dc3    begin, #sweeps= 101 cpu clock=  7.05E-01
+ sweep: dc dc3    end,  cpu clock=  7.22E-01 memory=    167 kb
+ sweep: monte_carlo     monte_carlo     1 end
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
