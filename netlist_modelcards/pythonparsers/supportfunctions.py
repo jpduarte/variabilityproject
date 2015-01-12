@@ -33,7 +33,7 @@ def meshgrid2(*arrs):
 def inplace_change(filename, old_string, new_string):
         s=open(filename).read()
         if old_string in s:
-                print 'Changing "{old_string}" to "{new_string}"'.format(**locals())
+                #print 'Changing "{old_string}" to "{new_string}"'.format(**locals())
                 s=s.replace(old_string, new_string)
                 f=open(filename, 'w')
                 f.write(s)

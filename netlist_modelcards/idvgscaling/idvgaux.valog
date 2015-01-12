@@ -17,7 +17,7 @@ Working-Dir: /users/jpduarte/research/variabilityproject/netlist_modelcards/pyth
 Args:        -p hsp -t spi -f /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir/pvaHDL.lis -o /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir 
 
 
-Begin of pVA compiling on Sun Jan 11 19:01:51 2015
+Begin of pVA compiling on Sun Jan 11 22:42:27 2015
 
 Parsing '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_main.va'
@@ -30,18 +30,18 @@ Parsing include file '/users/jpduarte/research/variabilityproject/model_code/cod
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_rdsmod.include'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_quasi_static_cv.include'
 
-End of pVA compiling on Sun Jan 11 19:01:51 2015
+End of pVA compiling on Sun Jan 11 22:42:28 2015
 
 
-End of build pVA DB on Sun Jan 11 19:01:51 2015
+End of build pVA DB on Sun Jan 11 22:42:28 2015
 
 
 /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir/pvaRTL_linux.so is reused
 
-End of pVA elaboration on Sun Jan 11 19:01:51 2015
+End of pVA elaboration on Sun Jan 11 22:42:28 2015
 
 *pvaI* Creating Verilog-A module 'bsimcmg' for X1
 
 
-pVA concluded on Sun Jan 11 19:01:51 2015
+pVA concluded on Sun Jan 11 22:42:28 2015
 

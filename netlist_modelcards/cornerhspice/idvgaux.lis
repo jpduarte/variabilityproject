@@ -5,12 +5,12 @@
   terms and conditions of the license agreement from Synopsys.
   Use of this program is your acceptance to be bound by the
   license agreement. HSPICE is the trademark of Synopsys, Inc.
-  Input File: /users/jpduarte/research/variabilityproject/netlist_modelcards/idv
-  Command line options: /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.sp -o /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux
+  Input File: /users/jpduarte/research/variabilityproject/netlist_modelcards/cor
+  Command line options: /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.sp -o /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux
  lic:  
  lic: FLEXlm: v10.8 
  lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU 
- lic: HOSTID:                      PID:      6655 
+ lic: HOSTID:                      PID:      17018 
  lic: Using FLEXlm license file: 
  lic: 1701@sunv40z-1.eecs.berkeley.edu 
  lic: Checkout 1 hspice 
@@ -18,7 +18,7 @@
  lic: 2(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley.
  lic:   
  Init: read install configuration file: /tools/synopsys/hspice/G-2012.06-ENG1/hspice/meta.cfg
- Loading pVA library /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir/pvaRTL_linux.so...
+ Loading pVA library /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.pvadir/pvaRTL_linux.so...
 1****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
  ******  
  *sample netlist for bsim-mg
@@ -37,7 +37,7 @@
  ******
  runlvl  = 3         bypass  = 2         
   Opening plot unit= 15
- file=/users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pa0
+ file=/users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.pa0
 
  ******  
  *sample netlist for bsim-mg
@@ -50,56 +50,56 @@ x
 
         volt    current    
                    x1.d    
-    0.          9.571e-12  
-  1.7551e-02    1.894e-11  
-  3.5102e-02    3.750e-11  
-  5.2653e-02    7.424e-11  
-  7.0204e-02    1.469e-10  
-  8.7755e-02    2.906e-10  
-    0.10531     5.741e-10  
-    0.12286     1.132e-09  
-    0.14041     2.222e-09  
-    0.15796     4.329e-09  
-    0.17551     8.315e-09  
-    0.19306     1.560e-08  
-    0.21061     2.820e-08  
-    0.22816     4.856e-08  
-    0.24571     7.893e-08  
-    0.26327     1.208e-07  
-    0.28082     1.747e-07  
-    0.29837     2.402e-07  
-    0.31592     3.164e-07  
-    0.33347     4.020e-07  
-    0.35102     4.957e-07  
-    0.36857     5.965e-07  
-    0.38612     7.033e-07  
-    0.40367     8.153e-07  
-    0.42122     9.317e-07  
-    0.43878     1.052e-06  
-    0.45633     1.175e-06  
-    0.47388     1.302e-06  
-    0.49143     1.430e-06  
-    0.50898     1.561e-06  
-    0.52653     1.694e-06  
-    0.54408     1.829e-06  
-    0.56163     1.965e-06  
-    0.57918     2.102e-06  
-    0.59673     2.240e-06  
-    0.61429     2.380e-06  
-    0.63184     2.520e-06  
-    0.64939     2.662e-06  
-    0.66694     2.804e-06  
-    0.68449     2.946e-06  
-    0.70204     3.090e-06  
-    0.71959     3.234e-06  
-    0.73714     3.378e-06  
-    0.75469     3.523e-06  
-    0.77224     3.668e-06  
-    0.78980     3.814e-06  
-    0.80735     3.960e-06  
-    0.82490     4.106e-06  
-    0.84245     4.253e-06  
-    0.86000     4.400e-06  
+    0.          1.313e-09  
+  1.7551e-02    2.218e-09  
+  3.5102e-02    3.745e-09  
+  5.2653e-02    6.324e-09  
+  7.0204e-02    1.067e-08  
+  8.7755e-02    1.800e-08  
+    0.10531     3.034e-08  
+    0.12286     5.102e-08  
+    0.14041     8.556e-08  
+    0.15796     1.428e-07  
+    0.17551     2.364e-07  
+    0.19306     3.869e-07  
+    0.21061     6.220e-07  
+    0.22816     9.762e-07  
+    0.24571     1.486e-06  
+    0.26327     2.183e-06  
+    0.28082     3.087e-06  
+    0.29837     4.204e-06  
+    0.31592     5.528e-06  
+    0.33347     7.045e-06  
+    0.35102     8.732e-06  
+    0.36857     1.057e-05  
+    0.38612     1.253e-05  
+    0.40367     1.461e-05  
+    0.42122     1.677e-05  
+    0.43878     1.901e-05  
+    0.45633     2.130e-05  
+    0.47388     2.364e-05  
+    0.49143     2.602e-05  
+    0.50898     2.843e-05  
+    0.52653     3.085e-05  
+    0.54408     3.329e-05  
+    0.56163     3.574e-05  
+    0.57918     3.818e-05  
+    0.59673     4.063e-05  
+    0.61429     4.307e-05  
+    0.63184     4.550e-05  
+    0.64939     4.791e-05  
+    0.66694     5.032e-05  
+    0.68449     5.270e-05  
+    0.70204     5.507e-05  
+    0.71959     5.742e-05  
+    0.73714     5.975e-05  
+    0.75469     6.205e-05  
+    0.77224     6.433e-05  
+    0.78980     6.659e-05  
+    0.80735     6.883e-05  
+    0.82490     7.104e-05  
+    0.84245     7.323e-05  
+    0.86000     7.539e-05  
 y
 -----------------------------------------------
  ******  
@@ -113,56 +113,56 @@ x
 
         volt    current    
                    x1.d    
-    0.          1.114e-11  
-  1.7551e-02    2.183e-11  
-  3.5102e-02    4.320e-11  
-  5.2653e-02    8.561e-11  
-  7.0204e-02    1.693e-10  
-  8.7755e-02    3.349e-10  
-    0.10531     6.619e-10  
-    0.12286     1.306e-09  
-    0.14041     2.567e-09  
-    0.15796     5.014e-09  
-    0.17551     9.677e-09  
-    0.19306     1.830e-08  
-    0.21061     3.357e-08  
-    0.22816     5.907e-08  
-    0.24571     9.894e-08  
-    0.26327     1.574e-07  
-    0.28082     2.385e-07  
-    0.29837     3.454e-07  
-    0.31592     4.810e-07  
-    0.33347     6.476e-07  
-    0.35102     8.469e-07  
-    0.36857     1.080e-06  
-    0.38612     1.348e-06  
-    0.40367     1.652e-06  
-    0.42122     1.992e-06  
-    0.43878     2.367e-06  
-    0.45633     2.778e-06  
-    0.47388     3.225e-06  
-    0.49143     3.706e-06  
-    0.50898     4.222e-06  
-    0.52653     4.771e-06  
-    0.54408     5.352e-06  
-    0.56163     5.966e-06  
-    0.57918     6.610e-06  
-    0.59673     7.284e-06  
-    0.61429     7.987e-06  
-    0.63184     8.718e-06  
-    0.64939     9.476e-06  
-    0.66694     1.026e-05  
-    0.68449     1.107e-05  
-    0.70204     1.190e-05  
-    0.71959     1.276e-05  
-    0.73714     1.363e-05  
-    0.75469     1.453e-05  
-    0.77224     1.545e-05  
-    0.78980     1.639e-05  
-    0.80735     1.735e-05  
-    0.82490     1.832e-05  
-    0.84245     1.932e-05  
-    0.86000     2.032e-05  
+    0.          7.454e-09  
+  1.7551e-02    1.200e-08  
+  3.5102e-02    1.931e-08  
+  5.2653e-02    3.106e-08  
+  7.0204e-02    4.988e-08  
+  8.7755e-02    7.998e-08  
+    0.10531     1.279e-07  
+    0.12286     2.035e-07  
+    0.14041     3.218e-07  
+    0.15796     5.036e-07  
+    0.17551     7.768e-07  
+    0.19306     1.175e-06  
+    0.21061     1.732e-06  
+    0.22816     2.480e-06  
+    0.24571     3.440e-06  
+    0.26327     4.621e-06  
+    0.28082     6.023e-06  
+    0.29837     7.641e-06  
+    0.31592     9.467e-06  
+    0.33347     1.149e-05  
+    0.35102     1.370e-05  
+    0.36857     1.608e-05  
+    0.38612     1.863e-05  
+    0.40367     2.132e-05  
+    0.42122     2.414e-05  
+    0.43878     2.709e-05  
+    0.45633     3.014e-05  
+    0.47388     3.329e-05  
+    0.49143     3.652e-05  
+    0.50898     3.983e-05  
+    0.52653     4.321e-05  
+    0.54408     4.665e-05  
+    0.56163     5.015e-05  
+    0.57918     5.369e-05  
+    0.59673     5.727e-05  
+    0.61429     6.089e-05  
+    0.63184     6.454e-05  
+    0.64939     6.822e-05  
+    0.66694     7.193e-05  
+    0.68449     7.566e-05  
+    0.70204     7.941e-05  
+    0.71959     8.317e-05  
+    0.73714     8.695e-05  
+    0.75469     9.075e-05  
+    0.77224     9.455e-05  
+    0.78980     9.836e-05  
+    0.80735     1.022e-04  
+    0.82490     1.060e-04  
+    0.84245     1.098e-04  
+    0.86000     1.137e-04  
 y
 -----------------------------------------------
 
@@ -208,16 +208,16 @@ y
   op point           0.00           1           0
   dc sweep           0.02         100         204
   readin             0.08
-  errchk             0.09
+  errchk             0.12
   setup              0.00
   output             0.00
 
 
-           peak memory used        112.86 megabytes
-           total cpu time            0.19 seconds
-           total elapsed time        0.49 seconds
-           job started at     22:42:27 01/11/2015
-           job ended   at     22:42:28 01/11/2015
+           peak memory used        112.85 megabytes
+           total cpu time            0.22 seconds
+           total elapsed time        0.56 seconds
+           job started at     01:57:29 01/12/2015
+           job ended   at     01:57:29 01/12/2015
 
 
  lic: Release hspice token(s) 

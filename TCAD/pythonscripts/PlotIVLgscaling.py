@@ -29,26 +29,15 @@ for namefile in data_files[0][1]:
       Idsindex =  header.index('drainTotalCurrent')
     
       datalist = np.loadtxt(filenameaux,skiprows = 1)
-      
-      l = pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )
+      pylab.figure(1)
+      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )      
+      pylab.figure(2)
+      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )
       target.close()
       count +=1
       print count
 
     
-pylab.xlabel("VG (V)", fontsize=20)
-pylab.ylabel("ID,SAT (uA/um)", fontsize=20)
-ax = pylab.gca()
-pylab.xlim([0,0.86])
-#pylab.ylim([0,1000])
-#ax.set_yscale('log')  
-#pylab.savefig('IonsatvsVglin', dpi=600, bbox_inches='tight')  
-#ax.set_yscale('log')  
-pylab.xlim([0,0.86])
-#pylab.ylim([1e-2,1e4])
-#pylab.savefig('IonsatvsVglog', dpi=600, bbox_inches='tight')   
-
-
 ################################## 
 
 root_dir = '../../netlist_modelcards/idvgscaling'
@@ -76,24 +65,31 @@ for namefile in data_files[0][1]:
       Idsindex =  header.index('drainTotalCurrent')
     
       datalist = np.loadtxt(filenameaux,skiprows = 1)
-      
+      pylab.figure(1)
       pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )
+      pylab.figure(2)
+      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )      
       target.close()
       count +=1
       print count
 
-    
+pylab.figure(1)  
 pylab.xlabel("VG (V)", fontsize=20)
-pylab.ylabel("ID,SAT (uA/um)", fontsize=20)
+pylab.ylabel("ID,LIN (uA/um)", fontsize=20)
 ax = pylab.gca()
 pylab.xlim([0,0.86])
-#pylab.ylim([0,1000])
-#ax.set_yscale('log')  
-#pylab.savefig('IonsatvsVglin', dpi=600, bbox_inches='tight')  
+#pylab.savefig('IonlinvsVgLGscalinglinGEO1', dpi=600, bbox_inches='tight') 
+
+
+pylab.figure(2)  
+pylab.xlabel("VG (V)", fontsize=20)
+pylab.ylabel("ID,LIN (uA/um)", fontsize=20)
+ax = pylab.gca()
 ax.set_yscale('log')  
 pylab.xlim([0,0.86])
 pylab.ylim([1e-4,1e4])
-#pylab.savefig('IonsatvsVgLGscalinglog', dpi=600, bbox_inches='tight') 
+#pylab.savefig('IonlinvsVgLGscalinglogGEO1', dpi=600, bbox_inches='tight') 
+
 
 
 pylab.show()
