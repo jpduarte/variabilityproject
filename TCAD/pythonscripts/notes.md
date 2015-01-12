@@ -7,3 +7,6 @@ extractresultscorner.py: extract results script from I-V results of corner simul
 plotelectricalextractioncorner.py: plot data of simulations such as Vth, SS, Ion vs Ioff etc.
 extracDIBL.py: extract DIBL and write down all electrical measurements of each device in a file (sat and lin)
 plotelectricalextractioncornersatlin.py: uses results from extracDIBL.py to plot different electrical quantities
+findIonsat.py: compare corner vs MC results
+extractresultsMC.py: for v10 folder extraction
+extracDIBL2.py: for v10 folder extraction

@@ -3,7 +3,7 @@ import os
 import numpy as np
 import pylab
 
-root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v8'
+root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v6'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 
@@ -21,14 +21,16 @@ for namefile in data_files[0][1]:
     #print namefile
     filenameaux = root_dir +'/'+ namefile
     target = open( filenameaux, 'r')
-    header = str.split(target.readline())
-    if len(header)>0:
+    fistline = target.readline()
+    header = str.split(fistline)
+    findvgindex = fistline.find("gateOuterVoltage")     
+    if (len(header)>0 and findvgindex>0):
       vgindex =  header.index('gateOuterVoltage')
       Idsindex =  header.index('drainTotalCurrent')
     
       datalist = np.loadtxt(filenameaux,skiprows = 1)
       
-      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2 )
+      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='k' )
       target.close()
       count +=1
       print count
@@ -40,9 +42,9 @@ ax = pylab.gca()
 pylab.xlim([0,0.86])
 #pylab.ylim([0,1000])
 #ax.set_yscale('log')  
-pylab.savefig('IonsatvsVglin', dpi=600, bbox_inches='tight')  
-ax.set_yscale('log')  
+#pylab.savefig('IonsatvsVglin', dpi=600, bbox_inches='tight')  
+#ax.set_yscale('log')  
 pylab.xlim([0,0.86])
-pylab.ylim([1e-2,1e4])
-pylab.savefig('IonsatvsVglog', dpi=600, bbox_inches='tight')    
+#pylab.ylim([1e-2,1e4])
+#pylab.savefig('IonsatvsVglog', dpi=600, bbox_inches='tight')    
 pylab.show()
