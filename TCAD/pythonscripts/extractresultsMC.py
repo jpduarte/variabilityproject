@@ -63,7 +63,7 @@ def findSS(vg_array,ids_array,vgi,level):
     SS = np.log(10)*(vg_array[indexids2]-vgi)/(np.log(ids_array[indexids2]/Ioff))
   return SS
 ######################
-root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v9'
+root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v10'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 #filenames = data_files[0][1]
@@ -71,7 +71,7 @@ data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 factorIDS = 1e6/(42e-3*2+7.6e-3)#this factor is for normalize
 
 montecarloresultsall = open('montecarloresultsallfile2', 'w')
-stringtoprint = 'Ioff'+' '+'Ion'+' '+'Wt'+' '+'Lg'+' '+'Hfin'+' '+'tox'+' '+'WbR'+' '+'WbL' +' '+'Nfin'+' '+'vd'+' '+'Vth'+' gmax'+' SS'+' filename'+'\n'
+stringtoprint = 'Ioff'+' '+'Ion'+' '+'Wt'+' '+'Lg'+' '+'Hfin'+' '+'tox'+' '+'WbR'+' '+'WbL' +' '+'Nfin'+' WF '+'vd'+' '+'Vth'+' gmax'+' SS'+' filename'+'\n'
 montecarloresultsall.write(stringtoprint)
 
 montecarloresultsallvdlin = open('montecarloresultsallfilevdlin2', 'w')
@@ -83,7 +83,7 @@ montecarloresultsallvdsat.write(stringtoprint)
 
 count = 1
 for namefile in data_files[0][1]:
-  #if count>1:
+  #if count>10:
 	#	break
   flagfiledata =  namefile.find("DATAREADY") #if it is found "DATAREADY" it returns the position, this can be used for 
   if ((flagfiledata > 0)):
@@ -94,6 +94,7 @@ for namefile in data_files[0][1]:
     indexWbR = namefile.find("WbR") 
     indexWbL = namefile.find("WbL") 
     indexNfin = namefile.find("Nfin") 
+    indexWF = namefile.find("WF") 
     indexvd = namefile.find("vd") 
 
     Wt =  namefile[indexWt+2:indexLg]
@@ -102,13 +103,19 @@ for namefile in data_files[0][1]:
     tox =  namefile[indextox+3:indexWbR]
     WbR =  namefile[indexWbR+3:indexWbL]
     WbL =  namefile[indexWbL+3:indexNfin]
-    Nfin =  namefile[indexNfin+4:indexvd]
+    Nfin =  namefile[indexNfin+4:indexWF]
+    WF =  namefile[indexWF+2:indexvd]    
     vd =  namefile[indexvd+2:flagfiledata]
+      
+    nametoprint =  namefile[indexWt:indexvd]
+
 
     filenameaux = root_dir +'/'+ namefile
     target = open( filenameaux, 'r')
-    header = str.split(target.readline())
-    if len(header)>0:
+    fistline = target.readline()
+    header = str.split(fistline)
+    findvgindex = fistline.find("gateOuterVoltage") 
+    if (len(header)>0 and findvgindex>0):
       vgindex =  header.index('gateOuterVoltage')
       Idsindex =  header.index('drainTotalCurrent')
       datalist = np.loadtxt(filenameaux,skiprows = 1)
@@ -117,7 +124,7 @@ for namefile in data_files[0][1]:
       Vth = findvth(datalist[:,vgindex],datalist[:,Idsindex],300*1e-9*(42e-9*2+7.6e-9)/(20e-9))#300nA*W/L for current reference in Vth
       gmax = findgmax(datalist[:,vgindex],datalist[:,Idsindex],1)
       SS = findSS(datalist[:,vgindex],datalist[:,Idsindex],0.0,1e3)
-      stringtoprint = str(Ioff)+' '+str(Ion)+' '+Wt+' '+Lg+' '+Hfin+' '+tox+' '+WbR+' '+WbL +' '+Nfin+' '+vd+' '+str(Vth)+' '+str(gmax)+' '+str(SS)+' '+ namefile[indexWt:flagfiledata]+'\n' 
+      stringtoprint = str(Ioff)+' '+str(Ion)+' '+Wt+' '+Lg+' '+Hfin+' '+tox+' '+WbR+' '+WbL +' '+Nfin+' '+WF+' '+vd+' '+str(Vth)+' '+str(gmax)+' '+str(SS)+' '+ nametoprint+'\n' 
       montecarloresultsall.write(stringtoprint)
 
       if vd =='0.05': 

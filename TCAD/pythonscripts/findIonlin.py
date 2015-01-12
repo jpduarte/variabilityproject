@@ -5,7 +5,7 @@ import os
 import numpy as np
 import pylab
 
-root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v8'
+root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v10'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 
@@ -42,9 +42,9 @@ ax = pylab.gca()
 pylab.xlim([0,0.86])
 #pylab.ylim([0,1000])
 #ax.set_yscale('log')  
-pylab.savefig('IonlinvsVglin', dpi=600, bbox_inches='tight')  
+#pylab.savefig('IonlinvsVglin', dpi=600, bbox_inches='tight')  
 ax.set_yscale('log')  
 pylab.xlim([0,0.86])
-pylab.ylim([1e-2,1e4])
-pylab.savefig('IonlinvsVglog', dpi=600, bbox_inches='tight')    
+#pylab.ylim([1e-2,1e4])
+#pylab.savefig('IonlinvsVglog', dpi=600, bbox_inches='tight')    
 pylab.show()

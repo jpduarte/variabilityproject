@@ -7,7 +7,7 @@ import pylab
 
 fignumber = 0
 ########################################################SAT
-filenameaux = 'montecarloresultsallfilevdsat'
+filenameaux = 'montecarloresultsallfilevdsat2'
 factorIDSon = 1e6/(42e-3*2+7.6e-3)
 factorIDSoff = 1e9/(42e-3*2+7.6e-3)
 
@@ -60,7 +60,7 @@ pylab.xlabel("ION,SAT (uA/um)", fontsize=18)
 target.close()
 #pylab.savefig('IonIoffVDSAT', dpi=300, bbox_inches='tight')
 ########################################################LIN
-filenameaux = 'montecarloresultsallfilevdlin'
+filenameaux = 'montecarloresultsallfilevdlin2'
 factorIDSon = 1e6/(42e-3*2+7.6e-3)
 factorIDSoff = 1e9/(42e-3*2+7.6e-3)
 
