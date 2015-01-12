@@ -1,0 +1,28 @@
+Args: pva -p hsp -t spi -f /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir/pvaHDL.lis -o /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir
+
+==> Start pvaCG on Sun Jan 11 16:54:36 2015
+
+
+Begin of pVA compiling on Sun Jan 11 16:54:36 2015
+
+Parsing '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_main.va'
+Parsing include file '/tools/synopsys/hspice/G-2012.06-ENG1/hspice/include/constants.vams'
+Parsing include file '/tools/synopsys/hspice/G-2012.06-ENG1/hspice/include/disciplines.vams'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/common_defs.include'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_cfringe.include'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_body.include'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_binning_parameters.include'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_rdsmod.include'
+Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_quasi_static_cv.include'
+
+End of pVA compiling on Sun Jan 11 16:54:36 2015
+
+
+End of build pVA DB on Sun Jan 11 16:54:36 2015
+
+
+/users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.pvadir/pvaRTL_linux.so is reused
+
+End of pVA elaboration on Sun Jan 11 16:54:36 2015
+
