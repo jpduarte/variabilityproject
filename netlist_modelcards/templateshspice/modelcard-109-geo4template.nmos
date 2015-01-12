@@ -1,32 +1,27 @@
-***BSIMCMG109 Model Card with TCAD data for variability simulations
+***BSIMCMG109 Model Card with TCAD data for variability simulations with GEOMOD=4
 .model nmos1 bsimcmg
-+FPITCH =7.600n
+*+FPITCH =8.5n
 +CDSC =100.0m
 +CDSCD =13.00m
 +CIT =1.800m
-+CS =0.000 
 +DEVTYPE =1.000 
 +DSUB =400.0m
 +DVT0 =100.0m
 +DVT1 =250.0m
-+DVT3 =0.000 
-+EOT = 800.0p
++EOT =0.8n
 +ETA0 =100.0m
 +ETAMOB =95.00m
-+GEOMOD =1.000 
++GEOMOD =4.000 
 +GIDLMOD =0.000 
-+IGMOD =0.000 
 +K1RSCE =0.000 
 +KSATIV =1.000 
-+LINT = 0.0 
-+WINT = 0.0
 +LL =0.000 
 +LPA =890.0m
 +LPE0 =10.00n
 +MEXP =2.000 
 +AMEXP =0.000 
 +BMEXP =100.0n
-+NBODY = 6.000E+24
++NBODY =6.000E+24
 +NF =1.000 
 +NGATE =0.000 
 +NSD =2.000E+26 
@@ -34,12 +29,9 @@
 +RDSW =16.00 
 +ARDSW =0.000 
 +BRDSW =20.00n
-+THETASAT =838.0m
 +PTWG =0.000 
 +APTWG =0.000 
 +BPTWG =1.000 
-+ATHETASAT =0.000 
-+BTHETASAT =1.000 
 +U0 =47.00m
 +UP =27.00n
 +VSAT =33.00K
@@ -56,7 +48,6 @@
 +MOBMOD =0.000 
 +RDSMOD =0.000 
 +DVT2 =200.0m
-+ALP =0.000 
 +AGIDL =0.000 
 +BGIDL =300.0MEG
 +EGIDL =200.0m
@@ -73,6 +64,9 @@
 +LA1 =1.000 
 +LCDSC =-1.700m
 +LETA0 =0.000
-+HFIN= 42n 
-+TFIN_TOP =7.600n
-+TFIN_BASE =15.20n
++W_UFCM = 91.94n
++Ach_UFCM = 319.2a
++Cins_UFCM = 3.967n
++TFIN_TOP =  7.600n
++TFIN_BASE = 15.20n
+

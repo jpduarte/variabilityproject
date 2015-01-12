@@ -1,3 +1,17 @@
+import numpy as np
+import supportfunctions as sf
+import shutil #this library is to copy file from original to AUX for simulation
+
+"""wheretosimpath ='/users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/'
+templatepath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/idvgnmostemplate.sp"
+modelverilogpath = "\"/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va\""
+modelcardpath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/modelcard-109template.nmos"
+vgs = np.linspace(0,0.86,50)
+vds = np.linspace(0.05,0.86,3)
+Lparam = '20e-9' 
+NFINparam = '1'"""
+
+def preparehspiceidvg(wheretosimpath,templatepath,modelverilogpath,modelcardpath,vgs,vds,Lparam,NFINparam):
 """*Sample netlist for BSIM-MG
 *Id-Vg Characteristics for NMOS (T = 27 C)
 
@@ -17,21 +31,6 @@ X1 supply gate 0 bulk nmos1 L=Lparam NFIN=NFINparam
 .dc vgs vgsi vgsf vgsdelta vds vds vdsi vdsf vdsdelta
 .print dc i(X1.d)
 .end"""
-
-import numpy as np
-import supportfunctions as sf
-import shutil #this library is to copy file from original to AUX for simulation
-
-"""wheretosimpath ='/users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/'
-templatepath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/idvgnmostemplate.sp"
-modelverilogpath = "\"/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va\""
-modelcardpath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/modelcard-109template.nmos"
-vgs = np.linspace(0,0.86,50)
-vds = np.linspace(0.05,0.86,3)
-Lparam = '20e-9' 
-NFINparam = '1'"""
-
-def preparehspiceidvg(wheretosimpath,templatepath,modelverilogpath,modelcardpath,vgs,vds,Lparam,NFINparam):
   #make an aux copy of hspice file to simulate
   shutil.copyfile(templatepath,wheretosimpath+'idvgaux.sp')
   #make an aux copy of modelcard file to simulate

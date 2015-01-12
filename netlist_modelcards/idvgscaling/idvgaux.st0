@@ -3,7 +3,7 @@
  lic:
  lic: FLEXlm: v10.8
  lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU
- lic: HOSTID:                      PID:      31537
+ lic: HOSTID:                      PID:      13440
  lic: Using FLEXlm license file:
  lic: 1701@sunv40z-1.eecs.berkeley.edu
  lic: Checkout 1 hspice
@@ -44,21 +44,21 @@
        option reltol   =    1.000E-06
        option post
        option ingold
- init: end read circuit files,  cpu clock=  1.00E-01 memory=    149 kb
- init: begin check errors,  cpu clock=  1.00E-01
- init: end check errors,  cpu clock=  1.90E-01 memory=    150 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.90E-01
-       establish matrix -- done,  cpu clock=  1.90E-01 memory=    150 kb
-       re-order matrix -- done,  cpu clock=  1.90E-01 memory=    150 kb
- init: end setup matrix,  cpu clock=  1.90E-01 memory=    162 kb
+ init: end read circuit files,  cpu clock=  9.00E-02 memory=    149 kb
+ init: begin check errors,  cpu clock=  9.00E-02
+ init: end check errors,  cpu clock=  1.80E-01 memory=    150 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.80E-01
+       establish matrix -- done,  cpu clock=  1.80E-01 memory=    150 kb
+       re-order matrix -- done,  cpu clock=  1.80E-01 memory=    150 kb
+ init: end setup matrix,  cpu clock=  1.80E-01 memory=    162 kb
  sweep: voltage         voltage1         begin, #sweeps =   2
  voltage: vds             =    5.00E-02
  output: /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscal
  sweep: dc dc1    begin, #sweeps=  50 cpu clock=  1.90E-01
- sweep: dc dc1    end,  cpu clock=  2.10E-01 memory=    163 kb
+ sweep: dc dc1    end,  cpu clock=  2.00E-01 memory=    163 kb
  voltage: vds             =    8.60E-01
  output: /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscal
- sweep: dc dc2    begin, #sweeps=  50 cpu clock=  2.10E-01
+ sweep: dc dc2    begin, #sweeps=  50 cpu clock=  2.00E-01
  sweep: dc dc2    end,  cpu clock=  2.10E-01 memory=    163 kb
  sweep: voltage         voltage         1 end
 >info:         ***** hspice job concluded

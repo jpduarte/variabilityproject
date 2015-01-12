@@ -25,7 +25,7 @@ def parsehspicev1(wheretosimpath,filenameoutput,vds,Lparam):
         filenameaux =''      
     elif (state==1):
       if line.find("x1.d")>-1:
-        filenameaux = filenameoutput + 'Lg'+Lparam+'vds'+str(vds[countruns]) + 'DEVICE.out'
+        filenameaux = filenameoutput + 'Lg'+Lparam+'vd'+str(vds[countruns]) + 'DATAREADY.out'
         countruns+=1
         print filenameaux 
         hspicefile = open(filepath+filenameaux, 'w') 

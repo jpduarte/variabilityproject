@@ -2,7 +2,7 @@
 *Id-Vg Characteristics for NMOS (T = 27 C)
 
 .option abstol=1e-6 reltol=1e-6 post ingold
-.temp 27
+.temp 25
 
 .hdl pathmodelverilog
 .include pathmodelcard
