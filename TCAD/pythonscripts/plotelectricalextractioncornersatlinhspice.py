@@ -142,7 +142,7 @@ DIBLindexsat = header.index('DIBL')
 datalist = np.loadtxt(filenameaux,skiprows = 1)
 
 #Cins,Ach,Weff = UFCMparameters(datalist[:,Wtindex],datalist[:,Lgindex],datalist[:,Hfinindex],datalist[:,toxindex],datalist[:,WbRindex],datalist[:,WbLindex],datalist[:,Nfinindex],eins)
-
+print Vthindexsat,Ionindexsat
 fignumber+=1
 pylab.figure(fignumber)
 pylab.scatter((datalist[:,Vthindexsat]),factorIDSon*datalist[:,Ionindexsat],s=80, facecolors='none', edgecolors='r') 
