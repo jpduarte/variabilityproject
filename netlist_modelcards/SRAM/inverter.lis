@@ -1,0 +1,161 @@
+ ****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+  Copyright (C) 2012 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: inverter1.sp                                                      
+  Command line options: inverter1.sp -o inverter
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU 
+ lic: HOSTID:                      PID:      932 
+ lic: Using FLEXlm license file: 
+ lic: 1701@sunv40z-1.eecs.berkeley.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-dec-2015/2014.09 
+ lic: 2(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley.
+ lic:   
+ Init: read install configuration file: /tools/synopsys/hspice/G-2012.06-ENG1/hspice/meta.cfg
+ Loading pVA library inverter.pvadir/pvaRTL_linux.so...
+1****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+ ******  
+ *sample netlist for inverter
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             bsimcmg(va)        1.00 
+        2 x2.                             bsimcmg(va)        1.00 
+ **info** *pvaI* Creating Verilog-A module 'bsimcmg' for X2
+
+ **info** *pvaI* Creating Verilog-A module 'bsimcmg' for X1
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 15
+ file=inverter.pa0
+
+ ******  
+ *sample netlist for inverter
+
+  ******  dc transfer curves tnom=  25.000 temp=  25.000 *****
+x
+
+        volt    voltage    
+                   x1.d    
+    0.            0.8493   
+  1.7551e-02    2.380e-02  
+  3.5102e-02    4.022e-03  
+  5.2653e-02    9.653e-04  
+  7.0204e-02    2.430e-04  
+  8.7755e-02    6.189e-05  
+    0.10531     1.581e-05  
+    0.12286     4.069e-06  
+    0.14041     1.054e-06  
+    0.15796     2.768e-07  
+    0.17551     7.448e-08  
+    0.19306     2.082e-08  
+    0.21061     6.140e-09  
+    0.22816     1.931e-09  
+    0.24571     6.490e-10  
+    0.26327     2.317e-10  
+    0.28082     8.706e-11  
+    0.29837     3.412e-11  
+    0.31592     1.383e-11  
+    0.33347     5.762e-12  
+    0.35102     2.455e-12  
+    0.36857     1.065e-12  
+    0.38612     4.691e-13  
+    0.40367     2.092e-13  
+    0.42122     9.440e-14  
+    0.43878     4.289e-14  
+    0.45633     2.302e-14  
+    0.47388     2.105e-14  
+    0.49143     1.939e-14  
+    0.50898     1.797e-14  
+    0.52653     1.670e-14  
+    0.54408     1.549e-14  
+    0.56163     1.454e-14  
+    0.57918     1.375e-14  
+    0.59673     1.297e-14  
+    0.61429     1.227e-14  
+    0.63184     1.143e-14  
+    0.64939     1.112e-14  
+    0.66694     1.046e-14  
+    0.68449     1.009e-14  
+    0.70204     9.579e-15  
+    0.71959     9.216e-15  
+    0.73714     8.876e-15  
+    0.75469     8.470e-15  
+    0.77224     8.174e-15  
+    0.78980     7.949e-15  
+    0.80735     7.595e-15  
+    0.82490     7.385e-15  
+    0.84245     7.280e-15  
+    0.86000     6.878e-15  
+y
+-----------------------------------------------
+
+          ***** job concluded
+1****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+ ******  
+ *sample netlist for inverter
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+ cpu MHz	: 1596.000
+  
+ OS:
+ Linux version 2.6.32-431.17.1.el6.x86_64 (mockbuild@x86-027.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ) #1 SMP Fri Apr 11 17:27:00 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    24
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      14 # elements   =       4
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       0 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       2
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  dc sweep           0.02          50         137
+  readin             0.07
+  errchk             0.10
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        112.88 megabytes
+           total cpu time            0.19 seconds
+           total elapsed time        0.50 seconds
+           job started at     17:41:15 01/12/2015
+           job ended   at     17:41:16 01/12/2015
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.26(s)

@@ -9,8 +9,8 @@
   Command line options: /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux.sp -o /users/jpduarte/research/variabilityproject/netlist_modelcards/idvgscaling/idvgaux
  lic:  
  lic: FLEXlm: v10.8 
- lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU 
- lic: HOSTID:                      PID:      6655 
+ lic: USER:   jpduarte             HOSTNAME: isis-e5640-1.EECS.Berkeley.EDU 
+ lic: HOSTID: 0025900669ca         PID:      15048 
  lic: Using FLEXlm license file: 
  lic: 1701@sunv40z-1.eecs.berkeley.edu 
  lic: Checkout 1 hspice 
@@ -176,17 +176,17 @@ y
   
  ******  Machine Information  ******
  CPU:
- model name	: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
- cpu MHz	: 1596.000
+ model name	: Intel(R) Xeon(R) CPU           E5640  @ 2.67GHz
+ cpu MHz	: 1600.000
   
  OS:
- Linux version 2.6.32-431.17.1.el6.x86_64 (mockbuild@x86-027.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ) #1 SMP Fri Apr 11 17:27:00 EDT 2014
+ Linux version 2.6.18-371.6.1.el5 (mockbuild@x86-029.build.eng.bos.redhat.com) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Feb 18 11:42:11 EST 2014
 
 
   ******  HSPICE Threads Information  ******
 
   Command Line Threads Count :     1
-  Available CPU Count        :    24
+  Available CPU Count        :    16
   Actual Threads Count       :     1
 
 
@@ -206,18 +206,18 @@ y
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.00           1           0
-  dc sweep           0.02         100         204
-  readin             0.08
-  errchk             0.09
+  dc sweep           0.03         100         204
+  readin             0.12
+  errchk             0.07
   setup              0.00
   output             0.00
 
 
-           peak memory used        112.86 megabytes
-           total cpu time            0.19 seconds
-           total elapsed time        0.49 seconds
-           job started at     22:42:27 01/11/2015
-           job ended   at     22:42:28 01/11/2015
+           peak memory used        112.18 megabytes
+           total cpu time            0.22 seconds
+           total elapsed time        0.51 seconds
+           job started at     13:52:55 01/12/2015
+           job ended   at     13:52:55 01/12/2015
 
 
  lic: Release hspice token(s) 
