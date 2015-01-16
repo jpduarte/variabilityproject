@@ -122,7 +122,7 @@ endfunction
 parameter real L         =  30n from [1n:inf);      // Designed Gate Length
 parameter real D         =  40n from [1n:inf);      // Diameter of the cylinder (GEOMOD=3)
 parameter real TFIN      =  15n from [1n:inf);      // Body (Fin) thickness
-parameter real FPITCH    =  80n from [TFIN:inf);    // Fin pitch
+parameter real FPITCH    =  80n from [0:inf);    // Fin pitch
 parameter integer NF     =  1 from [1:inf);         // Number of fingers
 parameter real NFIN      =  1.0 from (0:inf);       // Number of fins per finger (real number enables optimization)
 parameter integer NGCON  =  1 from [1:2];           // number of gate contact (1 or 2 sided)

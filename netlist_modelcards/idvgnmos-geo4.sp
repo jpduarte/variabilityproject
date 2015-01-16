@@ -7,7 +7,7 @@
 .param w_ufcm_mc=agauss(0,1,1)
 .param w_ufcm_n=91.94n
 
-.param ach_ufcm_n=319.2a
+.param ach_ufcm_n=478.8a
 .param ach_ufcm_mc=agauss(0,1,1)
 
 .param cins_ufcm_n=3.967n
