@@ -65,7 +65,7 @@ ax = pylab.gca()
 fignumber+=1
 pylab.figure(fignumber)
 pylab.scatter(datalist[:,Vthindexsat],1000*datalist[:,SSindexsat],s=80, facecolors='none', edgecolors='k') 
-pylab.xlabel("ION,SAT (uA/um)", fontsize=18)
+pylab.xlabel("Vth,SAT (V)", fontsize=18)
 pylab.ylabel("SS (mV/dec)", fontsize=18)
 ax = pylab.gca()
 #ax.set_yscale('log')

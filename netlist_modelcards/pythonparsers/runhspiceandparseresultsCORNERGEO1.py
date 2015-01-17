@@ -11,7 +11,7 @@ import parsehspice
 wheretosimpath ='/users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/'
 templatepath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/idvgnmostemplateGEO1.sp"
 modelverilogpath = "\"/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va\""
-modelcardpath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/modelcard-109-geo1template.nmos"#modelcard-109template.nmos"
+modelcardpath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/modelcard-109-geo4template_extreme.nmos"#modelcard-109template.nmos"
 vgssample = 50
 vdssample = 2
 vgs = np.linspace(0,0.86,vgssample)

@@ -17,13 +17,25 @@ def findIds(vg_array,ids_array,vgref):
 def findvth(vg_array,ids_array,idsref):
 #find vg for a given current level
   index = 0 
-  diff = 1000
+  diff1 = 1000
+  diff2 = 1000  
   for ids in ids_array:
-    if abs(ids-idsref)<diff:
-      indexids = index
-      diff = abs(ids-idsref)
+  #check1
+    if abs(ids-idsref)<diff1:
+      indexids1 = index
+      diff1 = abs(ids-idsref)
+    elif abs(ids-idsref)<diff2:
+      indexids2 = index
+      diff2 = abs(ids-idsref)    
     index+=1
-  return vg_array[indexids]
+  vt=0.0259 
+  I1=ids_array[indexids1]
+  I2=ids_array[indexids2] 
+  Vg1 = vg_array[indexids1]  
+  Vg2 = vg_array[indexids2]    
+  n=((Vg1-Vg2)/vt)/(np.log(I2/I1))
+  Vth = n*vt*np.log(idsref/I1)+Vg1
+  return Vth
 
 def findgmax(vg_array,ids_array,dervnumber):
 #find gmax, or max derivative, dervnumber=1 is for gmax
@@ -117,7 +129,7 @@ for namefile in data_files[0][1]:
       Vth = findvth(datalist[:,vgindex],datalist[:,Idsindex],300*1e-9*(42e-9*2+7.6e-9)/(20e-9))#300nA*W/L for current reference in Vth
       gmax = findgmax(datalist[:,vgindex],datalist[:,Idsindex],1)
       SS = findSS(datalist[:,vgindex],datalist[:,Idsindex],0.0,1e3)
-      stringtoprint = str(Ioff)+' '+str(Ion)+' '+Wt+' '+Lg+' '+Hfin+' '+tox+' '+WbR+' '+WbL +' '+Nfin+' '+vd+' '+str(Vth)+' '+str(gmax)+' '+str(SS)+' '+ namefile[indexWt:flagfiledata]+'\n' 
+      stringtoprint = str(Ioff)+' '+str(Ion)+' '+Wt+' '+Lg+' '+Hfin+' '+tox+' '+WbR+' '+WbL +' '+Nfin+' '+vd+' '+str(Vth)+' '+str(gmax)+' '+str(SS)+' '+ namefile[indexWt:indexvd]+'\n' 
       montecarloresultsall.write(stringtoprint)
 
       if vd =='0.05': 

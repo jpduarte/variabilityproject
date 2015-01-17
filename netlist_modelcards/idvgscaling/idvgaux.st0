@@ -3,14 +3,14 @@
  lic:
  lic: FLEXlm: v10.8
  lic: USER:   jpduarte             HOSTNAME: bwrcrdsl-1.EECS.Berkeley.EDU
- lic: HOSTID:                      PID:      24076
+ lic: HOSTID:                      PID:      22420
  lic: Using FLEXlm license file:
  lic: 1701@sunv40z-1.eecs.berkeley.edu
  lic: Checkout 1 hspice
  lic: License/Maintenance for hspice will expire on 19-dec-2015/2014.09
- lic: 9(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley.
+ lic: 10(in_use)/50(total) FLOATING license(s) on SERVER sunv40z-1.eecs.berkeley
  lic:
- init: begin read circuit files,  cpu clock=  4.00E-02
+ init: begin read circuit files,  cpu clock=  3.00E-02
        option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par
                          ts/ad
        option search   = /tools/synopsys/hspice/G-2012.06-ENG1/hspice/par

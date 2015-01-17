@@ -53,7 +53,7 @@ for namefile in data_files[0][1]:
   #if count>2:
 	#	break
   flagfiledata =  namefile.find("DATAREADY") #if it is found "DATAREADY" it returns the position, this can be used for 
-  flagfileIon =  namefile.find("vd-0.86") 
+  flagfileIon =  namefile.find("vd0.86") 
   if ((flagfiledata > 0) and (flagfileIon > 0)):
     filenameaux = root_dir +'/'+ namefile
     target = open( filenameaux, 'r')

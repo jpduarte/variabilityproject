@@ -1,9 +1,9 @@
 Args: pva -p hsp -t spi -f /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.pvadir/pvaHDL.lis -o /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.pvadir
 
-==> Start pvaCG on Mon Jan 12 01:57:29 2015
+==> Start pvaCG on Fri Jan 16 17:30:56 2015
 
 
-Begin of pVA compiling on Mon Jan 12 01:57:29 2015
+Begin of pVA compiling on Fri Jan 16 17:30:56 2015
 
 Parsing '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_main.va'
@@ -16,13 +16,13 @@ Parsing include file '/users/jpduarte/research/variabilityproject/model_code/cod
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_rdsmod.include'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_quasi_static_cv.include'
 
-End of pVA compiling on Mon Jan 12 01:57:29 2015
+End of pVA compiling on Fri Jan 16 17:30:56 2015
 
 
-End of build pVA DB on Mon Jan 12 01:57:29 2015
+End of build pVA DB on Fri Jan 16 17:30:56 2015
 
 
 /users/jpduarte/research/variabilityproject/netlist_modelcards/cornerhspice/idvgaux.pvadir/pvaRTL_linux.so is reused
 
-End of pVA elaboration on Mon Jan 12 01:57:29 2015
+End of pVA elaboration on Fri Jan 16 17:30:56 2015
 
