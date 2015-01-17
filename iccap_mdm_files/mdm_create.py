@@ -1,7 +1,7 @@
 import numpy
-time,Vs,Vsi,Sqf,Sdi,Ise,Ish,Is,Sq,Vg,Vgi,Gqf, Gdi,Ige,Igh,Ig,Gq, Vb, Vbi, Bqf, Bdi,Ibe,Ibh,Ib,Bq, Vd, Vdi, Dqf, Ddi,Ide,Idh,Id,Dq = numpy.loadtxt("/users/sourabh/sourabh/Variability/iccap_mdm_files/finfet_7LgWt0.0076Lg1.0Hfin0.042tox0.0008WbR0.0038WbL0.0038vd0.86DATAREADY",skiprows=118,unpack=True)
+time,Vs,Vsi,Sqf,Sdi,Ise,Ish,Is,Sq,Vg,Vgi,Gqf, Gdi,Ige,Igh,Ig,Gq, Vb, Vbi, Bqf, Bdi,Ibe,Ibh,Ib,Bq, Vd, Vdi, Dqf, Ddi,Ide,Idh,Id,Dq = numpy.loadtxt("/users/sourabh/sourabh/FinFET_Variability/variabilityproject/netlist_modelcards/Wt0.00836Lg0.018Hfin0.0462tox0.00088WbR0.00418WbL0.00418Nfin5.4e+18v0.86",skiprows=118,unpack=True)
 
-f_handle = file('myfile.dat','a')
+f_handle = file('idvgsat_worst.dat','a')
 
 f_handle.write('! VERSION = 6.00 \n')
 f_handle.write('BEGIN_HEADER \n')

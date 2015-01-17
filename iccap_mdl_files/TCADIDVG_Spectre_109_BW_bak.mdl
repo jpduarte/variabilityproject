@@ -1,4 +1,4 @@
-LINK MODEL "TCAD_Extraction_Spectre_109" "690.400"
+LINK MODEL "TCAD_Extraction_Spectre_109_BW" "690.400"
 {
 View model_window 1 "Model"
 TABLE "Variable Table" "690.400"
@@ -225,7 +225,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P28 C12 P100 P100 P100 P100 P100 C13"
 param FPITCH " 7.600n"
 param CDSC " 100.0m"
 param CDSCD " 13.00m"
@@ -28391,8 +28391,8 @@ connpair "B" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.1764631748752 3263 3890"
+View in_out 0 "2.0963274319142 8658 6203"
+View plot 0 "1.1764631748752 3263 3890"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 P13 C15 C15 C10"
@@ -28412,7 +28412,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,339,178"
+View draw_ds 0 "B,339,178"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28443,7 +28443,7 @@ list PLOT "gmvg"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2771,239"
+View draw_ds 0 "B,2771,239"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28466,7 +28466,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,5252,301"
+View draw_ds 0 "B,5252,301"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28490,7 +28490,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,5232,2727"
+View draw_ds 0 "B,5232,2727"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28514,7 +28514,7 @@ list XFORM "extract"
 }
 LINK SWEEP "LENGTH" "690.400"
 {
-View draw_ds 1 "B,2764,2664"
+View draw_ds 0 "B,2764,2664"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -28544,7 +28544,7 @@ element "Value 5" " 970.0n"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3545"
+View draw_ds 0 "B,387,3545"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -29165,7 +29165,7 @@ member OUT "id"
 LINK PLOT "idvg" "690.400"
 {
 View plot_window 0 "1217,338,10807,8393"
-View draw_ds 1 "B,766,-11038"
+View draw_ds 0 "B,766,-11038"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29202,7 +29202,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "1231,743,10033,8305"
-View draw_ds 1 "B,-157,-7224"
+View draw_ds 0 "B,-157,-7224"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29245,7 +29245,7 @@ TABLE "ICVIEWDATA"
 UTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC&../../Lg1000nm/idvg0p05/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,-166,-3168"
+View draw_ds 0 "B,-166,-3168"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29288,7 +29288,7 @@ TABLE "ICVIEWDATA"
 ./Lg500nm/idvg0p86/idvg:MAN|XY|-400.0m, 1.000 ,7,4: 0.000 , 80.00u,4,4: 0.000 , 1.000 ,4,5&../../Lg1000nm/idvg0p86/idvg:AUTO|XY|AUTOMATIC:AUTOMATIC:AUTOMATIC}
 __iccapDataBlockEnd
 }
-View draw_ds 1 "B,-166,-3168"
+View draw_ds 0 "B,-166,-3168"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29325,7 +29325,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p86" "690.400"
 {
 View plot_window 0 "0,61,28873,25925"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29401,7 +29401,7 @@ member SWEEP "Lg1000nm/idvg0p86/vg"
 LINK PLOT "ALLGMVG0p86" "690.400"
 {
 View plot_window 0 "70,107,35812,23409"
-View draw_ds 1 "B,-166,-3168"
+View draw_ds 0 "B,-166,-3168"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29438,7 +29438,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "IDVG0p05" "690.400"
 {
 View plot_window 0 "74,151,30043,25340"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29514,7 +29514,7 @@ member SWEEP "Lg1000nm/idvg0p05/vg"
 LINK PLOT "ALL" "690.400"
 {
 View plot_window 0 "168,97,33999,21862,{IDVG0p05:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 100.0u,5,4: 0.000 , 1.000 ,4,5&IDVG0p86:MAN|XY| 0.000 , 1.000 ,5,4: 0.000 , 150.0u,3,5: 0.000 , 1.000 ,4,5}"
-View draw_ds 1 "B,166,3948"
+View draw_ds 0 "B,166,3948"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -29547,7 +29547,7 @@ PlotOptimizerOpt Enable 0
 LINK PLOT "BW_IDVGlin" "690.400"
 {
 View plot_window 0 "74,61,30043,24533"
-View draw_ds 1 "B,0,0"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -29613,8 +29613,8 @@ member SWEEP "Lg20nm/idvg0p05/vg"
 }
 LINK PLOT "BW_IDVGsat" "690.400"
 {
-View plot_window 1 "82,61,30043,24533"
-View draw_ds 1 "B,0,0"
+View plot_window 0 "82,61,30043,24533"
+View draw_ds 0 "B,0,0"
 TABLE "Plot Options" "690.400"
 {
 TABLE "Plot Settings" "690.400"
@@ -30520,7 +30520,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvd" "690.400"
 {
-View in_out 1 "3.3265699453764 13739 6092"
+View in_out 0 "3.3265699453764 13739 6092"
 View plot 0 "1.07935834993 2372 3648"
 TABLE "Variable Table" "690.400"
 {
@@ -30539,7 +30539,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,4870,-10"
+View draw_ds 0 "B,4870,-10"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30567,7 +30567,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,7574,97"
+View draw_ds 0 "B,7574,97"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30590,7 +30590,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,2707,-26"
+View draw_ds 0 "B,2707,-26"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -30619,7 +30619,7 @@ list PLOT "idvsvg"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,2603,3070"
+View draw_ds 0 "B,2603,3070"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -31345,7 +31345,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 37.80n"
 param L " 22.00n"
@@ -33816,7 +33816,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 5720"
+View in_out 0 "2.0963274319142 8658 5720"
 View plot 0 "1.4660104854565 2639 3962"
 TABLE "Variable Table" "690.400"
 {
@@ -33837,7 +33837,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2916,278"
+View draw_ds 0 "B,2916,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -33860,7 +33860,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,7071,534"
+View draw_ds 0 "B,7071,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -33884,7 +33884,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,681,350"
+View draw_ds 0 "B,681,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -33916,7 +33916,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,5044,436"
+View draw_ds 0 "B,5044,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -33940,7 +33940,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,752,3559"
+View draw_ds 0 "B,752,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -34164,10 +34164,10 @@ point 99 1 1 7.66775E-05 0
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
+list PLOT "Global/idvg0p05/BW_IDVGlin"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
 list PLOT "idvg"
-list PLOT "Global/idvg0p05/BW_IDVGlin"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -35319,8 +35319,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p86" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
-View plot 1 "1.4065012786375 4464 4650"
+View in_out 0 "2.0963274319142 8658 6203"
+View plot 0 "1.4065012786375 4464 4650"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -35340,7 +35340,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -35363,7 +35363,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -35387,7 +35387,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -35419,7 +35419,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -35443,7 +35443,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -35667,10 +35667,10 @@ point 99 1 1 7.66775E-05 0
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
+list PLOT "Global/idvg0p05/BW_IDVGsat"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
 list PLOT "idvg"
-list PLOT "Global/idvg0p05/BW_IDVGsat"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -35939,7 +35939,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1022,365"
+View draw_ds 0 "B,1022,365"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -35977,7 +35977,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "5,61,11933,8924"
-View draw_ds 1 "B,178,4179"
+View draw_ds 0 "B,178,4179"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -36013,7 +36013,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,0,365"
+View draw_ds 0 "B,0,365"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -36099,7 +36099,7 @@ data
 {
 PSTABLE "Parameter Table"
 {
-View par_var_table 1 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
+View par_var_table 0 "V530 P13 P100 P100 P100 P100 P100 P100 C13"
 param TFIN " 7.600n"
 param HFIN " 46.20n"
 param L " 18.00n"
@@ -38570,8 +38570,8 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p05" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 5720"
-View plot 1 "1.2537531830793 3979 4145"
+View in_out 0 "2.0963274319142 8658 5720"
+View plot 0 "1.2537531830793 3979 4145"
 TABLE "Variable Table" "690.400"
 {
 View par_var_table 0 "V530 C15 C15 C15"
@@ -38591,7 +38591,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2916,278"
+View draw_ds 0 "B,2916,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -38614,7 +38614,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,7071,534"
+View draw_ds 0 "B,7071,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -38638,7 +38638,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,681,350"
+View draw_ds 0 "B,681,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -38670,7 +38670,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,5044,436"
+View draw_ds 0 "B,5044,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -38694,7 +38694,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,752,3559"
+View draw_ds 0 "B,752,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -38918,10 +38918,10 @@ point 99 1 1 8.60018E-05 0
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
+list PLOT "Global/idvg0p05/BW_IDVGlin"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
 list PLOT "idvg"
-list PLOT "Global/idvg0p05/BW_IDVGlin"
 }
 LINK XFORM "extract" "690.400"
 {
@@ -39190,7 +39190,7 @@ member OUT "id"
 LINK PLOT "idvsvglog" "690.400"
 {
 View plot_window 0 "518,331,28734,16048,{AUTO|XY| 0.000 , 1.200 ,4,5: 1.000p, 1.000u,6,9: 0.000 , 600.0n,4,5}"
-View draw_ds 1 "B,1426,-3814"
+View draw_ds 0 "B,1426,-3814"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -39228,7 +39228,7 @@ member SWEEP "vg"
 LINK PLOT "gmvg" "690.400"
 {
 View plot_window 0 "117,61,24349,16642"
-View draw_ds 1 "B,582,0"
+View draw_ds 0 "B,582,0"
 TABLE "Plot Options" "690.400"
 {
 }
@@ -39264,7 +39264,7 @@ member SWEEP "vg"
 }
 LINK PLOT "idvg" "690.400"
 {
-View draw_ds 1 "B,404,-3814"
+View draw_ds 0 "B,404,-3814"
 View plot_window 0 "0,61,11997,8998"
 TABLE "Plot Options" "690.400"
 {
@@ -39323,7 +39323,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p43" "690.400"
 {
-View in_out 1 "2.413028319064 9966 7140"
+View in_out 0 "2.413028319064 9966 7140"
 View plot 0 "1.2304636502667 4673 4158"
 TABLE "Variable Table" "690.400"
 {
@@ -39344,7 +39344,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -39367,7 +39367,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -39391,7 +39391,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -39423,7 +39423,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -39447,7 +39447,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -40073,7 +40073,7 @@ element 0 "Init Command" ""
 }
 LINK DAT "idvg0p86" "690.400"
 {
-View in_out 1 "2.0963274319142 8658 6203"
+View in_out 0 "2.0963274319142 8658 6203"
 View plot 0 "1.3447246931652 4268 4446"
 TABLE "Variable Table" "690.400"
 {
@@ -40094,7 +40094,7 @@ element 0 "Value" ""
 }
 LINK SWEEP "vs" "690.400"
 {
-View draw_ds 1 "B,2551,278"
+View draw_ds 0 "B,2551,278"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -40117,7 +40117,7 @@ element "Value" " 0.000 "
 }
 LINK SWEEP "vb" "690.400"
 {
-View draw_ds 1 "B,6706,534"
+View draw_ds 0 "B,6706,534"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -40141,7 +40141,7 @@ list XFORM "extract"
 }
 LINK SWEEP "vg" "690.400"
 {
-View draw_ds 1 "B,316,350"
+View draw_ds 0 "B,316,350"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -40173,7 +40173,7 @@ list PLOT "idvg"
 }
 LINK SWEEP "vd" "690.400"
 {
-View draw_ds 1 "B,4679,436"
+View draw_ds 0 "B,4679,436"
 data
 {
 HYPTABLE "Edit Sweep Info"
@@ -40197,7 +40197,7 @@ list XFORM "extract"
 }
 LINK OUT "id" "690.400"
 {
-View draw_ds 1 "B,387,3559"
+View draw_ds 0 "B,387,3559"
 data
 {
 HYPTABLE "Edit Output Info"
@@ -40421,10 +40421,10 @@ point 99 1 1 8.60018E-05 0
 list XFORM "extract"
 list XFORM "optimize"
 list XFORM "opt_NFS"
+list PLOT "Global/idvg0p05/BW_IDVGsat"
 list PLOT "idvsvglog"
 list PLOT "gmvg"
 list PLOT "idvg"
-list PLOT "Global/idvg0p05/BW_IDVGsat"
 }
 LINK XFORM "extract" "690.400"
 {

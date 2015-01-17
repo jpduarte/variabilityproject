@@ -53,8 +53,8 @@ ax = pylab.gca()
 fignumber+=1
 pylab.figure(fignumber)
 pylab.scatter(datalist[:,Vthindex],1000*datalist[:,SSindex],s=80, facecolors='none', edgecolors='k') 
-pylab.xlabel("ION,SAT (uA/um)", fontsize=18)
 pylab.ylabel("SS (mV/dec)", fontsize=18)
+pylab.xlabel("Vth (V)", fontsize=18)
 ax = pylab.gca()
 #ax.set_yscale('log')
 #pylab.xlim([0.1,0.25])
@@ -73,7 +73,13 @@ ax = pylab.gca()
 #pylab.ylim([2,10])
 #pylab.savefig('IonIoffVDSAT', dpi=600, bbox_inches='tight')
 
+indexmax = np.argmax(datalist[:,SSindex])
+print datalist[indexmax,SSindex]
+indexmin = np.argmin(datalist[:,SSindex])
+print datalist[indexmin,SSindex]
 
+
+target.close()
 ##################################
 ########################################################SAT
 filenameaux = 'montecarloresultsallfilevdlincorner'
@@ -116,6 +122,23 @@ pylab.ylabel("ION,LIN (uA/um)", fontsize=18)
 pylab.xlabel("Vth,LIN (V)", fontsize=18)
 ax = pylab.gca()
 #ax.set_yscale('log')
+
+############
+
+
+
+filenameaux = 'montecarloresultsallfilevdsatcorner'
+index=-1
+target = open(filenameaux, 'r') 
+for line in target:
+  if index == indexmax:
+    print line
+  if index == indexmin:
+    print line
+  index+=1
+  #header = str.split(target.readline())
+
+
 
 pylab.show() 
 
