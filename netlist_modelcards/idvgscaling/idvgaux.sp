@@ -12,8 +12,8 @@ vds supply  0 dc=0.05
 vgs gate  0 dc=1
 vbs bulk  0 dc=0
 * --- Transistor ---
-X1 supply gate 0 bulk nmos1 L=1000e-9 NFIN=1 
+X1 supply gate 0 bulk nmos1 L=1000e-9 NFIN=1 DEVTYPE = 1
 * --- DC Analysis ---
-.dc vgs 0.0 0.86 0.0175510204082 vds 0.05 0.86 0.81
+.dc vgs 0.0 -0.86 -0.0175510204082 vds -0.05 -0.86 -0.81
 .print dc i(X1.d)
 .end

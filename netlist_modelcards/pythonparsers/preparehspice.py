@@ -11,7 +11,7 @@ vds = np.linspace(0.05,0.86,3)
 Lparam = '20e-9' 
 NFINparam = '1'"""
 
-def preparehspiceidvg(wheretosimpath,templatepath,modelverilogpath,modelcardpath,vgs,vds,Lparam,NFINparam):
+def preparehspiceidvg(wheretosimpath,templatepath,modelverilogpath,modelcardpath,vgs,vds,Lparam,NFINparam, DEVTYPEparam):
   """*Sample netlist for BSIM-MG
   *Id-Vg Characteristics for NMOS (T = 27 C)
 
@@ -51,7 +51,7 @@ def preparehspiceidvg(wheretosimpath,templatepath,modelverilogpath,modelcardpath
 
   sf.inplace_change(wheretosimpath+'idvgaux.sp', 'Lparam', Lparam)
   sf.inplace_change(wheretosimpath+'idvgaux.sp', 'NFINparam',NFINparam)
-  
+  sf.inplace_change(wheretosimpath+'idvgaux.sp', 'DEVTYPEparam',DEVTYPEparam)  
 def preparehspiceidvgGEO1(wheretosimpath,templatepath,modelverilogpath,modelcardpath,vgs,vds,Lparam,HFINparam,TFIN_TOPparam,TFIN_BASEparam,EOTparam,NBODYparam,NFINparam):
   """*Sample netlist for BSIM-MG
   *Id-Vg Characteristics for NMOS (T = 27 C)
