@@ -18,10 +18,13 @@ def findvth(vg_array,ids_array,idsref):
 #find vg for a given current level
   index = 0 
   diff1 = 1000
-  diff2 = 1000  
+  diff2 = 1000 
+  indexids1 = 0 
   for ids in ids_array:
   #check1
     if abs(ids-idsref)<diff1:
+      indexids2 = indexids1
+      diff2 = diff1 
       indexids1 = index
       diff1 = abs(ids-idsref)
     elif abs(ids-idsref)<diff2:
@@ -33,9 +36,10 @@ def findvth(vg_array,ids_array,idsref):
   I2=ids_array[indexids2] 
   Vg1 = vg_array[indexids1]  
   Vg2 = vg_array[indexids2]    
-  n=((Vg1-Vg2)/vt)/(np.log(I2/I1))
+  n=((Vg2-Vg1)/vt)/(np.log(I2/I1))
   Vth = n*vt*np.log(idsref/I1)+Vg1
-  return Vth
+  return Vth 
+ 
 
 def findgmax(vg_array,ids_array,dervnumber):
 #find gmax, or max derivative, dervnumber=1 is for gmax
@@ -75,7 +79,7 @@ def findSS(vg_array,ids_array,vgi,level):
     SS = np.log(10)*(vg_array[indexids2]-vgi)/(np.log(ids_array[indexids2]/Ioff))
   return SS
 ######################
-root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v6'
+root_dir = '/users/jpduarte/research/variabilityproject/TCAD/data/v6'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 #filenames = data_files[0][1]
@@ -138,9 +142,10 @@ for namefile in data_files[0][1]:
       datalist = np.loadtxt(filenameaux,skiprows = 1)
       Ion = np.amax(datalist[:,Idsindex])
       Ioff = findIds(datalist[:,vgindex],datalist[:,Idsindex],0) 
-      Vth = findvth(datalist[:,vgindex],datalist[:,Idsindex],300*1e-9*(42e-9*2+7.6e-9)/(20e-9))#300nA*W/L for current reference in Vth
+
       gmax = findgmax(datalist[:,vgindex],datalist[:,Idsindex],1)
       SS = findSS(datalist[:,vgindex],datalist[:,Idsindex],0.0,1e3)
+      Vth = findvth(datalist[:,vgindex],datalist[:,Idsindex],300*1e-9*(42e-9*2+7.6e-9)/(20e-9))#300nA*W/L for current reference in Vth      
       stringtoprint = str(Ioff)+' '+str(Ion)+' '+Wt+' '+Lg+' '+Hfin+' '+tox+' '+WbR+' '+WbL +' '+Nfin+' '+vd+' '+str(Vth)+' '+str(gmax)+' '+str(SS)+' '+ nametoprint+'\n' 
       montecarloresultsall.write(stringtoprint)
 

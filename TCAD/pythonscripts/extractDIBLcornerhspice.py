@@ -11,7 +11,7 @@ filenameaux = 'montecarloresultsallfilevdlincornerhspice'
 vdslinfile = open(filenameaux, 'r') 
 
 
-montecarloresultsall = open('summarydevicecornerhspice', 'w')
+montecarloresultsall = open('summarydevicecornerhspice4', 'w')
 stringtoprint = 'Ioffsat'+' '+'Ionsat'+' '+'Wtsat'+' '+'Lgsat'+' '+'Hfinsat'+' '+'toxsat'+' '+'WbRsat'+' '+'WbLsat' +' '+'Nfinsat'+' '+'vdsat'+' '+'Vthsat'+' gmaxsat'+' SSsat'+' Iofflin'+' '+'Ionlin'+' '+'Wtlin'+' '+'Lglin'+' '+'Hfinlin'+' '+'toxlin'+' '+'WbRlin'+' '+'WbLlin' +' '+'Nfinlin'+' '+'vdlin'+' '+'Vthlin'+' gmaxlin'+' SSlin'+' DIBL'+'\n'
 montecarloresultsall.write(stringtoprint)
 
@@ -29,7 +29,7 @@ for line in vdssatfile:
       findfilename = line2.find(header[-1])    
       if findfilename > -1:
         header2 = str.split(line2)
-        DIBL = -(float(header[10])-float(header2[10]))/0.86
+        DIBL = -(float(header[10])-float(header2[10]))/0.81
         findWt = line2.find("Wt") 
         stringtoprint = line2[0:findWt] + ' '+str(DIBL)+'\n'
         montecarloresultsall.write(stringtoprint)           

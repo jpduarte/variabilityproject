@@ -1,7 +1,7 @@
 #plot Id-Vg scaling, TCAD versus Hspice
 import os
 import numpy as np
-import pylab
+import matplotlib.pyplot as plt
 
 root_dir = '../data/v7'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
@@ -29,10 +29,10 @@ for namefile in data_files[0][1]:
       Idsindex =  header.index('drainTotalCurrent')
     
       datalist = np.loadtxt(filenameaux,skiprows = 1)
-      pylab.figure(1)
-      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )      
-      pylab.figure(2)
-      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )
+      plt.subplot(1, 2, 2)
+      tcad1 = plt.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )      
+      plt.subplot(1, 2, 1)
+      tcad2 = plt.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS,'o',markerfacecolor=(1, 1, 1, 1),lw=1, color='k' )
       target.close()
       count +=1
       print count
@@ -65,31 +65,40 @@ for namefile in data_files[0][1]:
       Idsindex =  header.index('drainTotalCurrent')
     
       datalist = np.loadtxt(filenameaux,skiprows = 1)
-      pylab.figure(1)
-      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )
-      pylab.figure(2)
-      pylab.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )      
+      plt.subplot(1, 2, 2)
+      model1 = plt.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )
+      plt.subplot(1, 2, 1)
+      model2 = plt.plot( datalist[:,vgindex], datalist[:,Idsindex]*factorIDS, lw=2, color='r' )      
       target.close()
       count +=1
       print count
 
-pylab.figure(1)  
-pylab.xlabel("VG (V)", fontsize=20)
-pylab.ylabel("ID,LIN (uA/um)", fontsize=20)
-ax = pylab.gca()
-#pylab.xlim([0,0.86])
-#pylab.savefig('IonlinvsVgLGscalinglinGEO1', dpi=600, bbox_inches='tight') 
-
-
-pylab.figure(2)  
-pylab.xlabel("VG (V)", fontsize=20)
-pylab.ylabel("ID,LIN (uA/um)", fontsize=20)
-ax = pylab.gca()
+plt.subplot(1, 2, 2) 
+plt.xlabel("VG (V)", fontsize=20)
+#plt.ylabel("ID,LIN (uA/um)", fontsize=20)
+ax = plt.gca()
+plt.xlim([0,0.86])
+plt.ylim([-100,1400])
+ax.arrow(0.6, 0, -0.25, 400, head_width=0.05, head_length=25, fc='k', ec='k')
+ax.text(0.01, 600, r'LG = 1000nm~', fontsize=15)
+ax.text(0.2, 500, r'20nm', fontsize=15)
+#plt.savefig('IonlinvsVgLGscalinglinGEO1', dpi=600, bbox_inches='tight') 
+plt.yticks(fontsize = 16) 
+plt.legend([ tcad1,model1],['TCAD','Model'],loc=2,prop={'size':20})
+plt.subplot(1, 2, 1) 
+plt.xlabel("VG (V)", fontsize=20)
+plt.ylabel("Drain Current (uA/um), VDS=0.86 V", fontsize=20)
+ax = plt.gca()
 ax.set_yscale('log')  
-#pylab.xlim([0,0.86])
-pylab.ylim([1e-4,1e4])
-#pylab.savefig('IonlinvsVgLGscalinglogGEO1', dpi=600, bbox_inches='tight') 
+plt.xlim([0,0.86])
+plt.ylim([1e-4,1e4])
+#plt.xticks(fontsize = 15) 
+plt.yticks(fontsize = 18) 
+#
+ax.arrow(0.6, 10, -0.25, 400, head_width=0.05, head_length=50, fc='k', ec='k')
 
-
-
-pylab.show()
+plt.legend([ tcad2,model2],['TCAD','Model'],loc=4,prop={'size':20})
+ax.text(0.01, 3000, r'LG = 1000nm~', fontsize=15)
+ax.text(0.2, 1000, r'20nm', fontsize=15)
+plt.savefig('DrainCurrentScaling', dpi=600, bbox_inches='tight') 
+plt.show()
