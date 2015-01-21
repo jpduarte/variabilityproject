@@ -63,7 +63,7 @@ def findSS(vg_array,ids_array,vgi,level):
     SS = np.log(10)*(vg_array[indexids2]-vgi)/(np.log(ids_array[indexids2]/Ioff))
   return SS
 ######################
-root_dir = '/home/jpduarte/STDB/FINFETSRC2014/v10'
+root_dir = '/users/jpduarte/research/variabilityproject/TCAD/data/v8_aux'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 #filenames = data_files[0][1]
