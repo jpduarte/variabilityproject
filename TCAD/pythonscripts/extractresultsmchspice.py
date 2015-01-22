@@ -79,22 +79,22 @@ def findSS(vg_array,ids_array,vgi,level):
     SS = np.log(10)*(vg_array[indexids2]-vgi)/(np.log(ids_array[indexids2]/Ioff))
   return SS
 ######################
-root_dir = '/users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice'
+root_dir = '/users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice10nm'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 #filenames = data_files[0][1]
 
 factorIDS = 1e6/(42e-3*2+7.6e-3)#this factor is for normalize
 
-montecarloresultsall = open('montecarloresultsallfilemchspice', 'w')
+montecarloresultsall = open('montecarloresultsallfilemchspice2', 'w')
 stringtoprint = 'Ioff'+' '+'Ion'+' '+'Wt'+' '+'Lg'+' '+'Hfin'+' '+'tox'+' '+'WbR'+' '+'WbL' +' '+'Nfin'+' '+'vd'+' '+'Vth'+' gmax'+' SS'+' filename'+'\n'
 montecarloresultsall.write(stringtoprint)
 
-montecarloresultsallvdlin = open('montecarloresultsallfilevdlinmchspice', 'w')
+montecarloresultsallvdlin = open('montecarloresultsallfilevdlinmchspice10nm', 'w')
 montecarloresultsallvdlin.write(stringtoprint)
-montecarloresultsallvdmed = open('montecarloresultsallfilevdmedmchspice', 'w')
+montecarloresultsallvdmed = open('montecarloresultsallfilevdmedmchspice10nm', 'w')
 montecarloresultsallvdmed.write(stringtoprint)
-montecarloresultsallvdsat = open('montecarloresultsallfilevdsatmchspice', 'w')
+montecarloresultsallvdsat = open('montecarloresultsallfilevdsatmchspice10nm', 'w')
 montecarloresultsallvdsat.write(stringtoprint)
 
 count = 1

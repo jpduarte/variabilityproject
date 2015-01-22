@@ -8,7 +8,7 @@ import preparehspice
 import parsehspice
 
 ###################################
-wheretosimpath ='/users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice/'
+wheretosimpath ='/users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice2/'
 templatepath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/idvgnmostemplateGEO1.sp"
 modelverilogpath = "\"/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va\""
 modelcardpath = "/users/jpduarte/research/variabilityproject/netlist_modelcards/templateshspice/modelcard-109-geo4template_extreme.nmos"#modelcard-109template.nmos"
@@ -25,13 +25,13 @@ Lg = np.random.normal(mu, sigma, 2000)
 mu, sigma = 0.0076e-6, 0.0076e-6*0.1/2 # mean and standard deviation
 Wt = np.random.normal(mu, sigma, 2000)
 
-mu, sigma = 0.0076e-6, 0.0076e-6*0.1/2 # mean and standard deviation
+mu, sigma = 0.0076e-6/2, 0.0076e-6*0.1/2 # mean and standard deviation
 Wt = np.random.normal(mu, sigma, 2000)
 
-mu, sigma = 0.0076e-6/2, 0.0076e-6*0.1/4 # mean and standard deviation
+mu, sigma = 0.0076e-6/2, 0.0076e-6*0.1/2 # mean and standard deviation
 WbR = np.random.normal(mu, sigma, 2000)
 
-mu, sigma = 0.0076e-6/2, 0.0076e-6*0.1/4 # mean and standard deviation
+mu, sigma = 0.0076e-6, 0.0076e-6*0.1/2 # mean and standard deviation
 WbL = np.random.normal(mu, sigma, 2000)
 
 mu, sigma = 0.042e-6, 0.042e-6*0.1/2 # mean and standard deviation

@@ -40,7 +40,7 @@ for namefile in data_files[0][1]:
     
 ################################## 
 
-root_dir = '../../netlist_modelcards/idvgscaling'
+root_dir = '../../netlist_modelcards/idvgscalinggeo4'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 
@@ -100,5 +100,5 @@ ax.arrow(0.6, 10, -0.25, 400, head_width=0.05, head_length=50, fc='k', ec='k')
 plt.legend([ tcad2,model2],['TCAD','Model'],loc=4,prop={'size':20})
 ax.text(0.01, 3000, r'LG = 1000nm~', fontsize=15)
 ax.text(0.2, 1000, r'20nm', fontsize=15)
-plt.savefig('DrainCurrentScaling', dpi=600, bbox_inches='tight') 
+#plt.savefig('DrainCurrentScaling', dpi=600, bbox_inches='tight') 
 plt.show()

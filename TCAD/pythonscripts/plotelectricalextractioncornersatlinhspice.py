@@ -61,6 +61,7 @@ plt.xlabel("Vth,SAT (V)", fontsize=18)
 ax = plt.gca()
 #ax.set_yscale('log')
 #plt.savefig('IonVthVDSATcorner', dpi=300, bbox_inches='tight')
+VthIoncorr_tcad =  np.corrcoef(datalist[:,Vthindexsat],factorIDSon*datalist[:,Ionindexsat])
 
 fignumber+=1
 plt.figure(fignumber)
@@ -73,6 +74,8 @@ ax = plt.gca()
 #plt.ylim([60e-3,300e-3])
 ##plt.savefig('IonIoffVDSAT', dpi=600, bbox_inches='tight')
 #plt.savefig('IonSSVDSATcorner', dpi=300, bbox_inches='tight')
+print 'Correlation Vth-SS'
+VthSScorr_tcad =  np.corrcoef(datalist[:,Vthindexsat],1000*datalist[:,SSindexsat])
 
 fignumber+=1
 plt.figure(fignumber)
@@ -84,8 +87,7 @@ ax = plt.gca()
 #plt.xlim([500,1800])
 #plt.ylim([2,10])
 #plt.savefig('IonIoffVDSATcorner', dpi=300, bbox_inches='tight')
-
-print DIBLindexsat,Ioffindexsat
+IoffIoncorr_tcad =  np.corrcoef(np.log(factorIDSoff*datalist[:,Ioffindexsat]),factorIDSon*datalist[:,Ionindexsat])
 
 fignumber+=1
 plt.figure(fignumber)
@@ -96,6 +98,9 @@ ax = plt.gca()
 #plt.xlim([20,100])
 #plt.savefig('DIBLIoffVDSATcorner', dpi=300, bbox_inches='tight')
 
+print 'Correlation DIBL-Ioff'
+DIBLIOFFcorr_tcad =  np.corrcoef((1e3*datalist[:,DIBLindexsat]),np.log(factorIDSoff*datalist[:,Ioffindexsat]))
+
 fignumber+=1
 plt.figure(fignumber)
 tcad5 = plt.scatter((1e3*datalist[:,DIBLindexsat]),factorIDSon*datalist[:,Ionindexsat],s=800, facecolors='none', edgecolors='k') 
@@ -104,11 +109,11 @@ plt.ylabel("ION,SAT (uA/um)", fontsize=18)
 #plt.xlim([20,100])
 #plt.savefig('DIBLIonVDSATcorner', dpi=300, bbox_inches='tight')
 ########
-
+IonDIBLcorr_tcad =  np.corrcoef(1e3*datalist[:,DIBLindexsat],factorIDSon*datalist[:,Ionindexsat])
 fignumber = 0
 
 
-########################################################SAT
+#########################################################################################################################################################MODEL
 filenameaux = 'summarydevicecornerhspice4'
 factorIDSon = 1e6/(42e-3*2+7.6e-3)
 factorIDSoff = 1e9/(42e-3*2+7.6e-3)
@@ -158,6 +163,7 @@ plt.yticks(fontsize = 18)
 #plt.legend([ tcad1,model1],['TCAD','Model'],loc=1,prop={'size':20})
 #ax.set_yscale('log')
 #plt.savefig('IonVthVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+VthIoncorr_model =  np.corrcoef(datalist[:,Vthindexsat],factorIDSon*datalist[:,Ionindexsat])
 
 fignumber+=1
 plt.figure(fignumber)
@@ -174,6 +180,9 @@ plt.yticks(fontsize = 18)
 #plt.legend([ tcad2,model2],['TCAD','Model'],loc=1,prop={'size':20})
 #plt.savefig('VthSSVDSATcornerhspice7', dpi=600, bbox_inches='tight')
 
+print 'Correlation Vth-SS'
+VthSScorr_model = np.corrcoef(datalist[:,Vthindexsat],1000*datalist[:,SSindexsat])
+
 fignumber+=1
 plt.figure(fignumber)
 model3 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]),s=800, marker="h",facecolors='none', edgecolors='r') 
@@ -187,6 +196,7 @@ plt.xticks(fontsize = 18)
 plt.yticks(fontsize = 18) 
 #plt.legend([ tcad3,model3],['TCAD','Model'],loc=2,prop={'size':20})
 #plt.savefig('IonIoffVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+IoffIoncorr_model =  np.corrcoef(np.log(factorIDSoff*datalist[:,Ioffindexsat]),factorIDSon*datalist[:,Ionindexsat])
 
 fignumber+=1
 plt.figure(fignumber)
@@ -199,6 +209,9 @@ plt.xticks(fontsize = 18)
 plt.yticks(fontsize = 18) 
 #plt.legend([ tcad4,model4],['TCAD','Model'],loc=2,prop={'size':20})
 #plt.savefig('DIBLIoffVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+print 'Correlation DIBL-Ioff'
+DIBLIOFFcorr_model =  np.corrcoef((1e3*datalist[:,DIBLindexsat]),np.log(factorIDSoff*datalist[:,Ioffindexsat]))
+
 
 fignumber+=1
 plt.figure(fignumber)
@@ -210,9 +223,10 @@ plt.xticks(fontsize = 18)
 plt.yticks(fontsize = 18) 
 #plt.legend([ tcad5,model5],['TCAD','Model'],loc=2,prop={'size':20})
 #plt.savefig('DIBLIonVDSATcornerhspice7', dpi=600)
+IonDIBLcorr_model =  np.corrcoef(1e3*datalist[:,DIBLindexsat],factorIDSon*datalist[:,Ionindexsat])
 ########
 fignumber = 0
-########################################################SAT
+###################################################################################################################################################Nominal
 filenameaux = 'summarydevicenominal'
 factorIDSon = 1e6/(42e-3*2+7.6e-3)
 factorIDSoff = 1e9/(42e-3*2+7.6e-3)
@@ -266,6 +280,9 @@ nominal2 = plt.scatter(datalist[1,Vthindexsat],1000*datalist[1,SSindexsat], s=80
 plt.xlabel("Vth,SAT (V)", fontsize=18)
 plt.ylabel("SS (mV/dec)", fontsize=18)
 ax = plt.gca()
+
+
+
 #ax.set_yscale('log')
 #plt.xlim([0.1,0.25])
 #plt.ylim([60e-3,300e-3])
@@ -302,7 +319,7 @@ plt.ylabel("ION,SAT (uA/um)", fontsize=18)
 #plt.xlim([20,100])
 #plt.savefig('DIBLIonVDSATcorner', dpi=300, bbox_inches='tight')
 ########
-#############
+#########################################################################################################################################################Legends
 fignumber = 0
 
 
@@ -314,9 +331,10 @@ plt.xlabel("Vth,SAT (V)", fontsize=18)
 ax = plt.gca()
 plt.xticks(fontsize = 18) 
 plt.yticks(fontsize = 18) 
-plt.legend([ tcad1,model1,nominal1],['TCAD','Model','Nominal'],loc=1,prop={'size':20})
+plt.legend([ tcad1,model1,nominal1],['TCAD, p='+("%.2f" % VthIoncorr_tcad[0][1]),'Model, p='+("%.2f" % VthIoncorr_model[0][1]),'Nominal'],loc=1,prop={'size':20})
 #ax.set_yscale('log')
 #plt.savefig('IonVthVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+
 
 fignumber+=1
 plt.figure(fignumber)
@@ -330,8 +348,9 @@ ax = plt.gca()
 ##plt.savefig('IonIoffVDSAT', dpi=600, bbox_inches='tight')
 plt.xticks(fontsize = 18) 
 plt.yticks(fontsize = 18) 
-plt.legend([ tcad2,model2,nominal2],['TCAD','Model','Nominal'],loc=1,prop={'size':20})
+plt.legend([ tcad2,model2,nominal2],['TCAD, p='+("%.2f" % VthSScorr_tcad[0][1]),'Model, p='+("%.2f" % VthSScorr_model[0][1]),'Nominal'],loc=1,prop={'size':20})
 #plt.savefig('VthSSVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+
 
 fignumber+=1
 plt.figure(fignumber)
@@ -344,8 +363,9 @@ ax = plt.gca()
 #plt.ylim([2,10])
 plt.xticks(fontsize = 18) 
 plt.yticks(fontsize = 18) 
-plt.legend([ tcad3,model3,nominal3],['TCAD','Model','Nominal'],loc=2,prop={'size':20})
+plt.legend([ tcad3,model3,nominal3],['TCAD, p='+("%.2f" % IoffIoncorr_tcad[0][1]),'Model, p='+("%.2f" % IoffIoncorr_model[0][1]),'Nominal'],loc=2,prop={'size':20})
 #plt.savefig('IonIoffVDSATcornerhspice7', dpi=600, bbox_inches='tight')
+
 
 fignumber+=1
 plt.figure(fignumber)
@@ -356,7 +376,7 @@ ax = plt.gca()
 plt.xlim([10,100])
 plt.xticks(fontsize = 18) 
 plt.yticks(fontsize = 18) 
-plt.legend([ tcad4,model4,nominal4],['TCAD','Model','Nominal'],loc=2,prop={'size':20})
+plt.legend([ tcad4,model4,nominal4],['TCAD, p='+("%.2f" % DIBLIOFFcorr_tcad[0][1]) ,'Model, p='+("%.2f" % DIBLIOFFcorr_model[0][1]) ,'Nominal'],loc=2,prop={'size':20})
 #plt.savefig('DIBLIoffVDSATcornerhspice7', dpi=600, bbox_inches='tight')
 
 fignumber+=1
@@ -367,7 +387,7 @@ plt.ylabel("ION,SAT (uA/um)", fontsize=18)
 plt.xlim([10,100])
 plt.xticks(fontsize = 18) 
 plt.yticks(fontsize = 18) 
-plt.legend([ tcad5,model5,nominal5],['TCAD','Model','Nominal'],loc=2,prop={'size':20})
+plt.legend([ tcad5,model5,nominal5],['TCAD, p='+("%.2f" % IonDIBLcorr_tcad[0][1]),'Model, p='+("%.2f" % IonDIBLcorr_model[0][1]),'Nominal'],loc=2,prop={'size':20})
 #plt.savefig('DIBLIonVDSATcornerhspice8', dpi=600)
 
 plt.show() 
