@@ -69,5 +69,25 @@
 +HFIN = 42n
 +TFIN_TOP = 7.600n
 +TFIN_BASE = 15.20n
+<<<<<<< HEAD
+=======
++EOT =800.0p
++NBODY =6.000E+24
+*+FPITCH =8.5n
++DEVTYPE =1.000 
++NF =1.000 
++NGATE =0.000 
++alpha_UFCM = 1
+*****MODES
++GEOMOD =1.000 
++GIDLMOD =0.000 
++IGMOD =0.000 
+*****Short-Channel Effects
++CDSC =100.0m
++CDSCD =13.00m
++CIT =0*1.800m
++CS =0.000 
++DVT1SS = 0.53
+>>>>>>> raein
 
 
