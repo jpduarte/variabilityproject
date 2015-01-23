@@ -40,7 +40,7 @@ for namefile in data_files[0][1]:
     
 ################################## 
 
-root_dir = '../../netlist_modelcards/idvgscalinggeo4'
+root_dir = '../../netlist_modelcards/idvgscaling14nm'
 data_files = [(x[0], x[2]) for x in os.walk(root_dir)]
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 

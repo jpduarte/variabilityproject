@@ -64,7 +64,7 @@ VthSScorr_modelref =  np.corrcoef(datalist[:,Vthindexsat],1000*datalist[:,SSinde
 
 fignumber+=1
 plt.figure(fignumber)
-modelref2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="s",facecolors='none', edgecolors='k') 
+modelref2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="s",facecolors='none', edgecolors='k') 
 IonIoffcorr_modelref =  np.corrcoef(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
 
 fignumber+=1
@@ -112,8 +112,10 @@ VthSScorr_modelreduced =  np.corrcoef(datalist[:,Vthindexsat],1000*datalist[:,SS
 
 fignumber+=1
 plt.figure(fignumber)
-modelred2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="o",facecolors='none', edgecolors='g') 
+modelred2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="o",facecolors='none', edgecolors='g') 
 IonIoffcorr_modelreduced =  np.corrcoef(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
+ax = plt.gca()
+ax.set_yscale('log')
 
 fignumber+=1
 plt.figure(fignumber)
@@ -203,8 +205,10 @@ VthSScorr_modelref =  np.corrcoef(datalist[:,Vthindexsat],1000*datalist[:,SSinde
 
 fignumber+=1
 plt.figure(fignumber)
-modelref2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="s",facecolors='none', edgecolors='y') 
+modelref2 = plt.scatter(factorIDSon*datalist[:,Ionindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="s",facecolors='none', edgecolors='y') 
 IonIoffcorr_modelref =  np.corrcoef(factorIDSon*datalist[:,Ionindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
+ax = plt.gca()
+ax.set_yscale('log')
 
 fignumber+=1
 plt.figure(fignumber)

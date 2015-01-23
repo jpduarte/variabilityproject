@@ -30,11 +30,11 @@ os.system('hspice ' + wheretosimpath +filetorun+'.sp -o ' + wheretosimpath+filet
 
 #parse results
 finalnamedata = 'VTC'
-outputnamefiles = parseinverterout.parseinvv1(wheretosimpath,filetorun,finalnamedata)#return list with names of files 
+outputnamefiles = parseinverterout.parseinvv1(wheretosimpath,filetorun,finalnamedata,"vout")#return list with names of files 
 
 figurenumber=1
 for namefile in outputnamefiles:
-  plotgeneral.plotinverter(wheretosimpath,namefile,'Vin','Vout',figurenumber)
+  plotgeneral.plotinverter(wheretosimpath,namefile,'Vin','Vout',figurenumber,0)
   figurenumber+=1
   
 pylab.show()  

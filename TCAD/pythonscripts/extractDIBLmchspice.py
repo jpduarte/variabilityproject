@@ -4,14 +4,14 @@ import os
 import numpy as np
 import pylab
 ######################
-filenameaux = 'montecarloresultsallfilevdsatmchspice10nm'
+filenameaux = 'montecarloresultsallfilevdsatmchspice10nmv3'
 vdssatfile = open(filenameaux, 'r') 
 
-filenameaux = 'montecarloresultsallfilevdlinmchspice10nm'
+filenameaux = 'montecarloresultsallfilevdlinmchspice10nmv3'
 vdslinfile = open(filenameaux, 'r') 
 
 
-montecarloresultsall = open('summarydevicemchspice10nm', 'w')
+montecarloresultsall = open('summarydevicemchspice10nmv3', 'w')
 stringtoprint = 'Ioffsat'+' '+'Ionsat'+' '+'Wtsat'+' '+'Lgsat'+' '+'Hfinsat'+' '+'toxsat'+' '+'WbRsat'+' '+'WbLsat' +' '+'Nfinsat'+' '+'vdsat'+' '+'Vthsat'+' gmaxsat'+' SSsat'+' Iofflin'+' '+'Ionlin'+' '+'Wtlin'+' '+'Lglin'+' '+'Hfinlin'+' '+'toxlin'+' '+'WbRlin'+' '+'WbLlin' +' '+'Nfinlin'+' '+'vdlin'+' '+'Vthlin'+' gmaxlin'+' SSlin'+' DIBL'+'\n'
 montecarloresultsall.write(stringtoprint)
 

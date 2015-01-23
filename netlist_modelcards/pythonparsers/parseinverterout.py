@@ -1,7 +1,7 @@
 #parse data output from inverter
 
 ###################################d
-def parseinvv1(wheretosimpath,filenameoutput,finalnamedata):
+def parseinvv1(wheretosimpath,filenameoutput,finalnamedata,stringtosave):
   filepath =wheretosimpath
 
   filenameaux = filenameoutput+'.lis'
@@ -20,7 +20,7 @@ def parseinvv1(wheretosimpath,filenameoutput,finalnamedata):
         state=1
         filenameaux =''      
     elif (state==1):
-      if line.find("x1.d")>-1:
+      if line.find(stringtosave)>-1:
         filenameaux = finalnamedata +'INVERTER'+str(countruns)+'.out'
         outputnamefiles.append(filenameaux)
         countruns+=1

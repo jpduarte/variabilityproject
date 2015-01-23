@@ -1,10 +1,10 @@
 ***BSIMCMG109 Model Card with TCAD data for variability simulations with GEOMOD=4 for best and worst corner devices
-.model nmos1 bsimcmg
+.model pmos1 bsimcmg
 +FPITCH = 7.600n
 +CDSC = 4.000m
 +CDSCD = 470.0u
 +CIT = 0
-+DEVTYPE = 1.000 
++DEVTYPE = 0.000 
 +DSUB = 280.0m
 +DVT0 = 70.00m
 +DVT1 = 330.0m
@@ -26,7 +26,7 @@
 +NF = 1.000 
 +NGATE = 0.000
 +NSD = 2.000E+26 
-+PHIG = 4.20 
++PHIG = 4.93 
 +RDSW = 18.00 
 +ARDSW = 0.000 
 +BRDSW = 20.00n

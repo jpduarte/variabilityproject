@@ -15,7 +15,7 @@ def parsehspicev1(wheretosimpath,filenameoutput,vds,Lparam):
   delimiters = "1:", "=", "\n", "         "
   regexPattern = '|'.join(map(re.escape, delimiters))
   state=0
-
+  allfiles = []
   countruns=0
   for line in outputfiletoread:
     #print line
@@ -27,7 +27,8 @@ def parsehspicev1(wheretosimpath,filenameoutput,vds,Lparam):
       if line.find("x1.d")>-1:
         filenameaux = filenameoutput + 'Lg'+Lparam+'vd'+str(vds[countruns]) + 'DATAREADY.out'
         countruns+=1
-        print filenameaux 
+        print filenameaux
+        allfiles.append(filenameaux) 
         hspicefile = open(filepath+filenameaux, 'w') 
         hspicefile.write('gateOuterVoltage drainTotalCurrent\n') 
         state=2
@@ -38,6 +39,7 @@ def parsehspicev1(wheretosimpath,filenameoutput,vds,Lparam):
       else:
         stringinline = str.split(line)
         hspicefile.write(stringinline[0]+' '+stringinline[1]+'\n')
+  return allfiles        
         
 def parsehspicev2(wheretosimpath,filenameoutput,vds,Lg, Wt, WbR,WbL, Hfin, tox, Doping_FIN ):
   filepath =wheretosimpath
@@ -111,4 +113,6 @@ def parsehspicev3(wheretosimpath,filenameoutput,vds,Lg, Weff, Cins, Ach, Doping_
         hspicefile.close()
       else:
         stringinline = str.split(line)
-        hspicefile.write(stringinline[0]+' '+stringinline[1]+'\n')             
+        hspicefile.write(stringinline[0]+' '+stringinline[1]+'\n')          
+        
+      

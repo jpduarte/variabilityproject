@@ -77,6 +77,16 @@ plt.figure(fignumber)
 modelref3 = plt.scatter(1000*datalist[:,DIBLindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="s",facecolors='none', edgecolors='k')
 DIBLIoffcorr_modelref =  np.corrcoef(datalist[:,DIBLindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
 
+fignumber+=1
+plt.figure(fignumber)
+stats.probplot(1000*datalist[:,DIBLindexsat], dist="norm", plot=plt)
+
+fignumber+=1
+plt.figure(fignumber)
+modelref4 = plt.scatter(1000*datalist[:,DIBLindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="o", color='r', edgecolors='k')
+DIBLIoffcorr_modelref =  np.corrcoef(datalist[:,DIBLindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
+
+
 target.close()
 
 fignumber = 0
@@ -147,7 +157,14 @@ DIBLIoffcorr_modelreduced =  np.corrcoef(datalist[:,DIBLindexsat],np.log(factorI
 
 
 fignumber+=1
-stats.probplot(datalist[:,Vthindexsat], dist="norm", plot=plt)
+plt.figure(fignumber)
+stats.probplot(1000*datalist[:,DIBLindexsat], dist="norm", plot=plt)
+
+
+fignumber+=1
+plt.figure(fignumber)
+modelred4 = plt.scatter(1000*datalist[:,DIBLindexsat],(factorIDSoff*datalist[:,Ioffindexsat]),s=500, marker="o", color='b', edgecolors='k')
+DIBLIoffcorr_modelreduced =  np.corrcoef(datalist[:,DIBLindexsat],np.log(factorIDSoff*datalist[:,Ioffindexsat]))
 
 
 target.close()
@@ -161,21 +178,21 @@ fignumber = 0
 
 fignumber+=1
 plt.figure(fignumber)
-plt.ylabel("SS (mV/dec)", fontsize=18)
-plt.xlabel("Vth,SAT (V)", fontsize=18)
+plt.ylabel("SS (mV/dec)", fontsize=21)
+plt.xlabel("Vth,SAT (V)", fontsize=21)
 ax = plt.gca()
-plt.xticks(fontsize = 18) 
-plt.yticks(fontsize = 18) 
+plt.xticks(fontsize=21) 
+plt.yticks(fontsize=21) 
 plt.legend([ modelref1,modelred1],['14 nm','10 nm'],loc=1,prop={'size':20})
 #plt.legend([ modelref1,modelred1],['14 nm, p='+("%.2f" % VthSScorr_modelref [0][1]),'10 nm, p='+("%.2f" % VthSScorr_modelreduced[0][1])],loc=1,prop={'size':20})
 
 fignumber+=1
 plt.figure(fignumber)
-plt.xlabel("ION,SAT (mA/um)", fontsize=18)
-plt.ylabel("IOFF,SAT (nA/um)", fontsize=18)
+plt.xlabel("ION,SAT (mA/um)", fontsize=21)
+plt.ylabel("IOFF,SAT (nA/um)", fontsize=21)
 ax = plt.gca()
-plt.xticks(fontsize = 18) 
-plt.yticks(fontsize = 18) 
+plt.xticks(fontsize=21) 
+plt.yticks(fontsize=21) 
 plt.legend([ modelref2,modelred2],['14 nm','10 nm'],loc=1,prop={'size':20})
 #plt.legend([ modelref2,modelred2],['14 nm, p='+("%.2f" % IonIoffcorr_modelref [0][1]),'10 nm, p='+("%.2f" % IonIoffcorr_modelreduced[0][1])],loc=1,prop={'size':20})
 ax.set_yscale('log')
@@ -185,11 +202,11 @@ plt.ylim([1,1e4])
 
 fignumber+=1
 plt.figure(fignumber)
-plt.xlabel("ION,LIN (mA/um)", fontsize=18)
-plt.ylabel("IOFF,LIN (nA/um)", fontsize=18)
+plt.xlabel("ION,LIN (mA/um)", fontsize=21)
+plt.ylabel("IOFF,LIN (nA/um)", fontsize=21)
 ax = plt.gca()
-plt.xticks(fontsize = 18) 
-plt.yticks(fontsize = 18) 
+plt.xticks(fontsize=21) 
+plt.yticks(fontsize=21) 
 plt.legend([ modelref2,modelred2],['14 nm','10 nm'],loc=1,prop={'size':20})
 #plt.legend([ modelref2,modelred2],['14 nm, p='+("%.2f" % IonIoffcorr_modelref [0][1]),'10 nm, p='+("%.2f" % IonIoffcorr_modelreduced[0][1])],loc=1,prop={'size':20})
 ax.set_yscale('log')
@@ -199,14 +216,26 @@ plt.ylim([1,1e4])
 
 fignumber+=1
 plt.figure(fignumber)
-plt.xlabel("DIBL (mV/V)", fontsize=18)
-plt.ylabel("IOFF,SAT (nA/um)", fontsize=18)
+plt.xlabel("DIBL (mV/V)", fontsize=21)
+plt.ylabel("IOFF,SAT (nA/um)", fontsize=21)
 ax = plt.gca()
 ax.set_yscale('log')
-plt.xticks(fontsize = 18) 
-plt.yticks(fontsize = 18) 
+plt.xticks(fontsize=21) 
+plt.yticks(fontsize=21) 
+plt.legend([ modelref3,modelred3],['14 nm','10 nm'],loc=1,prop={'size':20})
+plt.ylim([1,1e4])
+
+fignumber+=1
+plt.figure(fignumber)
+plt.ylabel("DIBL (mV/V)", fontsize=21)
+plt.xlabel("Quantiles", fontsize=21)
+ax = plt.gca()
+plt.xticks(fontsize=21) 
+plt.yticks(fontsize=21) 
+ax.set_title("")
+plt.legend([ modelref4,modelred4],['14 nm','10 nm'],loc=2,prop={'size':20})
 #plt.legend([ modelref3,modelred3],['14 nm','10 nm'],loc=1,prop={'size':20})
-plt.ylim([1,1e4])
+
 
 target.close()
 
