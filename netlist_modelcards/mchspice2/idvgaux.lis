@@ -1,0 +1,213 @@
+ ****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+  Copyright (C) 2012 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: /users/jpduarte/research/variabilityproject/netlist_modelcards/mch
+  Command line options: -C /users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice2/idvgaux.sp -o /users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice2/idvgaux
+ Init: read install configuration file: /tools/synopsys/hspice/G-2012.06-ENG1/hspice/meta.cfg
+ Loading pVA library /users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice2/idvgaux.pvadir/pvaRTL_linux.so...
+1****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+ ******  
+ *sample netlist for bsim-mg
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             bsimcmg(va)        1.00 
+ **info** *pvaI* Creating Verilog-A module 'bsimcmg' for X1
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 15
+ file=/users/jpduarte/research/variabilityproject/netlist_modelcards/mchspice2/idvgaux.pa0
+
+ ******  
+ *sample netlist for bsim-mg
+
+  ******  dc transfer curves tnom=  25.000 temp=  25.000 *****
+
+   *** source        0:vds =  5.000e-02       ***
+
+x
+
+        volt    current    
+                   x1.d    
+    0.          5.047e-09  
+  1.7551e-02    9.854e-09  
+  3.5102e-02    1.922e-08  
+  5.2653e-02    3.741e-08  
+  7.0204e-02    7.255e-08  
+  8.7755e-02    1.397e-07  
+    0.10531     2.653e-07  
+    0.12286     4.927e-07  
+    0.14041     8.828e-07  
+    0.15796     1.505e-06  
+    0.17551     2.415e-06  
+    0.19306     3.637e-06  
+    0.21061     5.160e-06  
+    0.22816     6.947e-06  
+    0.24571     8.955e-06  
+    0.26327     1.114e-05  
+    0.28082     1.346e-05  
+    0.29837     1.588e-05  
+    0.31592     1.837e-05  
+    0.33347     2.092e-05  
+    0.35102     2.350e-05  
+    0.36857     2.611e-05  
+    0.38612     2.872e-05  
+    0.40367     3.133e-05  
+    0.42122     3.394e-05  
+    0.43878     3.653e-05  
+    0.45633     3.910e-05  
+    0.47388     4.164e-05  
+    0.49143     4.416e-05  
+    0.50898     4.665e-05  
+    0.52653     4.911e-05  
+    0.54408     5.153e-05  
+    0.56163     5.392e-05  
+    0.57918     5.627e-05  
+    0.59673     5.859e-05  
+    0.61429     6.086e-05  
+    0.63184     6.310e-05  
+    0.64939     6.530e-05  
+    0.66694     6.745e-05  
+    0.68449     6.958e-05  
+    0.70204     7.166e-05  
+    0.71959     7.370e-05  
+    0.73714     7.571e-05  
+    0.75469     7.767e-05  
+    0.77224     7.960e-05  
+    0.78980     8.150e-05  
+    0.80735     8.336e-05  
+    0.82490     8.518e-05  
+    0.84245     8.697e-05  
+    0.86000     8.872e-05  
+y
+-----------------------------------------------
+ ******  
+ *sample netlist for bsim-mg
+
+  ******  dc transfer curves tnom=  25.000 temp=  25.000 *****
+
+   *** source        0:vds =    0.8600        ***
+
+x
+
+        volt    current    
+                   x1.d    
+    0.          6.025e-09  
+  1.7551e-02    1.175e-08  
+  3.5102e-02    2.289e-08  
+  5.2653e-02    4.450e-08  
+  7.0204e-02    8.615e-08  
+  8.7755e-02    1.656e-07  
+    0.10531     3.139e-07  
+    0.12286     5.815e-07  
+    0.14041     1.039e-06  
+    0.15796     1.767e-06  
+    0.17551     2.833e-06  
+    0.19306     4.269e-06  
+    0.21061     6.072e-06  
+    0.22816     8.211e-06  
+    0.24571     1.064e-05  
+    0.26327     1.332e-05  
+    0.28082     1.621e-05  
+    0.29837     1.928e-05  
+    0.31592     2.248e-05  
+    0.33347     2.581e-05  
+    0.35102     2.923e-05  
+    0.36857     3.274e-05  
+    0.38612     3.631e-05  
+    0.40367     3.995e-05  
+    0.42122     4.363e-05  
+    0.43878     4.735e-05  
+    0.45633     5.111e-05  
+    0.47388     5.490e-05  
+    0.49143     5.871e-05  
+    0.50898     6.254e-05  
+    0.52653     6.638e-05  
+    0.54408     7.024e-05  
+    0.56163     7.410e-05  
+    0.57918     7.797e-05  
+    0.59673     8.185e-05  
+    0.61429     8.573e-05  
+    0.63184     8.961e-05  
+    0.64939     9.349e-05  
+    0.66694     9.737e-05  
+    0.68449     1.012e-04  
+    0.70204     1.051e-04  
+    0.71959     1.090e-04  
+    0.73714     1.129e-04  
+    0.75469     1.167e-04  
+    0.77224     1.206e-04  
+    0.78980     1.244e-04  
+    0.80735     1.283e-04  
+    0.82490     1.321e-04  
+    0.84245     1.359e-04  
+    0.86000     1.397e-04  
+y
+-----------------------------------------------
+
+          ***** job concluded
+1****** HSPICE -- G-2012.06-ENG1 32-BIT (Jun 28 2012) RHEL32 ******             
+ ******  
+ *sample netlist for bsim-mg
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+ cpu MHz	: 1596.000
+  
+ OS:
+ Linux version 2.6.32-504.3.3.el6.x86_64 (mockbuild@x86-028.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-9) (GCC) ) #1 SMP Fri Dec 12 16:05:43 EST 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    24
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      10 # elements   =       5
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       0 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       1
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  dc sweep           0.02         100         204
+  readin             0.07
+  errchk             0.10
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        102.55 megabytes
+           total cpu time            0.19 seconds
+           total elapsed time        0.27 seconds
+           job started at     23:49:08 01/21/2015
+           job ended   at     23:49:08 01/21/2015
+
+
+ lic: total license checkout elapse time:        0.00(s)
