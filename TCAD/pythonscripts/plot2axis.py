@@ -75,7 +75,7 @@ for namefile in data_files:
       
       datalist = np.loadtxt(filenameaux,skiprows = 1)
       xx,indexstart = findIds(datalist[:,vgindex],datalist[:,Idsindex],0)
-      worstSS = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '-o',lw=1, color='r',markersize=6 )
+      worstSS = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '-s',lw=1, color='g',markersize=6 )
       target.close()
       count +=1
       print count
@@ -84,7 +84,7 @@ for namefile in data_files:
 #plot best SS
 
 root_dir = '/users/jpduarte/research/variabilityproject/TCAD/data/v6'
-data_files = ['finfet_6Wt0.00684Lg0.022Hfin0.0378tox0.00072WbR0.00342WbL0.00342Nfin6.6e+18vd0.86DATAREADYDATAREADY']
+data_files = ['finfet_6Wt0.00684Lg0.022Hfin0.0378tox0.00088WbR0.00418WbL0.00418Nfin6.6e+18vd0.86DATAREADYDATAREADY']
 #namefile = data_files[0][1][3]#[0][0] give the adress then, [0][1][x] give the file name where x is the string number
 
 #filenames = data_files[0][1]
@@ -110,7 +110,7 @@ for namefile in data_files:
       
       datalist = np.loadtxt(filenameaux,skiprows = 1)
       xx,indexstart = findIds(datalist[:,vgindex],datalist[:,Idsindex],0)
-      bestSS = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '-s',lw=1, color='y',markersize=6 )
+      bestSS = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '-o',lw=1, color='c',markersize=7 )
       target.close()
       count +=1
       print count      
@@ -144,7 +144,7 @@ for namefile in data_files:
       
       datalist = np.loadtxt(filenameaux,skiprows = 1)
       xx,indexstart = findIds(datalist[:,vgindex],datalist[:,Idsindex],0)
-      nominal = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '->',lw=1, color='g',markersize=7, label='Nominal' )
+      nominal = plt.plot( datalist[indexstart:-1,vgindex], datalist[indexstart:-1,Idsindex]*factorIDS, '-<',lw=1, color='y',markersize=7, label='Nominal' )
       target.close()
       count +=1
       print count

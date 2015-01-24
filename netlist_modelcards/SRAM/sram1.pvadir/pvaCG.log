@@ -1,9 +1,9 @@
-Args: pva -p hsp -t spi -f /users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/inverter1.pvadir/pvaHDL.lis -o /users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/inverter1.pvadir
+Args: pva -p hsp -t spi -f /users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/sram1.pvadir/pvaHDL.lis -o /users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/sram1.pvadir
 
-==> Start pvaCG on Fri Jan 23 15:20:51 2015
+==> Start pvaCG on Fri Jan 23 18:23:07 2015
 
 
-Begin of pVA compiling on Fri Jan 23 15:20:51 2015
+Begin of pVA compiling on Fri Jan 23 18:23:07 2015
 
 Parsing '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg.va'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_main.va'
@@ -16,13 +16,13 @@ Parsing include file '/users/jpduarte/research/variabilityproject/model_code/cod
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_rdsmod.include'
 Parsing include file '/users/jpduarte/research/variabilityproject/model_code/code_109beta/bsimcmg_quasi_static_cv.include'
 
-End of pVA compiling on Fri Jan 23 15:20:51 2015
+End of pVA compiling on Fri Jan 23 18:23:07 2015
 
 
-End of build pVA DB on Fri Jan 23 15:20:51 2015
+End of build pVA DB on Fri Jan 23 18:23:07 2015
 
 
-/users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/inverter1.pvadir/pvaRTL_linux.so is reused
+/users/jpduarte/research/variabilityproject/netlist_modelcards/SRAM/sram1.pvadir/pvaRTL_linux.so is reused
 
-End of pVA elaboration on Fri Jan 23 15:20:51 2015
+End of pVA elaboration on Fri Jan 23 18:23:07 2015
 
